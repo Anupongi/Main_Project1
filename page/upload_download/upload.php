@@ -281,7 +281,7 @@
                   // name of the uploaded file
                   $filename = $_FILES['myfile']['name'];
                   // destination of the file on the server
-                  $destination = './uploads/' . $filename;
+                  $destination = './uploads/file/' . $filename;
 
                   // get the file extension
                   $extension = pathinfo($filename, PATHINFO_EXTENSION);
