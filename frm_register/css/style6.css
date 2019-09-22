@@ -1,0 +1,23 @@
+html body{
+    font-family: 'Kanit', sans-serif;
+    background-image: url('../../img/ห้องพยาบาล_๑๗๑๒๐๕_0008.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: fixed;
+}
+.tab-content{
+    background-color: ghostwhite;
+}
+h1{
+    text-shadow: 2px 2px #FF0000;
+    color: white;
+    font-size: 60px;
+}
+p{
+    color: white;
+    text-shadow: 2px 2px 12px black;
+    font-size: 18px;
+}
+small{
+    color: #FF0000;
+}
