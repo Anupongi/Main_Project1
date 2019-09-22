@@ -269,7 +269,36 @@
 
     <!-- Main content -->
     <section class="content">
-    <?php
+      <div class="container">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10">
+            <div class="card">
+              <div class="card-header">
+                เพิ่มเอกสารดาวน์โหลด
+              </div>
+              <div class="card-body">
+                <form action="./upload.php" method="post" enctype="multipart/form-data" >
+                  <div class="input-group mb-3">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile02" name="myfile">
+                      <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                    </div>
+                  </div>
+                  <button type="submit" name="save">upload</button>
+                  <br>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+      <?php
               // connect to the database
               // $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
               // mysqli_set_charset($con,"utf8");
@@ -341,36 +370,8 @@
                           echo "การเพิ่มไฟล์ผิดพลาด";
                       }
                   }
-              }?>
-      <div class="container">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-10">
-            <div class="card">
-              <div class="card-header">
-                เพิ่มเอกสารดาวน์โหลด
-              </div>
-              <div class="card-body">
-                <form action="./upload.php" method="post" enctype="multipart/form-data" >
-                  <div class="input-group mb-3">
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile02" name="myfile">
-                      <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                    </div>
-                  </div>
-                  <button type="submit" name="save">upload</button>
-                  <br>
-                  
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="col-1"></div>
-        </div>
-      </div>
+              }
+              ?>
     </section>
     <!-- /.content -->
   </div>
