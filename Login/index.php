@@ -67,12 +67,39 @@ session_start();
 						</div>
 
 						<div>
-							<a href="#" class="txt1" style="font-family: 'Kanit', sans-serif;font-size:16px;">
+							<a href="#" class="txt1" data-toggle="modal" data-target="#exampleModal" style="font-family: 'Kanit', sans-serif;font-size:16px;">
 								 วิธีการเข้าใช้งานระบบ ?
 							</a>
+							<!-- Modal -->
+							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">วิธีการเข้าใช้งานระบบ</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body" >
+										<h4><b>นักเรียนนักศึกษา</b></h4> 
+        								<p style="font-family: 'Kanit', sans-serif;">เข้าสู่ระบบโดยใช้ ชื่อผู้ใช้งานคือ รหัสประจำตัวนักเรียน
+										รหัสผ่านคือ รหัสนักศึกษา เช่น 61xxxxxxxx</p><br>  
+        								<h4><b>คณะครู อาจารย์ บุคลากร</b></h4>
+										
+        								<p style="font-family: 'Kanit', sans-serif;">เข้าสู่ระบบโดยใช้ ชื่อผู้ใช้งานคือ รหัสประจำตัวประชาชนของคณะครู อาจารย์ บุคลากร
+										รหัสผ่านคือ รหัสประจำตัวประชาชน เช่น 15xxxxxxxxxxx</p>
+										<br>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-			
+					<script>
+						$('#myModal').on('shown.bs.modal', function () {
+  						$('#myInput').trigger('focus')
+						})
+					</script>
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
