@@ -348,6 +348,7 @@ $num_rows2 = mysqli_num_rows($query2);
                       if (move_uploaded_file($file, $destination)) {
                           $conn2 = mysqli_connect('localhost','root','KZTuR1v3aaVA7t','file-management');
                           $sql = "INSERT INTO `files` (`image`, `name`, `extension` , `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
+                          echo $sql;
                           $result = mysqli_query($conn2, $sql);
                           if (mysqli_query($conn2, $sql)) {
                               
