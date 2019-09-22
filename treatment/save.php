@@ -10,7 +10,7 @@
 	// echo "</pre>";
 	$serverName = "localhost";
 	$userName = "root";
-	$userPassword = "";
+	$userPassword = "KZTuR1v3aaVA7t";
 	$dbName = "treatment";
 	$database_condb = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 

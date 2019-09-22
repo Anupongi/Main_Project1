@@ -1,7 +1,7 @@
 <?php 
     $serverName = "localhost";
     $userName = "root";
-    $userPassword = "";
+    $userPassword = "KZTuR1v3aaVA7t";
     $dbName = "treatment";
     $con = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     $id =  $_GET['ID'];

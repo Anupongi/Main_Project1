@@ -124,7 +124,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "";
+$userPassword = "KZTuR1v3aaVA7t";
 $dbName = "treatment";
 
 

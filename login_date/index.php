@@ -1,6 +1,6 @@
 <?php 
 //index.php
-$connect = mysqli_connect("localhost", "root", "", "user_login");
+$connect = mysqli_connect("localhost", "root", "KZTuR1v3aaVA7t", "user_login");
 $query = "SELECT * FROM user ORDER BY Username ASC";
 $result = mysqli_query($connect, $query);
 ?>

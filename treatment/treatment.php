@@ -122,7 +122,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "";
+$userPassword = "KZTuR1v3aaVA7t";
 $dbName = "user_login";
 $dbName1 = "post";
 $dbName2 = "file-management";

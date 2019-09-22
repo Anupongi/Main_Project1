@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: login.php');
+    header('Location: login/index.php');
   }
 
 ?>  
@@ -42,7 +42,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "";
+$userPassword = "KZTuR1v3aaVA7t";
 $dbName = "user_login";
 $dbName1 = "post";
 
