@@ -387,7 +387,7 @@ $num_rows4 = mysqli_num_rows($query4);
             <div class="col-md-4"></div>
             <div class="col-md-6 text-center">
             <?php
-              $connect = mysqli_connect("localhost", "root", "", "user_login");
+              $connect = mysqli_connect("localhost", "root", "KZTuR1v3aaVA7t", "user_login");
               $query = "SELECT * FROM user ORDER BY Username ASC";
               $result = mysqli_query($connect, $query);
             ?>
@@ -586,7 +586,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                       <?php
                                       $serverName = "localhost";
                                       $userName = "root";
-                                      $userPassword = "";
+                                      $userPassword = "KZTuR1v3aaVA7t";
                                       $dbName = "treatment";
                                       $con = mysqli_connect($serverName,$userName,$userPassword,$dbName);
                                       mysqli_set_charset($con,"utf8");
