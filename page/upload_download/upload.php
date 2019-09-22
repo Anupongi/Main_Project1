@@ -268,44 +268,13 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <?php echo $alert; ?>
-    <section class="content">
-      <div class="container">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-10">
-            <div class="card">
-              <div class="card-header">
-                เพิ่มเอกสารดาวน์โหลด
-              </div>
-              <div class="card-body">
-                <form action="./upload.php" method="post" enctype="multipart/form-data" >
-                  <div class="input-group mb-3">
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile02" name="myfile">
-                      <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                    </div>
-                  </div>
-                  <button type="submit" name="save">upload</button>
-                  <br>
-                  
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="col-1"></div>
-        </div>
-      </div>
-      <?php
+    <?php
               // connect to the database
-              // $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
-              // mysqli_set_charset($con,"utf8");
-              // $sql = "SELECT * FROM `files` ";
-              // $result = mysqli_query($con, $sql);
-              // $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
+              $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+              mysqli_set_charset($con,"utf8");
+              $sql = "SELECT * FROM `files`";
+              $result = mysqli_query($con, $sql);
+              $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
               // Uploads files
               if (isset($_POST['save'])) { // if save button on the form is clicked
@@ -357,25 +326,55 @@
                       if (move_uploaded_file($file, $destination)) {
                           $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
                           mysqli_set_charset($con,"utf8"); 
-                          $sql = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
-                          
-                          $result = mysqli_query($con, $sql);
-                          if ($result == 1) {
+                          $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
+                          $query4 = mysqli_query($con,$sql10);
+                          if ($query4) {
                               
                               $alert = '<div class="alert alert-success" role="alert">เอกสารของคุณถูกเพิ่มเรียบร้อยแล้ว <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                             </button></div>';//not showing an alert box. 
-                            
+                            echo $alert;
                           }
                       } else {
                           $alert = '<div class="alert alert-danger" role="alert">การเพิ่มไฟล์ผิดพลาด <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                             </button></div>';//not showing an alert box. 
-                          
+                          echo $alert;
                       }
                   }
               }
               ?>
+    
+    <section class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10">
+            <div class="card">
+              <div class="card-header">
+                เพิ่มเอกสารดาวน์โหลด
+              </div>
+              <div class="card-body">
+                <form action="./upload.php" method="post" enctype="multipart/form-data" >
+                  <div class="input-group mb-3">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile02" name="myfile">
+                      <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                    </div>
+                  </div>
+                  <button type="submit" name="save">upload</button>
+                  <br>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
     </section>
     <!-- /.content -->
   </div>
