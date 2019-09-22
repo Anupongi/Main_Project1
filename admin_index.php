@@ -75,14 +75,17 @@ $query = mysqli_query($conn,$sql);
 $num_rows = mysqli_num_rows($query);
 
 $date = date("d/m/Y");
+mysqli_set_charset($conn,"utf8");
 $sql1 = "SELECT * FROM login_date WHERE `Lastdate`='$date'";
 $query1 = mysqli_query($conn,$sql1);
 $num_rows1 = mysqli_num_rows($query1);
 
+mysqli_set_charset($conn,"utf8");
 $sql2 = "SELECT * FROM allpost";
 $query2 = mysqli_query($conn1,$sql2);
 $num_rows2 = mysqli_num_rows($query2);
 
+mysqli_set_charset($conn,"utf8");
 $sql3 = "SELECT * FROM `files`";
 $query3 = mysqli_query($conn2,$sql3);
 $num_rows3 = mysqli_num_rows($query3);
