@@ -7,7 +7,7 @@ session_start();
                   $Username = $_POST['username_log'];
                   $Password = $_POST['password_log'];
         //query 
-                  mysqli_set_charset($conn,"utf8");
+                  mysqli_set_charset($con,"utf8");
                   $sql="SELECT * FROM `user` Where Username='".$Username."' and Password='".$Password."' ";
                     
                   $result = mysqli_query($con,$sql);
