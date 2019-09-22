@@ -7,7 +7,7 @@ session_start();
                   $Username = $_POST['username_log'];
                   $Password = $_POST['password_log'];
 				//query 
-                  $sql="SELECT * FROM User Where Username='".$Username."' and Password='".$Password."' ";
+                  $sql="SELECT * FROM `user` Where Username='".$Username."' and Password='".$Password."' ";
                     
                   $result = mysqli_query($con,$sql);
 				
