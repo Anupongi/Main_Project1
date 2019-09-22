@@ -17,7 +17,6 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>เว็บไซต์ห้องพยาบาล วิทยาลัยเทคนิคเชียงใหม่</title>
     <meta name="description" content="เป็นเว็บไซต์เกี่ยวกับห้องพยาบาล วิทยาลัยเทคนิคเชียงใหม่">
-    <!-- <meta name="keywords" content="Aeaw Chiang Mai,aewchiangmai,เที่ยวเชียงใหม่,เชียงใหม่,เที่ยว,แอ่วเชียงใหม่"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
