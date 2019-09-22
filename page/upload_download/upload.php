@@ -293,10 +293,10 @@ $num_rows2 = mysqli_num_rows($query2);
     <section class="content">
     <?php
               // connect to the database
-              $conn = mysqli_connect('localhost', 'root', 'KZTuR1v3aaVA7t', 'file-management');
-              $sql = "SELECT * FROM files";
-              mysqli_set_charset($conn,"utf8");
-              $result = mysqli_query($conn, $sql);
+              $conn2 = mysqli_connect('localhost', 'root', 'KZTuR1v3aaVA7t', 'file-management');
+              $sql = "SELECT * FROM `files` ";
+              mysqli_set_charset($conn2,"utf8");
+              $result = mysqli_query($conn2, $sql);
               $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
               // Uploads files
