@@ -327,6 +327,7 @@
                           $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
                           mysqli_set_charset($con,"utf8"); 
                           $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$file_name','$extension','$size', 0 ,'$id_admin','$date1','y')";
+                          
                           $query4 = mysqli_query($con,$sql10);
                           if ($query4) {
                               
@@ -340,6 +341,7 @@
                                     <span aria-hidden="true">&times;</span>
                             </button></div>';//not showing an alert box. 
                           echo $alert;
+                          echo $sql;
                       }
                   }
               }
