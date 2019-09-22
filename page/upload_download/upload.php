@@ -344,7 +344,7 @@ $num_rows2 = mysqli_num_rows($query2);
                   } else {
                       // move the uploaded (temporary) file to the specified destination
                       if (move_uploaded_file($file, $destination)) {
-                          $sql = "INSERT INTO files (`image`, `name`, `extension` , `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
+                          $sql = "INSERT INTO `files` (`image`, `name`, `extension` , `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
                           if (mysqli_query($conn, $sql)) {
                               
                               $alert = '<div class="alert alert-success" role="alert">เอกสารของคุณถูกเพิ่มเรียบร้อยแล้ว <button type="button" class="close" data-dismiss="alert" aria-label="Close">
