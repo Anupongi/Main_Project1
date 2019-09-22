@@ -6,7 +6,8 @@ session_start();
 				//รับค่า user & password
                   $Username = $_POST['username_log'];
                   $Password = $_POST['password_log'];
-				//query 
+        //query 
+                  mysqli_set_charset($conn,"utf8");
                   $sql="SELECT * FROM `user` Where Username='".$Username."' and Password='".$Password."' ";
                     
                   $result = mysqli_query($con,$sql);
