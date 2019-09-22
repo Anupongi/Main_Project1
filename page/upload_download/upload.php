@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: login/index.php');
+    header('Location: Login/index.php');
   }
 ?>
 
@@ -339,7 +339,7 @@ $num_rows2 = mysqli_num_rows($query2);
                   }
                   if (!in_array($extension, ['zip', 'pdf', 'docx' ,'doc'])) {
                       echo "ไฟล์ที่คุณสามารถอัปโหลดได้คือ .zip, .pdf .docx or .doc";
-                  } elseif ($_FILES['myfile']['size'] > 2000000) { // file shouldn't be larger than 2Megabyte
+                  } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 2Megabyte
                       echo "ไฟล์มีขนาดใหญ่เกินไป!";
                   } else {
                       // move the uploaded (temporary) file to the specified destination
