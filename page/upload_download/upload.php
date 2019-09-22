@@ -341,7 +341,7 @@
                                     <span aria-hidden="true">&times;</span>
                             </button></div>';//not showing an alert box. 
                           echo $alert;
-                          echo $sql;
+                          echo $sql10;
                       }
                   }
               }
