@@ -53,7 +53,7 @@ session_start();
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="ต้องการรหัสผ่าน">
-						<input class="input100" type="password" name="password_log">
+						<input class="input100" type="text" name="password_log">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
 					</div>
