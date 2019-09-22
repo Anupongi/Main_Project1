@@ -289,6 +289,7 @@
                   // the physical file on a temporary uploads directory on the server
                   $file = $_FILES['myfile']['tmp_name'];
                   $size = $_FILES['myfile']['size'];
+                  move_uploaded_file($file,"./uploads/file/".$filename);
                   $file_name = $extension;
                   $id_admin = $_SESSION["name"];
                   date_default_timezone_set('asia/bangkok');
@@ -323,7 +324,8 @@
                       echo "ไฟล์มีขนาดใหญ่เกินไป!";
                   } else {
                       // move the uploaded (temporary) file to the specified destination
-                      if (move_uploaded_file($file, $destination)) {
+
+
                           $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
                           mysqli_set_charset($con,"utf8"); 
                           $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$file_name','$extension','$size', 0 ,'$id_admin','$date1','y')";
@@ -344,7 +346,7 @@
                           echo $alert;
                           
                       }
-                  }
+                  
               }
               ?>
     
