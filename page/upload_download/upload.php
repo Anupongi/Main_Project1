@@ -340,7 +340,7 @@
                           $alert = '<div class="alert alert-danger" role="alert">การเพิ่มไฟล์ผิดพลาด <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                             </button></div>';//not showing an alert box. 
-                          echo $alert;
+                          // echo $alert;
                           echo $sql10;
                       }
                   }
