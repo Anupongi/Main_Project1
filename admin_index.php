@@ -69,6 +69,7 @@ $conn1 = mysqli_connect($serverName,$userName,$userPassword,$dbName1);
 $conn2 = mysqli_connect($serverName,$userName,$userPassword,$dbName2);
 $conn3 = mysqli_connect($serverName,$userName,$userPassword,$dbName3);
 
+mysqli_set_charset($conn,"utf8");
 $sql = "SELECT * FROM user WHERE Userlevel IN ('02', '03') ";
 $query = mysqli_query($conn,$sql);
 $num_rows = mysqli_num_rows($query);
