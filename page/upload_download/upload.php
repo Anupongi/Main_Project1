@@ -268,6 +268,7 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <?php echo $alert; ?>
     <section class="content">
       <div class="container">
         <div class="row">
@@ -364,13 +365,13 @@
                               $alert = '<div class="alert alert-success" role="alert">เอกสารของคุณถูกเพิ่มเรียบร้อยแล้ว <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                             </button></div>';//not showing an alert box. 
-                            echo $alert;
+                            
                           }
                       } else {
                           $alert = '<div class="alert alert-danger" role="alert">การเพิ่มไฟล์ผิดพลาด <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                             </button></div>';//not showing an alert box. 
-                          echo $alert;
+                          
                       }
                   }
               }
