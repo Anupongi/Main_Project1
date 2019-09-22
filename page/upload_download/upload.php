@@ -40,30 +40,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
 </head>
 <body class="hold-transition sidebar-mini" style="font-family: 'Kanit', sans-serif;">
-<?php
-$serverName = "localhost";
-$userName = "root";
-$userPassword = "KZTuR1v3aaVA7t";
-$dbName = "user_login";
-$dbName1 = "post";
-
-
-$conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-$conn1 = mysqli_connect($serverName,$userName,$userPassword,$dbName1);
-
-
-$sql = "SELECT * FROM user";
-$query = mysqli_query($conn,$sql);
-$num_rows = mysqli_num_rows($query);
-
-$sql1 = "SELECT * FROM login_date";
-$query1 = mysqli_query($conn,$sql1);
-$num_rows1 = mysqli_num_rows($query1);
-
-$sql2 = "SELECT * FROM allpost";
-$query2 = mysqli_query($conn1,$sql2);
-$num_rows2 = mysqli_num_rows($query2);
-?>
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -295,11 +271,11 @@ $num_rows2 = mysqli_num_rows($query2);
     <section class="content">
     <?php
               // connect to the database
-              $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
-              mysqli_set_charset($con,"utf8");
-              $sql = "SELECT * FROM `files` ";
-              $result = mysqli_query($con, $sql);
-              $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
+              // $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+              // mysqli_set_charset($con,"utf8");
+              // $sql = "SELECT * FROM `files` ";
+              // $result = mysqli_query($con, $sql);
+              // $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
               // Uploads files
               if (isset($_POST['save'])) { // if save button on the form is clicked
@@ -362,7 +338,7 @@ $num_rows2 = mysqli_num_rows($query2);
                             echo $alert;
                           }
                       } else {
-                          echo "Failed to upload file.";
+                          echo "การเพิ่มไฟล์ผิดพลาด";
                       }
                   }
               }?>
