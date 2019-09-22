@@ -270,11 +270,11 @@
     <!-- Main content -->
     <?php
               // connect to the database
-              $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
-              mysqli_set_charset($con,"utf8");
-              $sql = "SELECT * FROM `files`";
-              $result = mysqli_query($con, $sql);
-              $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
+              // $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+              // mysqli_set_charset($con,"utf8");
+              // $sql = "SELECT * FROM `files`";
+              // $result = mysqli_query($con, $sql);
+              // $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
               // Uploads files
               if (isset($_POST['save'])) { // if save button on the form is clicked
