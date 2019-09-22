@@ -329,7 +329,7 @@
                           $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$file_name','$extension','$size', 0 ,'$id_admin','$date1','y')";
                           
                           $query4 = mysqli_query($con,$sql10);
-                          echo $sql10;
+                          // echo $sql10;
                       //     if ($query4) {
                               
                       //         $alert = '<div class="alert alert-success" role="alert">เอกสารของคุณถูกเพิ่มเรียบร้อยแล้ว <button type="button" class="close" data-dismiss="alert" aria-label="Close">
