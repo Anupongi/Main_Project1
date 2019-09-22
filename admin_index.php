@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: login/index.php');
+    header('Location: Login/index.php');
   }
   //กำหนดเวลาที่สามารถอยู่ในระบบ
   $sessionlifetime = 60; //กำหนดเป็นนาที
