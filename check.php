@@ -2,7 +2,11 @@
 session_start();
         if(isset($_POST['username_log'])){
 				//connection
-                  include("./connection/connection.php");
+              $serverName = "localhost";
+              $userName = "root";
+              $userPassword = "KZTuR1v3aaVA7t";
+              $dbName = "user_login";
+              $con = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 				//รับค่า user & password
                   $Username = $_POST['username_log'];
                   $Password = $_POST['password_log'];
