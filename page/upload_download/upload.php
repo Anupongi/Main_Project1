@@ -46,11 +46,11 @@ $userName = "root";
 $userPassword = "KZTuR1v3aaVA7t";
 $dbName = "user_login";
 $dbName1 = "post";
-$dbName2 = "file-management";
+
 
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 $conn1 = mysqli_connect($serverName,$userName,$userPassword,$dbName1);
-$conn2 = mysqli_connect($serverName,$userName,$userPassword,$dbName2);
+
 
 $sql = "SELECT * FROM user";
 $query = mysqli_query($conn,$sql);
@@ -295,7 +295,7 @@ $num_rows2 = mysqli_num_rows($query2);
     <section class="content">
     <?php
               // connect to the database
-              
+              $conn2 = mysqli_connect('localhost','root','KZTuR1v3aaVA7t','file-management');
               mysqli_set_charset($conn2,"utf8");
               $sql = "SELECT * FROM `files` ";
               $result = mysqli_query($conn2, $sql);
@@ -346,6 +346,7 @@ $num_rows2 = mysqli_num_rows($query2);
                   } else {
                       // move the uploaded (temporary) file to the specified destination
                       if (move_uploaded_file($file, $destination)) {
+                          $conn2 = mysqli_connect('localhost','root','KZTuR1v3aaVA7t','file-management');
                           $sql = "INSERT INTO `files` (`image`, `name`, `extension` , `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
                           $result = mysqli_query($conn2, $sql);
                           if (mysqli_query($conn2, $sql)) {
