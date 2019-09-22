@@ -295,10 +295,10 @@ $num_rows2 = mysqli_num_rows($query2);
     <section class="content">
     <?php
               // connect to the database
-              $conn2 = mysqli_connect('localhost','root','KZTuR1v3aaVA7t','file-management');
-              mysqli_set_charset($conn2,"utf8");
+              $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+              mysqli_set_charset($con,"utf8");
               $sql = "SELECT * FROM `files` ";
-              $result = mysqli_query($conn2, $sql);
+              $result = mysqli_query($con, $sql);
               $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
               // Uploads files
@@ -338,7 +338,10 @@ $num_rows2 = mysqli_num_rows($query2);
                       $file_image = '833px-PDF_file_icon.svg.png';
                   }elseif($file_name == 'zip'){
                       $file_image = 'www.downloadzen.com_.png';  
-                  }
+                  }elseif($file_name == 'doc'){
+                    $file_image = 'img src=.uploadsimgword-file-icon-8.png';  
+                  } 
+
                   if (!in_array($extension, ['zip', 'pdf', 'docx' ,'doc'])) {
                       echo "ไฟล์ที่คุณสามารถอัปโหลดได้คือ .zip, .pdf .docx or .doc";
                   } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 2Megabyte
@@ -346,10 +349,11 @@ $num_rows2 = mysqli_num_rows($query2);
                   } else {
                       // move the uploaded (temporary) file to the specified destination
                       if (move_uploaded_file($file, $destination)) {
-                          $conn2 = mysqli_connect('localhost','root','KZTuR1v3aaVA7t','file-management');
-                          $sql = "INSERT INTO `files` (`image`, `name`, `extension` , `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
+                          $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+                          mysqli_set_charset($con,"utf8"); 
+                          $sql = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension', $size, 0 ,'$id_admin' ,'$date1', 'y')";
                           
-                          $result = mysqli_query($conn2, $sql);
+                          $result = mysqli_query($con, $sql);
                           if ($result == 1) {
                               
                               $alert = '<div class="alert alert-success" role="alert">เอกสารของคุณถูกเพิ่มเรียบร้อยแล้ว <button type="button" class="close" data-dismiss="alert" aria-label="Close">
