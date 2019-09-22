@@ -10,7 +10,7 @@ session_start();
 
 //  }
 // }
-$connect = mysqli_connect("localhost", "root", "", "treatment");
+$connect = mysqli_connect("localhost", "root", "KZTuR1v3aaVA7t", "treatment");
 $id = $_GET['ID'];
 mysqli_set_charset($connect,"utf8");
 $sql = "SELECT * FROM `tb_treatment` WHERE `id` = $id" ;
