@@ -439,7 +439,7 @@ $per_page = 10;   // Per Page
                                                 "hideEasing": "linear",
                                                 "showMethod": "fadeIn",
                                                 "hideMethod": "fadeOut"
-                                                }'
+                                                }';
                                             echo "</script>";
                                         }
                                         }
