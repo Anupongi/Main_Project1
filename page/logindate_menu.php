@@ -365,7 +365,7 @@ $per_page = 10;   // Per Page
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-row">
+                                    <div class="form-row text-center">
                                         <div class="col">
                                             <button type="button" class="btn btn-primary">Primary</button>
                                         </div>
