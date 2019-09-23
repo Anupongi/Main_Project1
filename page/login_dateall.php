@@ -420,7 +420,7 @@ $per_page = 10;   // Per Page
                                         $dateend = $_POST['datetimepicker2'];
                                         
                                         $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate BETWEEN '$datestart' AND '$dateend'";
-                                        
+                                        echo $sql;
                                         $query = mysqli_query($conn,$sql);
                                         
                                         while ($d = mysqli_fetch_array($query)) {
@@ -480,7 +480,7 @@ $per_page = 10;   // Per Page
                                         if(isset($_POST['id_num'])){
                                           $id_user = $_POST['id_num'];
                                           $sql1 ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Username = '$id_user' ORDER BY `Lastdate` DESC";
-                                          echo $sql1;
+                                          // echo $sql1;
                                           $query = mysqli_query($conn,$sql1);
                                           while ($d = mysqli_fetch_array($query)) {
                                           $count = $count + 1;
