@@ -372,17 +372,6 @@ $per_page = 10;   // Per Page
                       <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy"  placeholder="xx/xx/xxxx" autocomplete="off">
                     </div>
                   </div>
-                  
-                   <div class="form-group col-md-4">
-                    <label for="exampleInputEmail1">ค้นหาวันที่</label>
-                    <input class="form-control col-md-8" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy"  placeholder="xx/xx/xxxx" autocomplete="off" >
-                    
-                  <!--</div>
-                  <div class="form-group col-md-5">
-                    <label for="exampleInputEmail1">ค้นหารหัสนักเรียน</label>
-                    <input class="form-control col-md-10" name="id_num" id="id_num" type="text">
-                  </div> -->
-
                   <div class="form-group col-md-3">
                     <button type="submit" class="btn btn-info">ค้นหา</button>
                   </div>
