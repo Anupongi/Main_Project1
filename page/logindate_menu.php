@@ -356,6 +356,21 @@ $per_page = 10;   // Per Page
 }
         </script>
       <div class="container" id="divDetail">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-row text-center">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary">ค้นหาจากช่วงวันที่</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary">ค้นหาจากวันที่</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-success">ค้นหาจากชื่อผู้ใช้</button>
+                        </div>
+                    </div>
+                </div>   
+            </div>
           <div class="row">
               <div class="col-md-12">
                     <div class="card">
@@ -363,21 +378,39 @@ $per_page = 10;   // Per Page
                             <h5>รายชื่อการลงชื่อเข้าใช้ทั้งหมด</h5>
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-row text-center">
-                                        <div class="col">
-                                            <button type="button" class="btn btn-primary">Primary</button>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" class="btn btn-secondary">Secondary</button>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" class="btn btn-success">Success</button>
-                                        </div>
-                                    </div>
-                                </div>   
-                            </div>
+                            <table align="center">
+                                <thead>
+                                    <tr>
+                                        <th width="120"> <div align="center">ลำดับ </div></th>
+                                        <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
+                                        <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
+                                        <th width="80"><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
+                                        <th width="100"><div align="center">เวลา</div></th>
+                                        <th width="71"> <div align="center">ลบ </div></th>
+                                    </tr>
+                                </thead>
+                                <?php
+                                $conn = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","user_login");
+                                mysqli_set_charset($conn, "utf8");
+                                $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
+                                // echo $sql;
+                                $query = mysqli_query($conn,$sql);
+                                $count = 0;
+                                while ($d = mysqli_fetch_array($query)) {
+                                $count = $count + 1;
+                                ?>
+                                    <tr>  
+                                        <td><?php echo $count;?></td>
+                                        <td><?php echo $d["Username"];?></td>
+                                        <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
+                                        <td><?php echo $d[3];?></td>
+                                        <td align="right"><?php echo $d[3];?></td>
+                                        <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                            </table>
                             
                         </div>    
                         <div class="card-footer text-muted text-center">
