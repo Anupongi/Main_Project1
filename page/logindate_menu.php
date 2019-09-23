@@ -358,7 +358,7 @@ $per_page = 10;   // Per Page
       <div class="container" id="divDetail">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="form-row text-center">
+                    <div class="form-row text-center " style="BORDER-BOTTOM: #b7deff 1px dashed;">
                         <div class="col">
                             <button type="button" class="btn btn-primary">ค้นหาจากช่วงวันที่</button>
                         </div>
