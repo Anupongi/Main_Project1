@@ -357,7 +357,8 @@ $per_page = 10;   // Per Page
         </script>
       <div class="container" id="divDetail">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
                     <div class="form-row text-center " style="BORDER-BOTTOM: #b7deff 1px dashed;BORDER-TOP: #b7deff 1px dashed;BORDER-LEFT: #b7deff 1px dashed;BORDER-RIGHT: #b7deff 1px dashed;">
                         <br>
                         <div class="col">
@@ -371,7 +372,8 @@ $per_page = 10;   // Per Page
                         </div>
                         <br>
                     </div>
-                </div>   
+                </div>
+                <div class="col-md-1"></div>   
             </div>
             <br>
             <br>
