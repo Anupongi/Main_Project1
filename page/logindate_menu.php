@@ -362,13 +362,13 @@ $per_page = 10;   // Per Page
                     <div class="form-row text-center " style="BORDER-BOTTOM: #b7deff 1px dashed;BORDER-TOP: #b7deff 1px dashed;BORDER-LEFT: #b7deff 1px dashed;BORDER-RIGHT: #b7deff 1px dashed;">
                         
                         <div class="col pt-4 pb-4">
-                            <button type="button" class="btn" style="background-color:Orange;color:white;">ค้นหาจากช่วงวันที่</button>
+                            <a herf="./login_datebyduration.php" class="btn" style="background-color:Orange;color:white;">ค้นหาจากช่วงวันที่</a>
                         </div>
                         <div class="col pt-4 pb-4">
-                            <button type="button" class="btn" style="background-color:hsl(147, 50%, 47%);color:white;">ค้นหาจากวันที่</button>
+                            <a herf="./login_datebydate.php" class="btn" style="background-color:hsl(147, 50%, 47%);color:white;">ค้นหาจากวันที่</a>
                         </div>
                         <div class="col pt-4 pb-4">
-                            <button type="button" class="btn" style="background-color:Tomato;color:white;">ค้นหาจากชื่อผู้ใช้</button>
+                            <a herf="./login_datebyname.php" class="btn" style="background-color:Tomato;color:white;">ค้นหาจากชื่อผู้ใช้</a>
                         </div>
                         
                     </div>
