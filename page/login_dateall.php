@@ -438,8 +438,8 @@ $per_page = 10;   // Per Page
                                         </tr>
                                         <?php
                                         }}else{
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username DESC ";
-                                          echo $sql;
+                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
+                                          // echo $sql;
                                           $query = mysqli_query($conn,$sql);
                                           while ($d = mysqli_fetch_array($query)) {
                                             $count = $count + 1;
