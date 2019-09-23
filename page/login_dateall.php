@@ -361,10 +361,10 @@ $per_page = 10;   // Per Page
               <div class="col-md-6">
               <form action="#" method="POST">
                 <div class="form-row">
-
+                  <label for="exampleInputEmail1">วันที่เริ่มต้น</label>
                   <div class="form-group col-md-9">
                     <div class="input-group">
-                      <label for="exampleInputEmail1">วันที่เริ่มต้น</label>
+                      
                       <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" required>
                         <div class="input-group-prepend">
                           <span class="input-group-text">ถึง</span>
