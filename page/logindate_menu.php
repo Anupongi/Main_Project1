@@ -357,129 +357,13 @@ $per_page = 10;   // Per Page
         </script>
       <div class="container" id="divDetail">
           <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-6">
-              <form action="#" method="POST">
-                <div class="form-row">
-                  <label for="exampleInputEmail1">ค้นหาวันที่เริ่มต้น - สิ้นสุด</label>
-                  <div class="form-group col-md-9">
-                    <div class="input-group">
-                      
-                      <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy"  placeholder="xx/xx/xxxx" autocomplete="off">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">ถึง</span>
-                        </div>
-                      <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy"  placeholder="xx/xx/xxxx" autocomplete="off">
-                    </div>
-                  </div>
-                  
-                   <div class="form-group col-md-4">
-                    <label for="exampleInputEmail1">ค้นหาวันที่</label>
-                    <input class="form-control col-md-8" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy"  placeholder="xx/xx/xxxx" autocomplete="off" >
-                    
-                  <!--</div>
-                  <div class="form-group col-md-5">
-                    <label for="exampleInputEmail1">ค้นหารหัสนักเรียน</label>
-                    <input class="form-control col-md-10" name="id_num" id="id_num" type="text">
-                  </div> -->
-
-                  <div class="form-group col-md-3">
-                    <button type="submit" class="btn btn-info">ค้นหา</button>
-                  </div>
-                </div>
-              </form>
-              </div>
-              <div class="col-md-3"></div>
-              <br>
-              <br>
               <div class="col-md-12">
                     <div class="card">
                         <div class="card-header text-center">
                             <h5>รายชื่อการลงชื่อเข้าใช้ทั้งหมด</h5>
                         </div>
                         <div class="card-body">
-                        <table align="center">
-                                        <thead>
-                                            <tr>
-                                                <th width="120"> <div align="center">ลำดับ </div></th>
-                                                <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
-                                                <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
-                                                <th width="80"><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
-                                                <th width="100"><div align="center">เวลา</div></th>
-                                                <th width="71"> <div align="center">ลบ </div></th>
-                                            </tr>
-                                        </thead>
-                                        <?php
-                                        $conn = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","user_login");
-                                        $count = 0;
-                                        mysqli_set_charset($conn, "utf8");
-                                        if(isset($_POST['datetimepicker1'])){
-
-                                        
-                                        $datestart = $_POST['datetimepicker1'];
-                                        $dateend = $_POST['datetimepicker2'];
-                                        
-                                        $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate BETWEEN '$datestart' AND '$dateend'  ORDER BY `Lastdate` DESC";
-                                        echo $sql;
-                                        $query = mysqli_query($conn,$sql);
-                                        
-                                        while ($d = mysqli_fetch_array($query)) {
-                                        
-                                          $count = $count + 1;
-                                        ?>
-                                        <tr>
-                                            
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $d["Username"];?></td>
-                                            <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
-                                            <td><?php echo $d[3];?></td>
-                                            <td align="right"><?php echo $d[3];?></td>
-                                            <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
-                                        </tr>
-                                        <?php
-                                        }}else{
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
-                                          // echo $sql;
-                                          $query = mysqli_query($conn,$sql);
-                                          while ($d = mysqli_fetch_array($query)) {
-                                            $count = $count + 1;
-                                        ?>
-                                        <tr>
-                                            
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $d["Username"];?></td>
-                                            <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
-                                            <td><?php echo $d[3];?></td>
-                                            <td align="right"><?php echo $d[3];?></td>
-                                            <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
-                                        </tr>
-                                        <?php
-                                          }
-                                          }
-                                        
-                                        if(isset($_POST['datetimepicker3'])){
-                                          $date1 = $_POST['datetimepicker3'];
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1' ORDER BY `Lastdate` DESC";
-                                          
-                                          $query = mysqli_query($conn,$sql);
-                                          while ($d = mysqli_fetch_array($query)) {
-                                          $count = $count + 1;
-                                        
-                                        ?>
-                                        <tr>
-                                            
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $d["Username"];?></td>
-                                            <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
-                                            <td><?php echo $d[3];?></td>
-                                            <td align="right"><?php echo $d[3];?></td>
-                                            <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
-                                        </tr>
-                                        <?php
-                                        }}
-                                        $count++;
-                                        ?>
-                                    </table>
+                        
                         </div>    
                         <div class="card-footer text-muted text-center">
 
