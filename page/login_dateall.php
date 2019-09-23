@@ -369,18 +369,17 @@ $per_page = 10;   // Per Page
                         <div class="input-group-prepend">
                           <span class="input-group-text">ถึง</span>
                         </div>
-                      <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" required>
+                      <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off">
                     </div>
                   </div>
                   
                   <div class="form-group col-md-9">
                     <label for="exampleInputEmail1">ค้นหาวันที่</label>
-                    <input class="form-control col-md-5" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" required>
-                  </div>
-                  <div class="form-group col-md-9">
+                    <input class="form-control col-md-5" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" >
                     <label for="exampleInputEmail1">ค้นหารหัสนักเรียน</label>
-                    <input class="form-control col-md-5" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" required>
+                    <input class="form-control col-md-5" name="datetimepicker3" id="datetimepicker2" type="text">
                   </div>
+                  
 
                   <div class="form-group col-md-3">
                     <button type="submit" class="btn btn-info">ค้นหา</button>
