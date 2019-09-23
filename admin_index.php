@@ -202,9 +202,9 @@ $num_rows5 = mysqli_num_rows($query5);
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./page/login_dateall.php" class="nav-link">
+                <a href="./page/logindate_menu.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>การลงชื่อเข้าใช้ประจำเดือน</p>
+                  <p>การลงชื่อเข้าใช้ทั้งหมด</p>
                 </a>
               </li>
             </ul>
