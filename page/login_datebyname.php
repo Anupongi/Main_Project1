@@ -359,24 +359,16 @@ $per_page = 10;   // Per Page
           <div class="row">
               <div class="col-md-3"></div>
               <div class="col-md-6">
-              <form action="#" method="POST">
-                <div class="form-row">
-                  <label for="exampleInputEmail1">ค้นหาวันที่เริ่มต้น - สิ้นสุด</label>
-                  <div class="form-group col-md-9">
-                    <div class="input-group">
-                      
-                      <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">ถึง</span>
+                <form action="" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" placeholder="รหัสผู้ใช้">
                         </div>
-                      <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
+                        <div class="form-group col-md-3">
+                            <button type="submit" class="btn btn-info">ค้นหา</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="form-group col-md-3">
-                    <button type="submit" class="btn btn-info">ค้นหา</button>
-                  </div>
-                </div>
-              </form>
+                </form>
               </div>
               <div class="col-md-3"></div>
               <br>
