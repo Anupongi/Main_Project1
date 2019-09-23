@@ -477,24 +477,25 @@ $per_page = 10;   // Per Page
                                         </tr>
                                         <?php
                                         }}
-                                        if(isset($_POST['id_num'])){
-                                          $id_user = $_POST['id_num'];
-                                          $sql1 ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Username = '$id_user' ORDER BY `Lastdate` DESC";
-                                          // echo $sql1;
-                                          $query = mysqli_query($conn,$sql1);
-                                          while ($d = mysqli_fetch_array($query)) {
-                                          $count = $count + 1;
-                                        ?>
-                                        <tr>
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $d["Username"];?></td>
-                                            <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
-                                            <td><?php echo $d[3];?></td>
-                                            <td align="right"><?php echo $d[3];?></td>
-                                            <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
-                                        </tr>
-                                        <?php
-                                          }}
+                                        // if(isset($_POST['id_num'])){
+                                        //   $id_user = $_POST['id_num'];
+                                        //   $sql1 ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Username = '$id_user' ORDER BY `Lastdate` DESC";
+                                        //   // echo $sql1;
+                                        //   $query = mysqli_query($conn,$sql1);
+                                        //   while ($d = mysqli_fetch_array($query)) {
+                                        //   $count = $count + 1;
+                                        // ?>
+                                        // <tr>
+                                        //     <td><?php echo $count;?></td>
+                                        //     <td><?php echo $d["Username"];?></td>
+                                        //     <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
+                                        //     <td><?php echo $d[3];?></td>
+                                        //     <td align="right"><?php echo $d[3];?></td>
+                                        //     <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+                                        // </tr>
+                                        // <?php
+                                        //   }}
+                                        
                                         $count++;
                                         ?>
                                     </table>
