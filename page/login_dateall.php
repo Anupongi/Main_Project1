@@ -375,7 +375,7 @@ $per_page = 10;   // Per Page
                   
                   <div class="form-group col-md-4">
                     <label for="exampleInputEmail1">ค้นหาวันที่</label>
-                    <input class="form-control col-md-7" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" >
+                    <input class="form-control col-md-8" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" >
                     
                   </div>
                   <div class="form-group col-md-5">
@@ -459,7 +459,7 @@ $per_page = 10;   // Per Page
                                         
                                         if(isset($_POST['datetimepicker3'])){
                                           $date1 = $_POST['datetimepicker3'];
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1'";
+                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1' DESC";
                                           
                                           $query = mysqli_query($conn,$sql);
                                           while ($d = mysqli_fetch_array($query)) {
