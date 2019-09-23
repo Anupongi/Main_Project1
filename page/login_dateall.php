@@ -459,7 +459,7 @@ $per_page = 10;   // Per Page
                                         
                                         if(isset($_POST['datetimepicker3'])){
                                           $date1 = $_POST['datetimepicker3'];
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1' DESC";
+                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1' ORDER BY `Lastdate` DESC";
                                           
                                           $query = mysqli_query($conn,$sql);
                                           while ($d = mysqli_fetch_array($query)) {
@@ -479,7 +479,7 @@ $per_page = 10;   // Per Page
                                         }}
                                         if(isset($_POST['id_num'])){
                                           $id_user = $_POST['id_num'];
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Username = '$id_user' DESC";
+                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Username = '$id_user'  ORDER BY `Lastdate` DESC";
                                           echo $sql;
                                           $query = mysqli_query($conn,$sql);
                                           while ($d = mysqli_fetch_array($query)) {
