@@ -372,8 +372,9 @@ $per_page = 10;   // Per Page
                       <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" required>
                     </div>
                   </div>
+                  <label for="exampleInputEmail1">วันที่สิ้นสุด</label>
                   <div class="form-group col-md-9">
-                    <label for="exampleInputEmail1">วันที่สิ้นสุด</label>
+                    
                     <input class="form-control col-md-5" name="datetimepicker3" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date; ?>" placeholder="xx/xx/xxxx" autocomplete="off" required>
                   </div>
                   <div class="form-group col-md-3">
