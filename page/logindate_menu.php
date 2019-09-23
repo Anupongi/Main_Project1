@@ -358,7 +358,7 @@ $per_page = 10;   // Per Page
       <div class="container" id="divDetail">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="form-row text-center " style="BORDER-BOTTOM: #b7deff 1px dashed;">
+                    <div class="form-row text-center " style="BORDER-BOTTOM: #b7deff 1px dashed;BORDER-TOP: #b7deff 1px dashed;BORDER-LEFT: #b7deff 1px dashed;BORDER-RIGHT: #b7deff 1px dashed;">
                         <div class="col">
                             <button type="button" class="btn btn-primary">ค้นหาจากช่วงวันที่</button>
                         </div>
@@ -371,6 +371,8 @@ $per_page = 10;   // Per Page
                     </div>
                 </div>   
             </div>
+            <br>
+            <br>
           <div class="row">
               <div class="col-md-12">
                     <div class="card">
