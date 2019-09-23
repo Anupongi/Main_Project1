@@ -361,8 +361,8 @@ $per_page = 10;   // Per Page
               <div class="col-md-6">
                 <form action="" method="post">
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" placeholder="รหัสผู้ใช้">
+                        <div class="form-group col-md-9">
+                            <input type="text" class="form-control" name="id_user" placeholder="รหัสผู้ใช้">
                         </div>
                         <div class="form-group col-md-3">
                             <button type="submit" class="btn btn-info">ค้นหา</button>
@@ -394,13 +394,12 @@ $per_page = 10;   // Per Page
                                         $conn = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","user_login");
                                         $count = 0;
                                         mysqli_set_charset($conn, "utf8");
-                                        if(isset($_POST['datetimepicker1'])){
+                                        if(isset($_POST['id_user'])){
 
                                         
-                                        $datestart = $_POST['datetimepicker1'];
-                                        $dateend = $_POST['datetimepicker2'];
+                                        $id_user = $_POST['id_user'];
                                         
-                                        $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate BETWEEN '$datestart' AND '$dateend'  ORDER BY `Lastdate` DESC";
+                                        $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Username = '$id_user'  ORDER BY `Lastdate` DESC";
                                         // echo $sql;
                                         $query = mysqli_query($conn,$sql);
                                         
@@ -437,27 +436,6 @@ $per_page = 10;   // Per Page
                                         <?php
                                           }
                                           }
-                                        
-                                        if(isset($_POST['datetimepicker3'])){
-                                          $date1 = $_POST['datetimepicker3'];
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1' ORDER BY `Lastdate` DESC";
-                                          
-                                          $query = mysqli_query($conn,$sql);
-                                          while ($d = mysqli_fetch_array($query)) {
-                                          $count = $count + 1;
-                                        
-                                        ?>
-                                        <tr>
-                                            
-                                            <td><?php echo $count;?></td>
-                                            <td><?php echo $d["Username"];?></td>
-                                            <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
-                                            <td><?php echo $d[3];?></td>
-                                            <td align="right"><?php echo $d[3];?></td>
-                                            <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
-                                        </tr>
-                                        <?php
-                                        }}
                                         $count++;
                                         ?>
                                     </table>
