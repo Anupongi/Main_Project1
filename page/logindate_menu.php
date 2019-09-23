@@ -362,13 +362,13 @@ $per_page = 10;   // Per Page
                     <div class="form-row text-center " style="BORDER-BOTTOM: #b7deff 1px dashed;BORDER-TOP: #b7deff 1px dashed;BORDER-LEFT: #b7deff 1px dashed;BORDER-RIGHT: #b7deff 1px dashed;">
                         
                         <div class="col pt-4 pb-4">
-                            <button type="button" class="btn" style="color:Orange;">ค้นหาจากช่วงวันที่</button>
+                            <button type="button" class="btn" style="background-color:Orange;color:white;">ค้นหาจากช่วงวันที่</button>
                         </div>
                         <div class="col pt-4 pb-4">
-                            <button type="button" class="btn" style="color:hsl(147, 50%, 47%);">ค้นหาจากวันที่</button>
+                            <button type="button" class="btn" style="background-color:hsl(147, 50%, 47%);color:white;">ค้นหาจากวันที่</button>
                         </div>
                         <div class="col pt-4 pb-4">
-                            <button type="button" class="btn" style="color:Tomato;">ค้นหาจากชื่อผู้ใช้</button>
+                            <button type="button" class="btn" style="background-color:Tomato;color:white;">ค้นหาจากชื่อผู้ใช้</button>
                         </div>
                         
                     </div>
