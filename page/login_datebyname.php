@@ -395,17 +395,20 @@ $per_page = 10;   // Per Page
                                         $count = 0;
                                         mysqli_set_charset($conn, "utf8");
                                         if(isset($_POST['id_user'])){
-
-                                        
                                         $id_user = $_POST['id_user'];
-                                        
+                                        $check = "SELECT * FROM `login_date` WHERE `Username` = '$id_user' ";
+                                        $result1 = mysqli_query($conn,$check);
+                                        $num=mysqli_num_rows($result1);
+                                        if($num > 0){
                                         $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Username = '$id_user'  ORDER BY `Lastdate` DESC";
                                         // echo $sql;
                                         $query = mysqli_query($conn,$sql);
                                         
                                         while ($d = mysqli_fetch_array($query)) {
                                         
-                                          $count = $count + 1;
+                                          $count = $count + 1;    
+                                        
+                                        
                                         ?>
                                         <tr>
                                             
@@ -417,7 +420,30 @@ $per_page = 10;   // Per Page
                                             <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
-                                        }}else{
+                                        }
+                                        }else{
+                                            echo "<script type='text/javascript'>";
+                                            echo 'toastr.options = {
+                                                "closeButton": false,
+                                                "debug": false,
+                                                "newestOnTop": false,
+                                                "progressBar": false,
+                                                "positionClass": "md-toast-top-right",
+                                                "preventDuplicates": false,
+                                                "onclick": null,
+                                                "showDuration": 300,
+                                                "hideDuration": 1000,
+                                                "timeOut": 5000,
+                                                "extendedTimeOut": 1000,
+                                                "showEasing": "swing",
+                                                "hideEasing": "linear",
+                                                "showMethod": "fadeIn",
+                                                "hideMethod": "fadeOut"
+                                                }'
+                                            echo "</script>";
+                                        }
+                                        }
+                                        else{
                                           $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
                                           // echo $sql;
                                           $query = mysqli_query($conn,$sql);
