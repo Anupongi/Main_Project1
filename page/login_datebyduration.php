@@ -365,11 +365,11 @@ $per_page = 10;   // Per Page
                   <div class="form-group col-md-9">
                     <div class="input-group">
                       
-                      <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy"  placeholder="xx/xx/xxxx" autocomplete="off">
+                      <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
                         <div class="input-group-prepend">
                           <span class="input-group-text">ถึง</span>
                         </div>
-                      <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy"  placeholder="xx/xx/xxxx" autocomplete="off">
+                      <input class="form-control col-md-5" name="datetimepicker2" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
                     </div>
                   </div>
                   <div class="form-group col-md-3">
