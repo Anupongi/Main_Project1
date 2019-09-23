@@ -363,17 +363,22 @@ $per_page = 10;   // Per Page
                             <h5>รายชื่อการลงชื่อเข้าใช้ทั้งหมด</h5>
                         </div>
                         <div class="card-body">
-                            <div class="form-row">
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary">Primary</button>
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-secondary">Secondary</button>
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-success">Success</button>
-                                </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <button type="button" class="btn btn-primary">Primary</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-secondary">Secondary</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-success">Success</button>
+                                        </div>
+                                    </div>
+                                </div>   
                             </div>
+                            
                         </div>    
                         <div class="card-footer text-muted text-center">
 
