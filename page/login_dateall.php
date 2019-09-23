@@ -419,7 +419,7 @@ $per_page = 10;   // Per Page
                                         $datestart = $_POST['datetimepicker1'];
                                         $dateend = $_POST['datetimepicker2'];
                                         
-                                        $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate BETWEEN '$datestart' AND '$dateend'";
+                                        $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate BETWEEN '$datestart' AND '$dateend'  ORDER BY `Lastdate` DESC";
                                         echo $sql;
                                         $query = mysqli_query($conn,$sql);
                                         
