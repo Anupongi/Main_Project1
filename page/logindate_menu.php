@@ -361,13 +361,13 @@ $per_page = 10;   // Per Page
                 <div class="col-md-10">
                     <div class="form-row text-center " style="BORDER-BOTTOM: #b7deff 1px dashed;BORDER-TOP: #b7deff 1px dashed;BORDER-LEFT: #b7deff 1px dashed;BORDER-RIGHT: #b7deff 1px dashed;">
                         
-                        <div class="col pt-5 pb-5">
+                        <div class="col pt-4 pb-4">
                             <button type="button" class="btn btn-primary">ค้นหาจากช่วงวันที่</button>
                         </div>
-                        <div class="col pt-5 pb-5">
+                        <div class="col pt-4 pb-4">
                             <button type="button" class="btn btn-secondary">ค้นหาจากวันที่</button>
                         </div>
-                        <div class="col pt-5 pb-5">
+                        <div class="col pt-4 pb-4">
                             <button type="button" class="btn btn-success">ค้นหาจากชื่อผู้ใช้</button>
                         </div>
                         
