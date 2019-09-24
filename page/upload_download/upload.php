@@ -315,7 +315,7 @@
             $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
             mysqli_set_charset($con,"utf8"); 
             $sql10 = "INSERT INTO `files`(`name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_input','$file_type','$file_size', 0 ,'$id_admin','$date1','y')";
-                          
+             $sql10;             
             $query4 = mysqli_query($con,$sql10);
             echo "ไฟล์ Upload เรียบร้อย";
            } else {
