@@ -362,12 +362,18 @@ $per_page = 10;   // Per Page
                 <form action="" method="post">
                     <div class="form-row">
                         <div class="col">
+                            <input type="text" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Last name">
+                        </div>
+                        <!-- <div class="col">
                             <label for="inputEmail4">ค้นหาวันที่</label>
                             <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
                             <div class="form-group col">
                                 <button type="submit" class="btn btn-info">ค้นหา</button>
                             </div>    
-                        </div>
+                        </div> -->
                     </div>
                 </form>
               </div>
@@ -397,7 +403,7 @@ $per_page = 10;   // Per Page
                                         mysqli_set_charset($conn, "utf8");
                                         if(isset($_POST['datetimepicker1'])){
                                         $datetimepicker1 = $_POST['datetimepicker1'];
-                                        $check = "SELECT * FROM `login_date` WHERE `Username` = '$datetimepicker1' ";
+                                        $check = "SELECT * FROM `login_date` WHERE `Lastdate` = '$datetimepicker1' ";
                                         $result1 = mysqli_query($conn,$check);
                                         $num=mysqli_num_rows($result1);
                                         if($num > 0){
