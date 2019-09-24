@@ -38,18 +38,19 @@ if (isset($_GET['file_id'])) {
     // echo $result1;
     $file = $download1 ; // Decode URL-encoded string
     $filepath = "./uploads/file/" . $file;
-    if(file_exists($filepath)) {
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($filepath));
-        flush(); // Flush system output buffer
-        readfile($filepath);
-        exit;
-    }
+    echo $filepath;
+    // if(file_exists($filepath)) {
+    //     header('Content-Description: File Transfer');
+    //     header('Content-Type: application/octet-stream');
+    //     header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
+    //     header('Expires: 0');
+    //     header('Cache-Control: must-revalidate');
+    //     header('Pragma: public');
+    //     header('Content-Length: ' . filesize($filepath));
+    //     flush(); // Flush system output buffer
+    //     readfile($filepath);
+    //     exit;
+    // }
     // $file = mysqli_fetch_array($result1);
     // $download = $file[0];
     // $file_path = './uploads/file/'.$download;
