@@ -366,7 +366,7 @@ $per_page = 10;   // Per Page
                             <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
                             
                         </div>
-                        <div class="col">
+                        <div class="form-group col">
                             <button type="submit" class="btn btn-info">ค้นหา</button>
                         </div>
                     </div>
