@@ -364,7 +364,6 @@ $per_page = 10;   // Per Page
                   <label for="exampleInputEmail1">ค้นหาวันที่เริ่มต้น - สิ้นสุด</label>
                   <div class="form-group col-md-9">
                     <div class="input-group">
-                      
                       <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
                         <div class="input-group-prepend">
                           <span class="input-group-text">ถึง</span>
