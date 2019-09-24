@@ -33,14 +33,15 @@ if (isset($_GET['file_id'])) {
     $sql1 = "SELECT  `name`  FROM `files` WHERE `id` = '$id' ";
     $result1 = mysqli_query($conn, $sql1);
 
-    $file = mysqli_fetch_array($result1);
-    $download = $file[0];
-    $file_path = './uploads/file/'.$download;
-    $filename = realpath($filepath);
-    header("Content-Type: application/octet-stream");
-    header("Content-Transfer-Encoding: Binary");
-    header('Content-Disposition: attachment; filename=' . basename($filename));
-    echo readfile($file_path);
+    echo $sql1;
+    // $file = mysqli_fetch_array($result1);
+    // $download = $file[0];
+    // $file_path = './uploads/file/'.$download;
+    // $filename = realpath($filepath);
+    // header("Content-Type: application/octet-stream");
+    // header("Content-Transfer-Encoding: Binary");
+    // header('Content-Disposition: attachment; filename=' . basename($filename));
+    // echo readfile($file_path);
 }    
     // $file = mysqli_fetch_array($result1);
     // $download = $file[0];
