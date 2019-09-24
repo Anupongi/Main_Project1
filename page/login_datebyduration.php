@@ -52,6 +52,13 @@ $dbName = "user_login";
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 $date = date('d/m/Y');
 mysqli_set_charset($conn, "utf8");
+if(isset($_POST['datetimepicker1'])){  
+  $datestart = $_POST['datetimepicker1'];
+  $dateend = $_POST['datetimepicker2'];
+
+}else{
+  
+}
 $sql = "SELECT * FROM `login_date`";
 $query = mysqli_query($conn,$sql);
 
