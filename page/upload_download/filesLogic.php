@@ -30,7 +30,7 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
 
     // fetch file to download from database
-    $sql1 = "SELECT * FROM `files` WHERE id=$id";
+    $sql1 = "SELECT * FROM `files` WHERE `id` = '$id' ";
     $result1 = mysqli_query($conn, $sql1);
 
     $file = mysqli_fetch_assoc($result1);
