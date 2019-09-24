@@ -360,7 +360,7 @@ $per_page = 10;   // Per Page
               <div class="col-md-3"></div>
               <div class="col-md-6">
                 <form action="" method="post">
-                    <div class="form-row">
+                    <div class="form-row text-center">
                         <label for="inputEmail4">ค้นหาวันที่</label>
                         <div class="form-group col pl-3">
                             <input class="form-control col-md-12" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
@@ -368,13 +368,6 @@ $per_page = 10;   // Per Page
                         <div class="form-group col">
                             <button type="submit" class="btn btn-info">ค้นหา</button>
                         </div>
-                        <!-- <div class="col">
-                            <label for="inputEmail4">ค้นหาวันที่</label>
-                            <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
-                            <div class="form-group col">
-                                <button type="submit" class="btn btn-info">ค้นหา</button>
-                            </div>    
-                        </div> -->
                     </div>
                 </form>
               </div>
