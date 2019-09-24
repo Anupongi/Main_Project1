@@ -39,12 +39,23 @@ if (isset($_GET['file_id'])) {
     if (file_exists($filepath)) {
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename=' . basename($filepath));
+        header('Content-Disposition: attachment; filename='.urldecode($filepath)); //ตรงนี้ก็ใส่ชื่อไฟล์ตามข้างบนไป
+        header('Content-Transfer-Encoding: binary');
         header('Expires: 0');
-        header('Cache-Control: must-revalidate');
+        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
         header('Pragma: public');
-        header('Content-Length: ' . filesize('./uploads/file/' . $_FILES['myfile']));
-        readfile('./uploads/file/'. $_FILES['myfile']);
+        header('Content-Length: ' . filesize($filepath)); // อันนี้ก็ไม่มีอะไร แจ้งให้ระบบทราบว่าไฟล์ของเราขนาดเท่าไร
+        ob_clean();
+        flush();
+        readfile($filepath);
+        // header('Content-Description: File Transfer');
+        // header('Content-Type: application/octet-stream');
+        // header('Content-Disposition: attachment; filename=' . basename($filepath));
+        // header('Expires: 0');
+        // header('Cache-Control: must-revalidate');
+        // header('Pragma: public');
+        // header('Content-Length: ' . filesize('./uploads/file/' . $_FILES['myfile']));
+        // readfile('./uploads/file/'. $_FILES['myfile']);
 
         // Now update downloads count
         $newCount = $file['downloads'] + 1;
