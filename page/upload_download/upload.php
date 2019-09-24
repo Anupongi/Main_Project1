@@ -269,6 +269,55 @@
 
     <!-- Main content -->
     <?php
+      
+      header('Content-Type: text/html; charset=utf-8');
+      
+      $File_Type_Allow = array("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.ms-excel"); //กำหนดประเภทของไฟล์ว่าไฟล์ประเภทใดบ้างที่อนุญาตให้ upload มาที่ Server
+      $Upload_Dir = "storage/Import";
+      $Max_File_Size = 200000000; //กำหนดขนาดไฟล์ที่ ใหญ่ที่สุดที่อนุญาตให้ upload มาที่ Server มีหน่วยเป็น byte
+      
+      function validate_form($file_input,$file_size,$file_type) { //เป็น function ที่เอาไว้ตรวจสอบว่าไฟล์ที่ผู้ใช้ upload ตรงตามเงื่อนไขหรือเปล่า
+         global $Max_File_Size,$File_Type_Allow;
+         if ($file_input == "none") {
+            $error = "ไม่มี file ให้ Upload";
+         } elseif ($file_size > $Max_File_Size) {
+            $error = "ขนาดไฟล์ใหญ่กว่า $Max_File_Size ไบต์";
+         } elseif (!check_type($file_type,$File_Type_Allow)) {
+            $error = "ไฟล์ประเภทนี้ ไม่อนุญาตให้ Upload <strong>อัพโหลดได้เฉพาะไฟล์นามสกุล .xlsx,.xls</strong>";
+         } else {
+            $error = false;
+         }
+      
+         return $error;
+      }
+      
+      function check_type($type_check) { //เป็น ฟังก์ชัน ที่ตรวจสอบว่า ไฟล์ที่ upload อยู่ในประเภทที่อนุญาตหรือเปล่า
+         global $File_Type_Allow;
+         for ($i=0;$i<count($File_Type_Allow);$i++) {
+            if ($File_Type_Allow[$i] == $type_check) {
+               return true;
+            }
+         }
+         return false;
+      }
+      
+      if ( $_FILES['file']['error'] ) { 
+          die($_FILES["file"]["error"]);
+      } 
+      
+      if($_FILES['file']){
+        $error_msg = validate_form($_FILES['file'],$_FILES['file']["size"],$_FILES['file']["type"]); // ตรวจดูว่า ไฟล์ที่ upload ตรงตามเงื่อนไขหรือเปล่า
+        if ($error_msg) {
+           die($error_msg);
+        } else {
+           if (copy($_FILES['file']['tmp_name'],$Upload_Dir."/".$_FILES['file']['name'])) { //ทำการ copy ไฟล์มาที่ Server
+            echo "ไฟล์ Upload เรียบร้อย";
+           } else {
+            die("ไฟล์ Upload มีปัญหา ".$_FILES["file"]["error"]);
+           }
+        }
+      }
+      
               // connect to the database
               // $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
               // mysqli_set_charset($con,"utf8");
@@ -277,78 +326,78 @@
               // $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
               // Uploads files
-              if (isset($_POST['save'])) { // if save button on the form is clicked
-                  // name of the uploaded file
-                  $filename = $_FILES['myfile']['name'];
-                  // destination of the file on the server
-                  $destination = './uploads/file/' . $filename;
+              // if (isset($_POST['save'])) { // if save button on the form is clicked
+              //     // name of the uploaded file
+              //     $filename = $_FILES['myfile']['name'];
+              //     // destination of the file on the server
+              //     $destination = './uploads/file/' . $filename;
 
-                  // get the file extension
-                  $extension = pathinfo($filename, PATHINFO_EXTENSION);
+              //     // get the file extension
+              //     $extension = pathinfo($filename, PATHINFO_EXTENSION);
 
-                  // the physical file on a temporary uploads directory on the server
-                  $file = $_FILES['myfile']['tmp_name'];
-                  $size = $_FILES['myfile']['size'];
-                  move_uploaded_file($file,"./uploads/file/".$filename);
-                  $file_name = $extension;
-                  $id_admin = $_SESSION["name"];
-                  date_default_timezone_set('asia/bangkok');
-                  $date=date("d-m-Y");
-                  function DateThai($strDate)
-	                {
-                  $strYear = date("Y",strtotime($strDate))+543;
-                  $strMonth= date("n",strtotime($strDate));
-                  $strDay= date("j",strtotime($strDate));
+              //     // the physical file on a temporary uploads directory on the server
+              //     $file = $_FILES['myfile']['tmp_name'];
+              //     $size = $_FILES['myfile']['size'];
+              //     move_uploaded_file($file,"./uploads/file/".$filename);
+              //     $file_name = $extension;
+              //     $id_admin = $_SESSION["name"];
+              //     date_default_timezone_set('asia/bangkok');
+              //     $date=date("d-m-Y");
+              //     function DateThai($strDate)
+	            //     {
+              //     $strYear = date("Y",strtotime($strDate))+543;
+              //     $strMonth= date("n",strtotime($strDate));
+              //     $strDay= date("j",strtotime($strDate));
 		
-                  $strMonthCut = Array("","มกราคม.","กุมภาพันธ์.","มีนาคม.","เมษายน.","พฤษภาคม.","มิถุนายน.","กรกฎาคม.","สิงหาคม.","กันยายน.","ตุลาคม.","พฤศจิกายน.","ธันวาคม.");
-                  $strMonthThai=$strMonthCut[$strMonth];
-                  return "$strDay $strMonthThai $strYear";
-	                }
+              //     $strMonthCut = Array("","มกราคม.","กุมภาพันธ์.","มีนาคม.","เมษายน.","พฤษภาคม.","มิถุนายน.","กรกฎาคม.","สิงหาคม.","กันยายน.","ตุลาคม.","พฤศจิกายน.","ธันวาคม.");
+              //     $strMonthThai=$strMonthCut[$strMonth];
+              //     return "$strDay $strMonthThai $strYear";
+	            //     }
 
-                  $strDate = $date;
-                  $date1 = DateThai($strDate);
+              //     $strDate = $date;
+              //     $date1 = DateThai($strDate);
                   
-                  if($file_name == 'docx'){
-                    $file_image = 'img src=.uploadsimgword-file-icon-8.png';
-                  }elseif($file_name == 'pdf'){
-                      $file_image = '833px-PDF_file_icon.svg.png';
-                  }elseif($file_name == 'zip'){
-                      $file_image = 'www.downloadzen.com_.png';  
-                  }elseif($file_name == 'doc'){
-                    $file_image = 'img src=.uploadsimgword-file-icon-8.png';  
-                  } 
+              //     if($file_name == 'docx'){
+              //       $file_image = 'img src=.uploadsimgword-file-icon-8.png';
+              //     }elseif($file_name == 'pdf'){
+              //         $file_image = '833px-PDF_file_icon.svg.png';
+              //     }elseif($file_name == 'zip'){
+              //         $file_image = 'www.downloadzen.com_.png';  
+              //     }elseif($file_name == 'doc'){
+              //       $file_image = 'img src=.uploadsimgword-file-icon-8.png';  
+              //     } 
 
-                  if (!in_array($extension, ['zip', 'pdf', 'docx' ,'doc'])) {
-                      echo "ไฟล์ที่คุณสามารถอัปโหลดได้คือ .zip, .pdf .docx or .doc";
-                  } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 2Megabyte
-                      echo "ไฟล์มีขนาดใหญ่เกินไป!";
-                  } else {
-                      // move the uploaded (temporary) file to the specified destination
+              //     if (!in_array($extension, ['zip', 'pdf', 'docx' ,'doc'])) {
+              //         echo "ไฟล์ที่คุณสามารถอัปโหลดได้คือ .zip, .pdf .docx or .doc";
+              //     } elseif ($_FILES['myfile']['size'] > 1000000) { // file shouldn't be larger than 2Megabyte
+              //         echo "ไฟล์มีขนาดใหญ่เกินไป!";
+              //     } else {
+              //         // move the uploaded (temporary) file to the specified destination
 
 
-                          $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
-                          mysqli_set_charset($con,"utf8"); 
-                          $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension','$size', 0 ,'$id_admin','$date1','y')";
+              //             $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+              //             mysqli_set_charset($con,"utf8"); 
+              //             $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension','$size', 0 ,'$id_admin','$date1','y')";
                           
-                          $query4 = mysqli_query($con,$sql10);
+              //             $query4 = mysqli_query($con,$sql10);
                           
-                          if ($query4) {
+              //             if ($query4) {
                               
-                              $alert = '<div class="alert alert-success" role="alert">เอกสารของคุณถูกเพิ่มเรียบร้อยแล้ว <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                            </button></div>';//not showing an alert box. 
-                            echo $alert;
-                          }
-                          else {
-                          $alert = '<div class="alert alert-danger" role="alert">การเพิ่มไฟล์ผิดพลาด <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                            </button></div>';//not showing an alert box. 
-                          echo $alert;
+              //                 $alert = '<div class="alert alert-success" role="alert">เอกสารของคุณถูกเพิ่มเรียบร้อยแล้ว <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              //                       <span aria-hidden="true">&times;</span>
+              //               </button></div>';//not showing an alert box. 
+              //               echo $alert;
+              //             }
+              //             else {
+              //             $alert = '<div class="alert alert-danger" role="alert">การเพิ่มไฟล์ผิดพลาด <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              //                       <span aria-hidden="true">&times;</span>
+              //               </button></div>';//not showing an alert box. 
+              //             echo $alert;
                           
-                          }
-                    }
-              }
-              ?>
+              //             }
+              //       }
+              // }
+            ?>
     
     <section class="content">
       <div class="container">
@@ -361,7 +410,7 @@
               </div>
               <div class="card-body">
                 <form action="./upload.php" method="post" enctype="multipart/form-data" >
-                  <div class="input-group mb-3">
+                  <!-- <div class="input-group mb-3">
                     <div class="custom-file">
                       <input type="file" class="custom-file-input" id="inputGroupFile02" name="myfile">
                       <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
@@ -369,7 +418,9 @@
                     <div class="input-group-append">
                       <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
                     </div>
-                  </div>
+                  </div> -->
+                  <input type="file" name="file" />
+                  <input type="submit" value="Upload" />
                   <button type="submit" name="save">upload</button>
                   <br>
                   
