@@ -33,7 +33,7 @@ if (isset($_GET['file_id'])) {
     $sql1 = "SELECT  `name`  FROM `files` WHERE `id` = '$id' ";
     $result1 = mysqli_query($conn, $sql1);
 
-    echo $sql1;
+    echo $result1;
     // $file = mysqli_fetch_array($result1);
     // $download = $file[0];
     // $file_path = './uploads/file/'.$download;
