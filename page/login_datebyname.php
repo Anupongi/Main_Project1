@@ -361,6 +361,7 @@ $per_page = 10;   // Per Page
               <div class="col-md-6">
                 <form action="" method="post">
                     <div class="form-row">
+                        <label for="exampleInputEmail1">ค้นหารหัสผู้ใช้</label>
                         <div class="form-group col-md-9">
                             <input type="text" class="form-control" name="id_user" placeholder="รหัสผู้ใช้">
                         </div>
