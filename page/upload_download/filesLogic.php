@@ -30,6 +30,7 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
 
     // fetch file to download from database
+    mysqli_set_charset($conn,"utf8");
     $sql1 = "SELECT  `name`  FROM `files` WHERE `id` = '$id' ";
     $result1 = mysqli_query($conn, $sql1);
     $download = mysqli_fetch_array($result1);
