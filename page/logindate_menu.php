@@ -52,7 +52,7 @@ $dbName = "user_login";
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 $date = date('d/m/Y');
 mysqli_set_charset($conn, "utf8");
-$sql = "SELECT * FROM `login_date` WHERE `Lastdate` = '$date' ";
+$sql = "SELECT * FROM `login_date`";
 $query = mysqli_query($conn,$sql);
 
 $num_rows = mysqli_num_rows($query);
@@ -221,7 +221,7 @@ $per_page = 10;   // Per Page
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./treatment/treatment_frm.php" class="nav-link">
+                <a href="../treatment/treatment_frm.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข้อมูลเวชภัณฑ์ยา</p>
                 </a>
@@ -447,6 +447,30 @@ $per_page = 10;   // Per Page
                                 }
                                 ?>
                             </table>
+                            <br><br>
+                            Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
+                            <?php
+                            if($prev_page)
+                            {
+                              echo " <a href='$_SERVER[SCRIPT_NAME]?Page=$prev_page'><< Back</a> ";
+                            }
+                            
+                            for($i=1; $i<=$num_pages; $i++){
+                              if($i != $page)
+                              {
+                                echo "[ <a href='$_SERVER[SCRIPT_NAME]?Page=$i'>$i</a> ]";
+                              }
+                              else
+                              {
+                                echo "<b> $i </b>";
+                              }
+                            }
+                            if($page!=$num_pages)
+                            {
+                              echo " <a href ='$_SERVER[SCRIPT_NAME]?Page=$next_page'>Next>></a> ";
+                            }
+                            $conn = null;
+                            ?>
                             
                         </div>    
                         <div class="card-footer text-muted text-center">

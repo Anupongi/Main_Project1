@@ -221,7 +221,7 @@ $per_page = 10;   // Per Page
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./treatment/treatment_frm.php" class="nav-link">
+                <a href="../treatment/treatment_frm.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข้อมูลเวชภัณฑ์ยา</p>
                 </a>
