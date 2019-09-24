@@ -361,13 +361,11 @@ $per_page = 10;   // Per Page
               <div class="col-md-6">
                 <form action="" method="post">
                     <div class="form-row">
-                        <label for="exampleInputEmail1">ค้นหารหัสผู้ใช้</label>
-                        <div class="form-group col-md-9">
-                          <div class="input-group">
-                            <input type="text" class="form-control col-md-6" name="id_user" placeholder="รหัสผู้ใช้">
-                          </div>
+                        <label for="inputEmail4" class="pl-5">ค้นหารหัสผู้ใช้</label>
+                        <div class="form-group col pl-4">
+                            <input type="text" name="id_user" id="" placeholder="รหัสผู้ใช้" autocomplete="off">
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col">
                             <button type="submit" class="btn btn-info">ค้นหา</button>
                         </div>
                     </div>
@@ -426,7 +424,7 @@ $per_page = 10;   // Per Page
                                         }
                                         }else{
                                             echo "<script type='text/javascript'>";
-				                            echo "alert('ผิดพลาด ไม่พบชื่อผู้ใช้นี้');";
+				                            echo "alert('ขออภัยค่ะ!! ไม่พบชื่อผู้ใช้นี้');";
 				                            echo "window.location='./login_datebyname.php';";
 			                                echo "</script>";
                                         }
@@ -445,7 +443,7 @@ $per_page = 10;   // Per Page
                                             <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
                                             <td><?php echo $d[3];?></td>
                                             <td align="right"><?php echo $d[3];?></td>
-                                            <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"> <a href="./del.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
                                           }
