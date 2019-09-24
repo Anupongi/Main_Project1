@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <?php
 $conn = mysqli_connect('localhost', 'root', 'KZTuR1v3aaVA7t', 'file-management');
-$sql = "SELECT * FROM files";
+$sql = "SELECT * FROM `files`";
 mysqli_set_charset($conn,"utf8");
 $result = mysqli_query($conn, $sql);
 $d = mysqli_fetch_array($result);
@@ -30,11 +30,11 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
 
     // fetch file to download from database
-    $sql1 = "SELECT * FROM files WHERE id=$id";
+    $sql1 = "SELECT * FROM `files` WHERE id=$id";
     $result1 = mysqli_query($conn, $sql1);
 
     $file = mysqli_fetch_assoc($result1);
-    $filepath = './uploads/file/' . $file['name'];
+    $filepath = './uploads/file/'. $file['name'];
     if (file_exists($filepath)) {
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
@@ -43,7 +43,7 @@ if (isset($_GET['file_id'])) {
         header('Cache-Control: must-revalidate');
         header('Pragma: public');
         header('Content-Length: ' . filesize('./uploads/' . $file['name']));
-        readfile('./uploads/' . $file['name']);
+        readfile('./uploads/file/' . $file['name']);
 
         // Now update downloads count
         $newCount = $file['downloads'] + 1;
