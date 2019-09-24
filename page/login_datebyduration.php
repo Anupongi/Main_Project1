@@ -52,7 +52,7 @@ $dbName = "user_login";
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 $date = date('d/m/Y');
 mysqli_set_charset($conn, "utf8");
-$sql = "SELECT * FROM `login_date` WHERE `Lastdate` BETWEEN '$datestart' AND '$dateend'  ORDER BY `Lastdate` DESC ";
+$sql = "SELECT * FROM `login_date`";
 $query = mysqli_query($conn,$sql);
 
 $num_rows = mysqli_num_rows($query);
