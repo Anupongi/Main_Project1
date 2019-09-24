@@ -271,7 +271,8 @@
     <?php
       
       header('Content-Type: text/html; charset=utf-8');
-      
+      $date1 = date('d/m/Y');
+      $id_admin = $_SESSION["name"];
       $File_Type_Allow = array("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.ms-excel"); //กำหนดประเภทของไฟล์ว่าไฟล์ประเภทใดบ้างที่อนุญาตให้ upload มาที่ Server
       $Upload_Dir = "./uploads/file/";
       $Max_File_Size = 200000000; //กำหนดขนาดไฟล์ที่ ใหญ่ที่สุดที่อนุญาตให้ upload มาที่ Server มีหน่วยเป็น byte
@@ -311,6 +312,11 @@
            die($error_msg);
         } else {
            if (copy($_FILES['file']['tmp_name'],$Upload_Dir."/".$_FILES['file']['name'])) { //ทำการ copy ไฟล์มาที่ Server
+            $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+            mysqli_set_charset($con,"utf8"); 
+            $sql10 = "INSERT INTO `files`(`name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_input','$file_type','$file_size', 0 ,'$id_admin','$date1','y')";
+                          
+            $query4 = mysqli_query($con,$sql10);
             echo "ไฟล์ Upload เรียบร้อย";
            } else {
             die("ไฟล์ Upload มีปัญหา ".$_FILES["file"]["error"]);
