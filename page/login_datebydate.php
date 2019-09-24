@@ -362,10 +362,10 @@ $per_page = 10;   // Per Page
                 <form action="" method="post">
                     <div class="form-row">
                         <label for="inputEmail4">ค้นหาวันที่</label>
-                        <div class="form-group col-md-9">
+                        <div class="form-group col">
                             <input class="form-control col-md-5" name="datetimepicker1" id="datetimepicker2" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
                         </div>
-                        <div class="col">
+                        <div class="form-group col">
                             <input type="text" class="form-control" placeholder="Last name">
                         </div>
                         <!-- <div class="col">
