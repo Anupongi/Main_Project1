@@ -42,7 +42,7 @@ if (isset($_GET['file_id'])) {
         header('Expires: 0');
         header('Cache-Control: must-revalidate');
         header('Pragma: public');
-        header('Content-Length: ' . filesize('./uploads/' . $file['name']));
+        header('Content-Length: ' . filesize('./uploads/file/' . $file['name']));
         readfile('./uploads/file/'. $file['name']);
 
         // Now update downloads count
