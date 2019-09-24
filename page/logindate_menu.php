@@ -447,7 +447,7 @@ $per_page = 10;   // Per Page
                                 }
                                 ?>
                             </table>
-                            <br><br>
+                            <br>
                             Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
                             <?php
                             if($prev_page)
@@ -471,7 +471,12 @@ $per_page = 10;   // Per Page
                             }
                             $conn = null;
                             ?>
-                            
+                            <div class="row">
+                                <div class="col-9"></div>
+                                <div class="col-3">
+                                    <a href="../Exportfile/export.php" class="btn btn-success"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
+                                </div>
+                            </div>
                         </div>    
                         <div class="card-footer text-muted text-center">
 
