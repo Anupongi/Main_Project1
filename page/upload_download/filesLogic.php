@@ -60,7 +60,9 @@ if (isset($_GET['file_id'])) {
            header("Content-Transfer-Encoding: binary");
            header("Content-Length: ".@filesize($filename));
            set_time_limit(0);
-           @readfile("$filename") or die("File not found.");
+        //    @readfile("$filename") or die("File not found.");
+            header('Content-Length: ' . @filesize($filename));
+            readfile('./uploads/file/'. $filename);
     // if (file_exists($filepath)) {
         
         // header('Content-Description: File Transfer');
