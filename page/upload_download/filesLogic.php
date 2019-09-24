@@ -43,12 +43,12 @@ if (isset($_GET['file_id'])) {
         header('Cache-Control: must-revalidate');
         header('Pragma: public');
         header('Content-Length: ' . filesize('./uploads/' . $file['name']));
-        readfile('./uploads/file/' . $file['name']);
+        readfile('./uploads/file/'. $file['name']);
 
         // Now update downloads count
         $newCount = $file['downloads'] + 1;
         
-        $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
+        $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
         mysqli_query($conn, $updateQuery);
         exit;
     }
