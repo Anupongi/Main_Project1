@@ -363,7 +363,9 @@ $per_page = 10;   // Per Page
                     <div class="form-row">
                         <label for="exampleInputEmail1">ค้นหาวันที่</label>
                         <div class="form-group col-md-9">
-                            <input class="form-control col-md-5" name="datetimepicker1" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
+                            <div class="input-group">
+                                <input class="form-control col-md-5" name="datetimepicker1" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" value="<?php echo $date ?>" placeholder="xx/xx/xxxx" autocomplete="off">
+                            </div>
                         </div>
                         <div class="form-group col-md-3">
                             <button type="submit" class="btn btn-info">ค้นหา</button>
