@@ -222,6 +222,30 @@ $per_page = 10;   // Per Page
               </li>
             </ul>
           </li>
+          <li class="nav-header">ประวัติการรักษา</li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                ประวัติการรักษา
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../treatment/treatment.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลประวัติการรักษา</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../treatment/treatment_list1.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>ประวัติการรักษาทั้งหมด</p>
+                </a>
+              </li>
+              </ul>
+            </li>
           <li class="nav-header">ข่าวประชาสัมพันธ์</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
