@@ -33,8 +33,9 @@ if (isset($_GET['file_id'])) {
     $sql1 = "SELECT `name` FROM `files` WHERE `id` = '$id' ";
     $result1 = mysqli_query($conn, $sql1);
 
+    
     $file = mysqli_fetch_assoc($result1);
-    $filepath = './uploads/file/'. $file['name'];
+    $filepath = './uploads/file/'. $_FILES['myfile'];
     if (file_exists($filepath)) {
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
@@ -42,8 +43,8 @@ if (isset($_GET['file_id'])) {
         header('Expires: 0');
         header('Cache-Control: must-revalidate');
         header('Pragma: public');
-        header('Content-Length: ' . filesize('./uploads/file/' . $file['name']));
-        readfile('./uploads/file/'. $file['name']);
+        header('Content-Length: ' . filesize('./uploads/file/' . $_FILES['myfile']));
+        readfile('./uploads/file/'. $_FILES['myfile']);
 
         // Now update downloads count
         $newCount = $file['downloads'] + 1;
