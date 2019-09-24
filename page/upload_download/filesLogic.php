@@ -33,37 +33,45 @@ if (isset($_GET['file_id'])) {
     $sql1 = "SELECT  `name`  FROM `files` WHERE `id` = '$id' ";
     $result1 = mysqli_query($conn, $sql1);
 
-    
     $file = mysqli_fetch_array($result1);
     $download = $file[0];
-    $filepath = './uploads/file/'. $download;
+    $file_path = './uploads/file/'.$download;
     $filename = realpath($filepath);
-           $file_extension = strtolower(substr(strrchr($filename,"."),1));
-           switch ($file_extension) {
-               case "pdf": $ctype="application/pdf"; break;
-               case "exe": $ctype="application/octet-stream"; break;
-               case "zip": $ctype="application/zip"; break;
-               case "doc": $ctype="application/msword"; break;
-               case "xls": $ctype="application/vnd.ms-excel"; break;
-               case "ppt": $ctype="application/vnd.ms-powerpoint"; break;
-               default: $ctype="application/force-download";
-           }
-           if (!file_exists($filename)) {
-               die("NO FILE HERE");
-           }
-           header("Pragma: public");
-           header("Expires: 0");
-           header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-           header("Cache-Control: private",false);
-           header("Content-Type: $ctype");
-           header("Content-Disposition: attachment; filename="".basename($filename)."";");
-           header("Content-Transfer-Encoding: binary");
-        //    header("Content-Length: ".@filesize($filename));
-           set_time_limit(0);
-        //    @readfile("$filename") or die("File not found.");
-            header('Content-Length: ' . filesize('./uploads/file/' . $filename));
-            // header('Content-Length: ' . @filesize($filename));
-            readfile('./uploads/file/'. $filename);
+    header("Content-Type: application/octet-stream");
+    header("Content-Transfer-Encoding: Binary");
+    header('Content-Disposition: attachment; filename=' . basename($filename));
+    echo readfile($file_path);
+}    
+    // $file = mysqli_fetch_array($result1);
+    // $download = $file[0];
+    // $filepath = './uploads/file/'. $download;
+    // $filename = realpath($filepath);
+    //        $file_extension = strtolower(substr(strrchr($filename,"."),1));
+    //        switch ($file_extension) {
+    //            case "pdf": $ctype="application/pdf"; break;
+    //            case "exe": $ctype="application/octet-stream"; break;
+    //            case "zip": $ctype="application/zip"; break;
+    //            case "doc": $ctype="application/msword"; break;
+    //            case "xls": $ctype="application/vnd.ms-excel"; break;
+    //            case "ppt": $ctype="application/vnd.ms-powerpoint"; break;
+    //            default: $ctype="application/force-download";
+    //        }
+    //        if (!file_exists($filename)) {
+    //            die("NO FILE HERE");
+    //        }
+    //        header("Pragma: public");
+    //        header("Expires: 0");
+    //        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+    //        header("Cache-Control: private",false);
+    //        header("Content-Type: $ctype");
+    //        header("Content-Disposition: attachment; filename="".basename($filename)."";");
+    //        header("Content-Transfer-Encoding: binary");
+    //     //    header("Content-Length: ".@filesize($filename));
+    //        set_time_limit(0);
+    //     //    @readfile("$filename") or die("File not found.");
+    //         header('Content-Length: ' . filesize('./uploads/file/' . $filename));
+    //         // header('Content-Length: ' . @filesize($filename));
+    //         readfile('./uploads/file/'. $filename);
     // if (file_exists($filepath)) {
         
         // header('Content-Description: File Transfer');
@@ -83,4 +91,4 @@ if (isset($_GET['file_id'])) {
         // exit;
     //}
 
-}
+
