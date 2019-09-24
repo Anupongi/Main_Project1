@@ -273,7 +273,7 @@
       header('Content-Type: text/html; charset=utf-8');
       
       $File_Type_Allow = array("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.ms-excel"); //กำหนดประเภทของไฟล์ว่าไฟล์ประเภทใดบ้างที่อนุญาตให้ upload มาที่ Server
-      $Upload_Dir = "storage/Import";
+      $Upload_Dir = "./uploads/file/";
       $Max_File_Size = 200000000; //กำหนดขนาดไฟล์ที่ ใหญ่ที่สุดที่อนุญาตให้ upload มาที่ Server มีหน่วยเป็น byte
       
       function validate_form($file_input,$file_size,$file_type) { //เป็น function ที่เอาไว้ตรวจสอบว่าไฟล์ที่ผู้ใช้ upload ตรงตามเงื่อนไขหรือเปล่า
