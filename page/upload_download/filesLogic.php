@@ -30,24 +30,39 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
 
     // fetch file to download from database
-    $sql1 = "SELECT `name` FROM `files` WHERE `id` = '$id' ";
+    $sql1 = "SELECT  `name`  FROM `files` WHERE `id` = '$id' ";
     $result1 = mysqli_query($conn, $sql1);
 
     
-    $file = mysqli_fetch_assoc($result1);
-    $filepath = './uploads/file/'. $_FILES['name'];
-    if (file_exists($filepath)) {
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename='.urldecode($filepath)); //ตรงนี้ก็ใส่ชื่อไฟล์ตามข้างบนไป
-        header('Content-Transfer-Encoding: binary');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($filepath)); // อันนี้ก็ไม่มีอะไร แจ้งให้ระบบทราบว่าไฟล์ของเราขนาดเท่าไร
-        ob_clean();
-        flush();
-        readfile($filepath);
+    $file = mysqli_fetch_array($result1);
+    $download = $file[0];
+    $filepath = './uploads/file/'. $download;
+    $filename = realpath($filepath);
+           $file_extension = strtolower(substr(strrchr($filename,"."),1));
+           switch ($file_extension) {
+               case "pdf": $ctype="application/pdf"; break;
+               case "exe": $ctype="application/octet-stream"; break;
+               case "zip": $ctype="application/zip"; break;
+               case "doc": $ctype="application/msword"; break;
+               case "xls": $ctype="application/vnd.ms-excel"; break;
+               case "ppt": $ctype="application/vnd.ms-powerpoint"; break;
+               default: $ctype="application/force-download";
+           }
+           if (!file_exists($filename)) {
+               die("NO FILE HERE");
+           }
+           header("Pragma: public");
+           header("Expires: 0");
+           header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+           header("Cache-Control: private",false);
+           header("Content-Type: $ctype");
+           header("Content-Disposition: attachment; filename="".basename($filename)."";");
+           header("Content-Transfer-Encoding: binary");
+           header("Content-Length: ".@filesize($filename));
+           set_time_limit(0);
+           @readfile("$filename") or die("File not found.");
+    // if (file_exists($filepath)) {
+        
         // header('Content-Description: File Transfer');
         // header('Content-Type: application/octet-stream');
         // header('Content-Disposition: attachment; filename=' . basename($filepath));
@@ -58,11 +73,11 @@ if (isset($_GET['file_id'])) {
         // readfile('./uploads/file/'. $_FILES['myfile']);
 
         // Now update downloads count
-        $newCount = $file['downloads'] + 1;
+        // $newCount = $file['downloads'] + 1;
         
-        $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
-        mysqli_query($conn, $updateQuery);
-        exit;
-    }
+        // $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
+        // mysqli_query($conn, $updateQuery);
+        // exit;
+    //}
 
 }
