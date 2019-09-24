@@ -34,7 +34,7 @@ if (isset($_GET['file_id'])) {
     $result1 = mysqli_query($conn, $sql1);
 
     $file = mysqli_fetch_assoc($result1);
-    $filepath = './uploads/file' . $file['name'];
+    $filepath = './uploads/file/' . $file['name'];
     if (file_exists($filepath)) {
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
