@@ -325,11 +325,10 @@ mysqli_set_charset($conn,"utf8");
                   <div class="card mb-3" style="max-width: 550px;">
                     <div class="row no-gutters">
                     
-                      <div class="col-md-5" style="margin-top:2%;margin-bottom:2%;">
-                        
-                        <img src="./uploads/img/<?php echo $d[1];?>" class="card-img" height="90" width="90;" style="right: 0px; padding: 10px;">
+                      <div class="col" style="margin-top:5%;margin-bottom:2%;margin-left:2%;">
+                        <img src="./uploads/img/<?php echo $d[1];?>" class="card-img img-fluid" style="right: 0px; padding: 10px; max-width:128px;">
                       </div>
-                      <div class="col-md-7">
+                      <div class="col-10">
                         <div class="card-body">
                           <h6 class="card-title" style="font-size:16px">เรื่อง : <?php echo $d[2]; ?></h6>
                           <h6 style="font-size:14px">โพสต์โดย : <?php echo $d[6]; ?></h6>
