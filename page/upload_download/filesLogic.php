@@ -37,7 +37,7 @@ if (isset($_GET['file_id'])) {
     $download1 = $download[0];
     $file = urldecode($download1); // Decode URL-encoded string
     $filepath = "./uploads/file/" . $file;
-    
+
     if(file_exists($filepath)) {
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
@@ -48,6 +48,12 @@ if (isset($_GET['file_id'])) {
         header('Content-Length: ' . filesize($filepath));
         flush(); // Flush system output buffer
         readfile($filepath);
+        exit;
+
+        // Now update downloads count
+        $newCount = $file['downloads'] + 1;
+        $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
+        mysqli_query($conn, $updateQuery);
         exit;
     }
 
