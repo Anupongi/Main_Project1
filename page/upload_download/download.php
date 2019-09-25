@@ -327,7 +327,7 @@ mysqli_set_charset($conn,"utf8");
                     
                       <div class="col-md-5" style="margin-top:2%;margin-bottom:2%;">
                         
-                        <img src="./uploads/img/<?php echo $d[1];?>" class="card-img" height="150" width="100;" style="right: 0px; padding: 10px;">
+                        <img src="./uploads/img/<?php echo $d[1];?>" class="card-img" height="90" width="90;" style="right: 0px; padding: 10px;">
                       </div>
                       <div class="col-md-7">
                         <div class="card-body">
