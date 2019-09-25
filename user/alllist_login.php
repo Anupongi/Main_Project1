@@ -325,7 +325,7 @@ $query = mysqli_query($conn,$sql);
                                             <tr>
                                                 <th> <div align="center">ลำดับ</div></th>
                                                 <th> <div align="center">ชื่อผู้ใช้ </div></th>
-                                                <th width="130"> <div align="center">ชื่อ-นามสกุล </div></th>
+                                                <th> <div align="center">ชื่อ-นามสกุล </div></th>
                                                 <th>  <div align="center">วันที่ลงชื่อเข้าใช้</div></th>
                                             </tr>
                                         </thead>
