@@ -410,8 +410,8 @@ $per_page = 10;   // Per Page
                             <h5>รายชื่อการลงชื่อเข้าใช้ทั้งหมด</h5>
                         </div>
                         <div class="card-body">
-                        <table align="center">
-                                        <thead>
+                        <table align="center"  class="table">
+                                        <thead class="thead-dark">
                                             <tr>
                                                 <th width="120"> <div align="center">ลำดับ </div></th>
                                                 <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
