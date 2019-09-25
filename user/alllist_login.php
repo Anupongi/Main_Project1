@@ -318,14 +318,14 @@ $query = mysqli_query($conn,$sql);
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-md-12">
                                     <table align="center" class="table">
                                         <thead class="bg-success">
                                             <tr>
-                                            <th width="91"> <div align="center">ลำดับ</div></th>
-                                                <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
-                                                <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
-                                                <th width="100"><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
+                                                <th> <div align="center">ลำดับ</div></th>
+                                                <th> <div align="center">ชื่อผู้ใช้ </div></th>
+                                                <th> <div align="center">ชื่อ-นามสกุล </div></th>
+                                                <th>  <div align="center">วันที่ลงชื่อเข้าใช้</div></th>
                                             </tr>
                                         </thead>
                                         <?php
