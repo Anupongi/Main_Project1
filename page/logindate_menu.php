@@ -428,7 +428,7 @@ $per_page = 10;   // Per Page
                                 <?php
                                 $conn = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","user_login");
                                 mysqli_set_charset($conn, "utf8");
-                                $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
+                                $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate,login_date.time FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
                                 // echo $sql;
                                 $query = mysqli_query($conn,$sql);
                                 $count = 0;
