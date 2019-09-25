@@ -47,7 +47,8 @@ $dbName = "user_login";
 
 $name = $_SESSION["User"];
 $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-$date = date('d-m-Y');
+date_default_timezone_set('asia/bangkok');	
+$date = date('d/m/Y');
 mysqli_set_charset($conn, "utf8");
 $sql = "SELECT * FROM `login_date` WHERE  `Lastdate`='$date' ";
 $query = mysqli_query($conn,$sql);
@@ -332,7 +333,7 @@ $query = mysqli_query($conn,$sql);
                                         <?php
                                          mysqli_set_charset($conn, "utf8");
                                          $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.Username = '$name' AND `Lastdate`= '$date'";
-                                         echo $sql1;
+                                        //  echo $sql1;
                                          $query = mysqli_query($conn,$sql1);
                                         $count = 1;
                                         while($result=mysqli_fetch_array($query))
