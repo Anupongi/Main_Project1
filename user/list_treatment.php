@@ -339,6 +339,7 @@ if(mysqli_num_rows($result2)==1){
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
+                                  <div class="table-responsive-md">
                                     <table align="center" class="table">
                                         <thead class="bg-success">
                                             <tr>
@@ -376,6 +377,7 @@ if(mysqli_num_rows($result2)==1){
                                         }
                                         ?>
                                     </table>
+                                  </div>
                                     Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 <?php
 
