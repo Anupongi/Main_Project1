@@ -413,12 +413,12 @@ $per_page = 10;   // Per Page
                         <table align="center"  class="table">
                                         <thead class="thead-dark">
                                             <tr>
-                                                <th width="120"> <div align="center">ลำดับ </div></th>
-                                                <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
-                                                <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
-                                                <th width="80"><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
-                                                <th width="100"><div align="center">เวลาลงชื่อเข้าใช้</div></th>
-                                                <th width="71"> <div align="center">ลบ </div></th>
+                                                <th > <div align="center">ลำดับ </div></th>
+                                                <th> <div align="center">ชื่อผู้ใช้ </div></th>
+                                                <th > <div align="center">ชื่อ-นามสกุล </div></th>
+                                                <th ><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
+                                                <th ><div align="center">เวลาลงชื่อเข้าใช้</div></th>
+                                                <th > <div align="center">ลบ </div></th>
                                             </tr>
                                         </thead>
                                         <?php
