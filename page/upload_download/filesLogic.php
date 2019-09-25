@@ -37,6 +37,7 @@ if (isset($_GET['file_id'])) {
     $download1 = $download[0];
     $file = urldecode($download1); // Decode URL-encoded string
     $filepath = "./uploads/file/" . $file;
+    
     if(file_exists($filepath)) {
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
