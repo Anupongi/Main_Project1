@@ -353,7 +353,7 @@ if(mysqli_num_rows($result2)==1){
                                         </thead>
                                         <?php
                                          mysqli_set_charset($con, "utf8");
-                                         $sql = "SELECT * FROM tb_treatment WHERE Student_id='".$name."' ORDER BY id DESC ";
+                                         $sql = "SELECT * FROM tb_treatment WHERE Student_id='".$name."' ORDER BY `date` DESC ";
                                          $query = mysqli_query($con,$sql);
                                         $count = 1;
                                         while($result=mysqli_fetch_array($query))

@@ -355,7 +355,7 @@ if(mysqli_num_rows($result2)==1){
                                             date_default_timezone_set('asia/bangkok');	
                                             $date = date('d/m/Y');
                                          mysqli_set_charset($con, "utf8");
-                                         $sql = "SELECT * FROM tb_treatment WHERE `date`='$date' ";
+                                         $sql = "SELECT * FROM tb_treatment WHERE `date`='$date' ORDER BY `date` DESC ";
                                          $query = mysqli_query($con,$sql);
                                         $count = 1;
                                         while($result=mysqli_fetch_array($query))

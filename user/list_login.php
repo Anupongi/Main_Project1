@@ -319,19 +319,19 @@ $query = mysqli_query($conn,$sql);
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
-                                    <table align="center">
-                                        <thead>
+                                    <table align="center" class="table">
+                                        <thead class="bg-success">
                                             <tr>
-                                            <th width="91"> <div align="center">ลำดับ</div></th>
-                                                <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
-                                                <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
-                                                <th width="100"><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
-                                                <th width="100"><div align="center">เวลาลงชื่อเข้าใช้</div></th>
+                                            <th> <div align="center">ลำดับ</div></th>
+                                                <th> <div align="center">ชื่อผู้ใช้ </div></th>
+                                                <th> <div align="center">ชื่อ-นามสกุล </div></th>
+                                                <th><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
+                                                <th ><div align="center">เวลาลงชื่อเข้าใช้</div></th>
                                             </tr>
                                         </thead>
                                         <?php
                                          mysqli_set_charset($conn, "utf8");
-                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE Lastdate = $date";
+                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE Lastdate = $date ORDER BY Lastdate DESC";
                                          $query = mysqli_query($conn,$sql1);
                                         $count = 1;
                                         while($result=mysqli_fetch_array($query))
