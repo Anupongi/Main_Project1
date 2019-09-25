@@ -319,8 +319,8 @@ $query = mysqli_query($conn,$sql);
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
-                                    <table align="center">
-                                        <thead>
+                                    <table align="center" class="table">
+                                        <thead class="bg-success">
                                             <tr>
                                             <th width="91"> <div align="center">ลำดับ</div></th>
                                                 <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
