@@ -338,17 +338,17 @@ if(mysqli_num_rows($result2)==1){
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12">
-                                    <table align="center">
-                                        <thead>
+                                <div class="col-md-12">
+                                    <table align="center" class="table">
+                                        <thead class="bg-success">
                                             <tr>
-                                                <th width="50"> <div align="center">ลำดับ </div></th>
-                                                <th width="100"> <div align="center">รหัสนักศึกษา </div></th>
-                                                <th width="130"> <div align="center">ชื่อ-นามสกุล</div></th>
-                                                <th width="200"><div align="center">อาการเบื้องต้น</div></th>
-                                                <th width="80"><div align="center">ผู้บันทึกข้อมูล</div></th>
-                                                <th width="80"><div align="center">วันที่ลงบันทึก</div></th>
-                                                <th width="71"> <div align="center">รายละเอียดเพิ่มเติม </div></th>
+                                                <th> <div align="center">ลำดับ </div></th>
+                                                <th> <div align="center">รหัสนักศึกษา </div></th>
+                                                <th> <div align="center">ชื่อ-นามสกุล</div></th>
+                                                <th><div align="center">อาการเบื้องต้น</div></th>
+                                                <th><div align="center">ผู้บันทึกข้อมูล</div></th>
+                                                <th><div align="center">วันที่ลงบันทึก</div></th>
+                                                <th> <div align="center">รายละเอียดเพิ่มเติม </div></th>
                                             </tr>
                                         </thead>
                                         <?php

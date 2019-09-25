@@ -331,7 +331,8 @@ $query = mysqli_query($conn,$sql);
                                         </thead>
                                         <?php
                                          mysqli_set_charset($conn, "utf8");
-                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.Lastdate = $date ORDER BY Lastdate DESC";
+                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.Username = '$name'";
+                                         echo $sql1;
                                          $query = mysqli_query($conn,$sql1);
                                         $count = 1;
                                         while($result=mysqli_fetch_array($query))

@@ -338,9 +338,9 @@ if(mysqli_num_rows($result2)==1){
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12">
-                                    <table align="center">
-                                        <thead>
+                                <div class="col-md-12">
+                                    <table align="center" class="table">
+                                        <thead class="bg-success">
                                             <tr>
                                                 <th> <div align="center">ลำดับ </div></th>
                                                 <th> <div align="center">รหัสนักศึกษา </div></th>
