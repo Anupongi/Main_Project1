@@ -314,7 +314,7 @@ $query = mysqli_query($conn,$sql);
             <div class="col-md-12">
             <div class="card">
                         <div class="card-header text-center">
-                            <h5>ประวัติการรักษาของ <?php echo $_SESSION["name"]?></h5>
+                            <h5>ประวัติการลงชื่อเข้าใช้ของ <?php echo $_SESSION["name"]?></h5>
                         </div>
                         <div class="card-body">
                             <div class="row">

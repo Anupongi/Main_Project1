@@ -314,7 +314,7 @@ $query = mysqli_query($conn,$sql);
             <div class="col-md-12">
             <div class="card">
                         <div class="card-header text-center">
-                            <h5>ประวัติการรักษาของ <?php echo $_SESSION["name"]?></h5>
+                            <h5>ประวัติการลงชื่อเข้าใช้ของ <?php echo $_SESSION["name"]?></h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -331,7 +331,7 @@ $query = mysqli_query($conn,$sql);
                                         </thead>
                                         <?php
                                          mysqli_set_charset($conn, "utf8");
-                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE Lastdate = $date ORDER BY Lastdate DESC";
+                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.Lastdate = $date ORDER BY Lastdate DESC";
                                          $query = mysqli_query($conn,$sql1);
                                         $count = 1;
                                         while($result=mysqli_fetch_array($query))
