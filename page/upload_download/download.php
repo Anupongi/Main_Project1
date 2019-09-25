@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: login/index.php');
+    header('Location: ../../Login/index.php');
   }
 ?>
 
