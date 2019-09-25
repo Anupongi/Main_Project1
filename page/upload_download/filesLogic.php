@@ -40,19 +40,19 @@ if (isset($_GET['file_id'])) {
     $file = $download1 ; // Decode URL-encoded string
     // $filepath = "uploads/file/" . $file;
     $filepath = "http://34.93.94.45/page/upload_download/uploads/file/%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B9%80%E0%B8%81%E0%B8%A3%E0%B8%94%20A-F.pdf";
-    echo $filepath;
-    if(file_exists($filepath)) {
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($filepath));
-        flush(); // Flush system output buffer
-        readfile($filepath);
-        exit;
-    }
+    // echo $filepath;
+    // if(file_exists($filepath)) {
+    //     header('Content-Description: File Transfer');
+    //     header('Content-Type: application/octet-stream');
+    //     header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
+    //     header('Expires: 0');
+    //     header('Cache-Control: must-revalidate');
+    //     header('Pragma: public');
+    //     header('Content-Length: ' . filesize($filepath));
+    //     flush(); // Flush system output buffer
+    //     readfile($filepath);
+    //     exit;
+    // }
     // $file = mysqli_fetch_array($result1);
     // $download = $file[0];
     // $file_path = './uploads/file/'.$download;
