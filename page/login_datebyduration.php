@@ -430,7 +430,7 @@ $per_page = 10;   // Per Page
                                                 <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
                                                 <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
                                                 <th width="80"><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
-                                                <th width="100"><div align="center">เวลา</div></th>
+                                                <th width="100"><div align="center">เวลาลงชื่อเข้าใช้</div></th>
                                                 <th width="71"> <div align="center">ลบ </div></th>
                                             </tr>
                                         </thead>
@@ -475,7 +475,7 @@ $per_page = 10;   // Per Page
                                             <td><?php echo $d["Username"];?></td>
                                             <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
                                             <td><?php echo $d[3];?></td>
-                                            <td align="right"><?php echo $d[3];?></td>
+                                            <td align="right"><?php echo $d["time"];?></td>
                                             <td align="right"> <a href="./del.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
