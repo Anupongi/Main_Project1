@@ -7,6 +7,7 @@
     $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn,"utf8");
     $username = $_POST['Username'];
+    date_default_timezone_set('asia/bangkok');	
     $date = date("d/m/Y");
     $time = date("H:i:s");
     if(isset($_POST["id"])){
