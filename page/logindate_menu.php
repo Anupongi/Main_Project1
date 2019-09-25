@@ -414,15 +414,16 @@ $per_page = 10;   // Per Page
                             <h5>รายชื่อการลงชื่อเข้าใช้ทั้งหมด</h5>
                         </div>
                         <div class="card-body">
-                            <table align="center">
-                                <thead>
+                          <div class="table-responsive-md">
+                            <table align="center" class="table">
+                                <thead class="bg-success">
                                     <tr>
-                                        <th width="120"> <div align="center">ลำดับ </div></th>
-                                        <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
-                                        <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
-                                        <th width="80"><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
-                                        <th width="100"><div align="center">เวลาลงชื่อเข้าใช้</div></th>
-                                        <th width="71"> <div align="center">ลบ </div></th>
+                                        <th> <div align="center">ลำดับ </div></th>
+                                        <th> <div align="center">ชื่อผู้ใช้ </div></th>
+                                        <th> <div align="center">ชื่อ-นามสกุล </div></th>
+                                        <th><div align="center">วันที่ลงชื่อเข้าใช้</div></th>
+                                        <th><div align="center">เวลาลงชื่อเข้าใช้</div></th>
+                                        <th> <div align="center">ลบ </div></th>
                                     </tr>
                                 </thead>
                                 <?php
@@ -447,6 +448,7 @@ $per_page = 10;   // Per Page
                                 }
                                 ?>
                             </table>
+                          </div>
                             <br>
                             Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
                             <?php

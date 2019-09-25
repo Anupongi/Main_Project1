@@ -363,8 +363,9 @@ $per_page = 10;   // Per Page
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
-                                    <table align="center">
-                                        <thead>
+                                  <div class="table-responsive-md"> 
+                                    <table align="center" class="table">
+                                        <thead class="bg-success">
                                             <tr>
                                                 <th width="91"> <div align="center">ลำดับ</div></th>
                                                 <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
@@ -396,6 +397,7 @@ $per_page = 10;   // Per Page
                                         }
                                         ?>
                                     </table>
+                                  </div>
                                     <br>
                                     Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 <?php

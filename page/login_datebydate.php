@@ -410,8 +410,9 @@ $per_page = 10;   // Per Page
                             <h5>รายชื่อการลงชื่อเข้าใช้ทั้งหมด</h5>
                         </div>
                         <div class="card-body">
-                        <table align="center"  class="table">
-                                        <thead class="thead-dark">
+                        <div class="table-responsive-md">
+                          <table align="center"  class="table">
+                                        <thead class="bg-success">
                                             <tr>
                                                 <th > <div align="center">ลำดับ </div></th>
                                                 <th> <div align="center">ชื่อผู้ใช้ </div></th>
@@ -481,6 +482,7 @@ $per_page = 10;   // Per Page
                                         $count++;
                                         ?>
                                     </table>
+                                    </div>
                                     <br>
                             Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
                             <?php
