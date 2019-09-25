@@ -327,11 +327,12 @@ $query = mysqli_query($conn,$sql);
                                                 <th> <div align="center">ชื่อผู้ใช้ </div></th>
                                                 <th> <div align="center">ชื่อ-นามสกุล </div></th>
                                                 <th>  <div align="center">วันที่ลงชื่อเข้าใช้</div></th>
+                                                <th>  <div align="center">เวลาลงชื่อเข้าใช้</div></th>
                                             </tr>
                                         </thead>
                                         <?php
                                          mysqli_set_charset($conn, "utf8");
-                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,user.Firstname, user.Lastname FROM login_date INNER JOIN user ON user.Username=login_date.Username WHERE login_date.Username='".$name."' ";
+                                         $sql1 = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM login_date INNER JOIN user ON user.Username=login_date.Username WHERE login_date.Username='".$name."' ";
                                        
                                          $query = mysqli_query($conn,$sql1);
                                         $count = 1;
@@ -344,6 +345,7 @@ $query = mysqli_query($conn,$sql);
                                             <td><?php echo $result["Username"];?></td>
                                             <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
                                             <td align="right"><?php echo $result["Lastdate"];?></td>
+                                            <td align="right"><?php echo $result["time"];?></td>
                                         </tr>
                                         <?php
                                         $count=$count+1;
