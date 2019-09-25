@@ -319,6 +319,7 @@ $query = mysqli_query($conn,$sql);
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
+                                  <div class="table-responsive-sm">
                                     <table align="center" class="table">
                                         <thead class="bg-success">
                                             <tr>
@@ -349,6 +350,7 @@ $query = mysqli_query($conn,$sql);
                                         }
                                         ?>
                                     </table>
+                                  </div>
                                     Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 <?php
 
