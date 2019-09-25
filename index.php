@@ -360,7 +360,6 @@ session_start();
                         $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
                         mysqli_set_charset($conn,"utf8");
                         
-                        
                         $sql = "SELECT * FROM `files`   WHERE `published` = 'y' ORDER BY `date` DESC LIMIT 3 ;";
                         $query = mysqli_query($conn, $sql);
                         while ($d = mysqli_fetch_array($query)) {
