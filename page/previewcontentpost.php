@@ -154,6 +154,7 @@ session_start();
                             </div> -->
                             <a class="nav-item nav-link" href="./pages/about.php">เกี่ยวกับ</a>
                             <a class="nav-item nav-link" href="./pages/contact.php">ติดต่อ</a>
+                            <a class="nav-item nav-link" href="../Login/index.php">เข้าสู่ระบบ</a>
                         </div>
                     </div>
                 </nav>
@@ -235,7 +236,7 @@ session_start();
                     <?php
                         $serverName = "localhost";
                         $userName = "root";
-                        $userPassword = "KZTuR1v3aaVA7t";
+                        $userPassword = "Ice@2019";
                         $dbName = "file-management";
                         $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
                         mysqli_set_charset($conn,"utf8");
