@@ -2,7 +2,7 @@
 session_start();
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "KZTuR1v3aaVA7t";
+$userPassword = "Ice@2019";
 $dbName = "user_login";
 $db = "test";
 $conn = new mysqli($serverName, $userName, $userPassword,$db);

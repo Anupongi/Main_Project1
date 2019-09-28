@@ -42,7 +42,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "KZTuR1v3aaVA7t";
+$userPassword = "Ice@2019";
 $dbName = "user_login";
 
 

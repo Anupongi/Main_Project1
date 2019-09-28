@@ -1,16 +1,6 @@
 <?php
 session_start(); 
-// $connect = mysqli_connect("localhost", "root", "", "user_login");
-// if(isset($_POST["id"]))
-// {
-// $query = "SELECT * FROM user ORDER BY Username ASC";
-// $result = mysqli_query($connect, $query);
-// while($row = mysqli_fetch_array($result))
-//  {
-
-//  }
-// }
-$connect = mysqli_connect("localhost", "root", "KZTuR1v3aaVA7t", "treatment");
+$connect = mysqli_connect("localhost", "root", "Ice@2019", "treatment");
 $id = $_GET['ID'];
 mysqli_set_charset($connect,"utf8");
 $sql = "SELECT * FROM `tb_treatment` WHERE `id` = $id" ;

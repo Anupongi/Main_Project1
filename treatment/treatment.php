@@ -122,7 +122,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "KZTuR1v3aaVA7t";
+$userPassword = "Ice@2019";
 $dbName = "user_login";
 $dbName1 = "post";
 $dbName2 = "file-management";
@@ -586,7 +586,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                       <?php
                                       $serverName = "localhost";
                                       $userName = "root";
-                                      $userPassword = "KZTuR1v3aaVA7t";
+                                      $userPassword = "Ice@2019";
                                       $dbName = "treatment";
                                       $con = mysqli_connect($serverName,$userName,$userPassword,$dbName);
                                       mysqli_set_charset($con,"utf8");

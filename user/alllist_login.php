@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: login/index.php');
+    header('Location: ../Login/index.php');
   }
 ?>  
 <!DOCTYPE html>
@@ -42,7 +42,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "KZTuR1v3aaVA7t";
+$userPassword = "Ice@2019";
 $dbName = "user_login";
 
 $name = $_SESSION["User"];

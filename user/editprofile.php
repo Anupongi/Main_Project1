@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: login/index.php');
+    header('Location: ../Login/index.php');
   }
 ?>  
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "KZTuR1v3aaVA7t";
+$userPassword = "Ice@2019";
 $dbName = "user_login";
 $dbName1 = "treatment";
 
@@ -324,8 +324,14 @@ if(mysqli_num_rows($result2)==1){
                                                 <option >ปวช.1</option>
                                                 <option >ปวช.2</option>
                                                 <option >ปวช.3</option>
-                                                <option >ปวส.1</option>
-                                                <option >ปวส.2</option>
+                                                <option >ปวส.1(ตรง)</option>
+                                                <option >ปวส.1(ทวิ)</option>
+                                                <option >ปวส.1(ม.6)</option>
+                                                <option >ปวส.2(ตรง)</option>
+                                                <option >ปวส.2(ม.6)</option>
+                                                <option >ปวส.3</option>
+                                                <option >ป.ตรี ปีที่ 1</option>
+                                                <option >ป.ตรี ปีที่ 2</option>
                                             </select>
                                     </div>
                                     <div class="form-group col-md-2">
