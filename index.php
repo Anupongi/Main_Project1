@@ -362,6 +362,13 @@ session_start();
                         
                         $sql = "SELECT * FROM `files`   WHERE `published` = 'y' ORDER BY `date` DESC LIMIT 3 ;";
                         $query = mysqli_query($conn, $sql);
+
+                        // Now update downloads count
+                        $row = mysqli_fetch_array($query);
+                        $newCount = $row['downloads'] + 1;
+                        $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
+                        mysqli_query($conn, $updateQuery);
+                        // exit;
                         while ($d = mysqli_fetch_array($query)) {
                           
                     ?>

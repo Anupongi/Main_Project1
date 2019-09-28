@@ -51,6 +51,7 @@ if (isset($_GET['file_id'])) {
         exit;
 
         // Now update downloads count
+        $row = mysqli_fetch_array($result);
         $newCount = $file['downloads'] + 1;
         $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
         mysqli_query($conn, $updateQuery);
