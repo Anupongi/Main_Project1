@@ -362,15 +362,6 @@ session_start();
                         
                         $sql = "SELECT * FROM `files`   WHERE `published` = 'y' ORDER BY `date` DESC LIMIT 3 ;";
                         $query = mysqli_query($conn, $sql);
-
-                        // Now update downloads count
-                        if(mysqli_num_rows($query)==1){
-                            $row = mysqli_fetch_array($result);
-                            $newCount = $row['downloads'] + 1;
-                            $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
-                            mysqli_query($conn, $updateQuery);
-                            // exit;
-                        }else{}
                         while ($d = mysqli_fetch_array($query)) {
                           
                     ?>
@@ -384,6 +375,7 @@ session_start();
                                             <h6 class="card-title"><?php echo substr($d[2], 0, 88). "..." ?></h6>
                                             <h6 style="font-size:14px">จำนวนดาวน์โหลด : <?php echo $d[5]; ?> ครั้ง</h6>
                                             <a href="./page/upload_download/uploads/file/<?php echo $d[2]?>" style="color:red;">Download</a>
+                                            
                                             <p class="card-text"><small class="text-muted">วันที่โพสต์ : <?php echo $d[7]; ?></small></p>
                                     </div>
                                 </div>
