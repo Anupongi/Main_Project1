@@ -364,11 +364,13 @@ session_start();
                         $query = mysqli_query($conn, $sql);
 
                         // Now update downloads count
-                        $row = mysqli_fetch_array($query);
-                        $newCount = $row['downloads'] + 1;
-                        $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
-                        mysqli_query($conn, $updateQuery);
-                        // exit;
+                        if(mysqli_num_rows($query)==1){
+                            $row = mysqli_fetch_array($result);
+                            $newCount = $row['downloads'] + 1;
+                            $updateQuery = "UPDATE `files` SET downloads=$newCount WHERE id=$id";
+                            mysqli_query($conn, $updateQuery);
+                            // exit;
+                        }else{}
                         while ($d = mysqli_fetch_array($query)) {
                           
                     ?>
