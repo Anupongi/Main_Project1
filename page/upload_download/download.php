@@ -304,7 +304,7 @@ mysqli_set_charset($conn,"utf8");
     <!-- Main content -->
     <section class="content">
       <?php
-      $conn = mysqli_connect('localhost', 'root', 'KZTuR1v3aaVA7t', 'file-management');
+      $conn = mysqli_connect('localhost', 'root', 'Ice@2019', 'file-management');
       $sql = "SELECT * FROM files";
       mysqli_set_charset($conn,"utf8");
       $result = mysqli_query($conn, $sql);

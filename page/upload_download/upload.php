@@ -350,7 +350,7 @@
                       // move the uploaded (temporary) file to the specified destination
 
 
-                          $con = mysqli_connect("localhost","root","KZTuR1v3aaVA7t","file-management");
+                          $con = mysqli_connect("localhost","root","Ice@2019","file-management");
                           mysqli_set_charset($con,"utf8"); 
                           $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension','$size', 0 ,'$id_admin','$date1','y')";
                           
