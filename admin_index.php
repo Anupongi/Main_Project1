@@ -111,9 +111,6 @@ $num_rows5 = mysqli_num_rows($query5);
       <li class="nav-item d-none d-sm-inline-block">
       <a href="#" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
@@ -475,12 +472,6 @@ $num_rows5 = mysqli_num_rows($query5);
       <b>Version</b> 3.0.0-alpha
     </div>
   </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
