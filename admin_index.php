@@ -53,7 +53,7 @@
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <link rel="icon" href="./img/5d91b4ef7a7d7.256px.ico" type="image/png">
+  <link rel="icon" href="./img/icons.ico" type="image/png">
 </head>
 <body class="hold-transition sidebar-mini">
 <?php
