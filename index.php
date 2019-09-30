@@ -25,7 +25,7 @@ session_start();
     <link rel="stylesheet" href="./asset/css/style_font.css">
     <meta name="google-site-verification" content="HfyyLXEy_HeeCFIgiuZzjfHteEU4fs8HsAzuS1CGD-M" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/5d91b4ef7a7d7.256px.ico" type="image/x-icon">
+    <link rel="icon" href="./img/icons.ico" type="image/x-icon">
     <style>
         /* body {
             background-image:
