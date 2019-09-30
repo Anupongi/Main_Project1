@@ -25,6 +25,7 @@ session_start();
     <link rel="stylesheet" href="./asset/css/style_font.css">
     <meta name="google-site-verification" content="HfyyLXEy_HeeCFIgiuZzjfHteEU4fs8HsAzuS1CGD-M" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/นามสกุลไฟล์" href="./img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" />
     <style>
         /* body {
             background-image:
