@@ -37,6 +37,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="icon" href="./img/5d91b4ef7a7d7.256px.ico" type="image/png">
+  <link rel="icon" type="image/png" href="./img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
 </head>
 <body class="hold-transition sidebar-mini">
 <?php
