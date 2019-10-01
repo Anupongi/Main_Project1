@@ -42,7 +42,7 @@ session_start();
 					
 					<?php 
         				if(isset($_GET['state'])){
-          				echo '<p class="login-box-msg" style="font-family: "Kanit", sans-serif;">เซลชันของคุณหมดเวลาแล้ว กรุณาเข้าสู่ระบบใหม่อีกครั้ง</p>';
+          				echo "<p class='login-box-msg' style='font: Kanit, sans-serif;'>เซลชันของคุณหมดเวลาแล้ว กรุณาเข้าสู่ระบบใหม่อีกครั้ง</p>";
         				}
       				?>
 					<div class="wrap-input100 validate-input" data-validate = "ชื่อผู้ใช้: xxxxxxxxxx">
