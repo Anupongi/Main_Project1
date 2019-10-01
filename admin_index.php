@@ -118,8 +118,6 @@ $num_rows5 = mysqli_num_rows($query5);
       <?php
         echo '<a href="./logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
       ?>
-        
-          
       </li>
       <!-- Notifications Dropdown Menu -->
       
@@ -421,7 +419,19 @@ $num_rows5 = mysqli_num_rows($query5);
         </div>
         <!-- /.row -->
         <div class="row" >
-          <div class="col-lg-3 col-6" ></div>
+          <div class="col-lg-3 col-6" >
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3><?php echo $num_rows2 ?> โพสต์</h3>
+
+                <p>ข่าวประชาสัมพันธ์ทั้งหมด</p>
+              </div>
+              <div class="icon">
+              <i class="ion-ios-paper"></i>
+              </div>
+              <a href="./page/allpost.php" class="small-box-footer">ข้อมูลเพิ่มเติม <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
           <div class="col-lg-3 col-6" >
             <!-- small box -->
             <div class="small-box bg-secondary">
