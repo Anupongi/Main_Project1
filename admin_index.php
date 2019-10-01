@@ -420,11 +420,10 @@ $num_rows5 = mysqli_num_rows($query5);
         <!-- /.row -->
         <div class="row" >
           <div class="col-lg-3 col-6" >
-            <div class="small-box bg-secondary">
+            <div class="small-box" style="color:#1229FE;">
               <div class="inner">
                 <h3><?php echo $num_rows2 ?> โพสต์</h3>
-
-                <p>ข่าวประชาสัมพันธ์ทั้งหมด</p>
+                <p>ประวัติการรักษา</p>
               </div>
               <div class="icon">
               <i class="ion-ios-paper"></i>
