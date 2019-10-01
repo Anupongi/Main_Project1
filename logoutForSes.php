@@ -1,6 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header("Location: login/index.php?state=sessiontimeout");	
+header("Location: ./Login/index.php?state=sessiontimeout");	
 ?>
 
