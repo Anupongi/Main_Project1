@@ -98,6 +98,10 @@ $num_rows4 = mysqli_num_rows($query4);
 $sql5 = "SELECT * FROM `tb_med`";
 $query5 = mysqli_query($conn3,$sql5);
 $num_rows5 = mysqli_num_rows($query5);
+
+$sql6 = "SELECT * FROM `tb_treatment`";
+$query6 = mysqli_query($conn3,$sql6);
+$num_rows6 = mysqli_num_rows($query6);
 ?>
 <div class="wrapper">
 
@@ -422,13 +426,13 @@ $num_rows5 = mysqli_num_rows($query5);
           <div class="col-lg-3 col-6" >
             <div class="small-box" style="bgcolor:#1229FE;">
               <div class="inner">
-                <h3><?php echo $num_rows2 ?> โพสต์</h3>
+                <h3><?php echo $num_rows2 ?> รายการ</h3>
                 <p>ประวัติการรักษา</p>
               </div>
               <div class="icon">
               <i class="ion-ios-paper"></i>
               </div>
-              <a href="./page/allpost.php" class="small-box-footer">ข้อมูลเพิ่มเติม <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="./treatment/treatment_list1.php" class="small-box-footer">ข้อมูลเพิ่มเติม <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6" >
