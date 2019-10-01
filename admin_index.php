@@ -430,7 +430,7 @@ $num_rows6 = mysqli_num_rows($query6);
                 <p>ประวัติการรักษา</p>
               </div>
               <div class="icon">
-              <i class="ion-ios-paper"></i>
+              <i class="ion-ios-pulse"></i>
               </div>
               <a href="./treatment/treatment_list1.php" class="small-box-footer">ข้อมูลเพิ่มเติม <i class="fa fa-arrow-circle-right"></i></a>
             </div>
