@@ -162,10 +162,7 @@ $num_rows4 = mysqli_num_rows($query4);
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="#" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+      <a href="../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -174,8 +171,6 @@ $num_rows4 = mysqli_num_rows($query4);
       <?php
         echo '<a href="../logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
       ?>
-        
-          
       </li>
       <!-- Notifications Dropdown Menu -->
       
