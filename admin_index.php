@@ -437,7 +437,7 @@ $num_rows6 = mysqli_num_rows($query6);
           </div>
           <div class="col-lg-3 col-6" >
             <!-- small box -->
-            <div class="small-box bg-secondary">
+            <div class="small-box" style="color:white;background-color:#FE9A17;">
               <div class="inner">
                 <h3><?php echo $num_rows2 ?> โพสต์</h3>
 
