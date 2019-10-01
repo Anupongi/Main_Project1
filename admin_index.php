@@ -424,7 +424,7 @@ $num_rows6 = mysqli_num_rows($query6);
         <!-- /.row -->
         <div class="row" >
           <div class="col-lg-3 col-6" >
-            <div class="small-box" style="bgcolor:#1229FE;">
+            <div class="small-box" style="background-color:#1229FE;">
               <div class="inner">
                 <h3><?php echo $num_rows6 ?> รายการ</h3>
                 <p>ประวัติการรักษา</p>
