@@ -5,7 +5,7 @@
     header('Location: Login/index.php');
   }
   //กำหนดเวลาที่สามารถอยู่ในระบบ
-  $sessionlifetime = 60; //กำหนดเป็นนาที
+  $sessionlifetime = 5; //กำหนดเป็นนาที
  
     if(isset($_SESSION["timeLasetdActive"])){
 	    $seclogin = (time()-$_SESSION["timeLasetdActive"])/60;

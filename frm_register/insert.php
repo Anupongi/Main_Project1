@@ -53,7 +53,7 @@
     $phone=$_POST['phone'];
     $your_email=$_POST['your_email'];
     date_default_timezone_set('asia/bangkok');
-    $date=date("d-m-Y");
+    $date=date("d/m/Y");
 
     $check = "SELECT * FROM `user` WHERE `Username` = '$user_name' ";
     $result1 = mysqli_query($con,$check);
