@@ -27,6 +27,7 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./asset/css/style_font.css">
     <meta name="google-site-verification" content="HfyyLXEy_HeeCFIgiuZzjfHteEU4fs8HsAzuS1CGD-M" />
+    <link rel="icon" href="./dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
     <style>
         /* body {
             background-image:
