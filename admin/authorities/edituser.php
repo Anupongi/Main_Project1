@@ -38,14 +38,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="icon" type="image/png" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
-  <style>
-    .profile-image{
-      border-radius: 50%;
-      width: 140px;
-      border: 3px solid #fff;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
-    }
-  </style>
+  
 </head>
 <body class="hold-transition sidebar-mini">
 <?php
@@ -351,7 +344,9 @@ $array = mysqli_fetch_array($query);
                                     <div class="card-body">
                                       <div class="col-lg-4 col-md-4 col-12">
                                         <div class="profile-image float-md-right"> 
-                                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                                          <div class="col-lg-12  text-center">
+                                            <img src="./profile/60039275-young-male-cartoon-profile-vector-illustration-graphic-design-.jpg" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
