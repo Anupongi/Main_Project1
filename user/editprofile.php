@@ -211,13 +211,13 @@ if(mysqli_num_rows($result2)==1){
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="./alllist_login.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ทั้งหมด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="./list_login.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ประจำวัน</p>
                 </a>
