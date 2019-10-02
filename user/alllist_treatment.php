@@ -134,7 +134,7 @@ if(mysqli_num_rows($result2)==1){
       <!-- Messages Dropdown Menu -->
       <li>
       <?php
-        echo '<a href="../logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
+        echo '<a href="../Login/logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
       ?>
         
           
