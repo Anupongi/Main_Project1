@@ -19,8 +19,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>เว็บไซต์ห้องพยาบาล วิทยาลัยเทคนิคเชียงใหม่</title>
-    <meta name="description" content="เป็นเว็บไซต์เกี่ยวกับการท่องเที่ยวในส่วนต่างๆในอำเภอเมืองจังหวัดเชียงใหม่ โดยภายในเว็บไซต์จะแบ่งออกเป็นหมวดหมูการท่องเที่ยวไว้อย่างชัดเจน">
-    <meta name="keywords" content="Aeaw Chiang Mai,aewchiangmai,เที่ยวเชียงใหม่,เชียงใหม่,เที่ยว,แอ่วเชียงใหม่">
+    <meta name="description" content="เป็นเว็บไซต์เกี่ยวกับห้องพยาบาล วิทยาลัยเทคนิคเชียงใหม่">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -139,22 +138,11 @@ session_start();
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav mx-auto">
-                            <a class="nav-item nav-link active" href="../index.php">หน้าแรก <span class="sr-only">(current)</span></a>
-                            <!-- <div class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ประเภท
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="./pages/category.php?name=ถนนคนเดิน">ถนนคนเดิน</a>
-                                    <a class="dropdown-item" href="./pages/category.php?name=ห้าง">ห้าง</a>
-                                    <a class="dropdown-item" href="./pages/category.php?name=ตลาดกลางคืน">ตลาดกลางคืน</a>
-                                    <a class="dropdown-item" href="./pages/category.php?name=ที่ถ่ายรูป">ที่ถ่ายรูป</a>
-                                    <a class="dropdown-item" href="./pages/category.php?name=สวนสัตว์">สวนสัตว์</a>
-                                </div>
-                            </div> -->
-                            <a class="nav-item nav-link" href="./pages/about.php">เกี่ยวกับ</a>
-                            <a class="nav-item nav-link" href="./pages/contact.php">ติดต่อ</a>
-                            <a class="nav-item nav-link" href="../Login/index.php">เข้าสู่ระบบ</a>
+                            <a class="nav-item nav-link active" href="./index.php">หน้าแรก <span class="sr-only">(current)</span></a>
+                            
+                            <a class="nav-item nav-link" href="#">เกี่ยวกับ</a>
+                            <a class="nav-item nav-link" href="#">ติดต่อ</a>
+                            <a class="nav-item nav-link" href="./Login/index.php">เข้าสู่ระบบ</a>
                         </div>
                     </div>
                 </nav>
@@ -210,10 +198,10 @@ session_start();
                             <div class="card-body">
                                 <div class="row ">
                                     <div class="col-lg-4" align="center">
-                                        <img src="./img/img/<?php echo $d[2]; ?>" style="width:100px;height:80px;" >
+                                        <img src="./admin/page/img/img/<?php echo $d[2]; ?>" style="width:100px;height:80px;" >
                                     </div>
                                     <div class="col-lg-8">
-                                        <h5> <a class="card-title" href="./page/previewcontentpost.php?id=<?php echo $d[0]; ?>"><?php echo $d[1]?></a></h5>
+                                        <h5> <a class="card-title" href="./previewcontentpost.php?id=<?php echo $d[0]; ?>"><?php echo $d[1]?></a></h5>
                                         <p class="card-text"><small class="text-muted">วันที่ : <?php echo $d[4] ?></small></p>
                                     </div>
                                 </div>
@@ -251,12 +239,12 @@ session_start();
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-4" align="center">
-                                        <img src="./upload_download/uploads/img/<?php echo $d[1] ?>" style="width:90px;height:90px;">
+                                        <img src="./admin/page/upload_download/uploads/img/<?php echo $d[1] ?>" style="width:90px;height:90px;">
                                     </div>
                                     <div class="col-lg-8 text-center">
                                             <h6 class="card-title"><?php echo substr($d[2], 0, 88). "..." ?></h6>
                                             <h6 style="font-size:14px">จำนวนดาวน์โหลด : <?php echo $d[5]; ?> ครั้ง</h6>
-                                            <a href="./page/upload_download/filesLogic.php?file_id=<?php echo $d[0] ?>" style="color:red;">Download</a>
+                                            <a href="./admin/page/upload_download/filesLogic.php?file_id=<?php echo $d[0] ?>" style="color:red;">Download</a>
                                             <p class="card-text"><small class="text-muted">วันที่โพสต์ : <?php echo $d[7]; ?></small></p>
                                     </div>
                                 </div>
@@ -345,7 +333,7 @@ session_start();
                 <div class="col-md-3 mb-md-0 mb-3">
 
                     <!-- Links -->
-                    <h5 class="text-uppercase">ติดต่อ</h5>
+                    <h5 class="text-uppercase">ติดต่อเรา</h5>
 
                     <ul class="list-unstyled">
                         <li>
