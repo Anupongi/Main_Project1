@@ -333,7 +333,7 @@ session_start();
                                         <img src="./admin/page/img/img/<?php echo $d[2]; ?>" style="width:100px;height:80px;" >
                                     </div>
                                     <div class="col-lg-8">
-                                        <h5> <a class="card-title" href="./admin/page/previewcontentpost.php?id=<?php echo $d[0]; ?>"><?php echo $d[1]?></a></h5>
+                                        <h5> <a class="card-title" href="./previewcontentpost.php?id=<?php echo $d[0]; ?>"><?php echo $d[1]?></a></h5>
                                         <p class="card-text"><small class="text-muted">วันที่ : <?php echo $d[4] ?></small></p>
                                     </div>
                                 </div>
