@@ -347,8 +347,24 @@ $array = mysqli_fetch_array($query);
                                           <div class="col-lg-12  text-center">
                                             <img src="./profile/60039275-young-male-cartoon-profile-vector-illustration-graphic-design-.jpg" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
                                           </div>
+                                          <br>
                                           <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>
                                           <br>
+                                          <form action="./updatepic.php" method="POST" enctype="multipart/form-data"> 
+                                          <div class="custom-file">
+                                              <input type="file" class="custom-file-input" id="customFile" name="image">
+                                              <label class="custom-file-label" for="customFile">กรุณาเลือกรูป</label>
+                                              <input type="hidden" name="id" id="id" value="<?php echo $d[0]?>">
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <div class="form-row  text-center">
+                                              <div class="col-lg-12"></div>
+                                              <div class="col-lg-12">
+                                                  <button type="submit" class="btn btn-success" id="submit">ยืนยัน</button>
+                                              </div>
+                                          </div>
+                                          </form>
                                         </div>
                                       </div>
                                     </div>
