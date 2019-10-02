@@ -338,14 +338,14 @@ $array = mysqli_fetch_array($query);
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-md-6">
                                   <div class="card">
                                     <div class="card-body">
                                       This is some text within a card body.
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-md-6">
                                     <div class="card">
                                         <div class="card-body" align="center">
                                             <form action="./update.php" method="POST">
