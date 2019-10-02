@@ -349,8 +349,10 @@ $array = mysqli_fetch_array($query);
                                 <div class="col-md-5">
                                   <div class="card">
                                     <div class="card-body">
-                                      <div class="profile-image float-md-right"> 
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                                      <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="profile-image float-md-right"> 
+                                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
