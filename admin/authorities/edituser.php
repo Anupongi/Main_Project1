@@ -338,10 +338,12 @@ $array = mysqli_fetch_array($query);
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                   <div class="card">
                                     <div class="card-body">
-                                      This is some text within a card body.
+                                      <div class="profile-image float-md-right"> 
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
