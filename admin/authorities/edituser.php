@@ -347,12 +347,14 @@ $array = mysqli_fetch_array($query);
                                           <div class="col-lg-12  text-center">
                                             <img src="./profile/60039275-young-male-cartoon-profile-vector-illustration-graphic-design-.jpg" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
                                           </div>
+                                          <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>
+                                          <br>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-7">
                                     <div class="card">
                                         <div class="card-body" align="center">
                                             <form action="./update.php" method="POST">
