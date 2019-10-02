@@ -266,7 +266,7 @@ session_start();
                 while ($d = mysqli_fetch_array($result)) {
                     ?>
                     <div class="card float-left m-3 wow fadeInUp shadow p-3 " data-wow-duration="1s" style="width: 20rem;height: 21rem">
-                        <img class="card-img-top rounded" src="./page/img/img/<?php echo $d[2] ?>" height="180" alt="Card image cap">
+                        <img class="card-img-top rounded" src="./admin/page/img/img/<?php echo $d[2] ?>" height="180" alt="Card image cap">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-12">
@@ -277,7 +277,7 @@ session_start();
                             </div>
                             <div class="row pt-2">
                                 <div class="col-sm-12">
-                                    <h5><a href="./page/previewcontentpost.php?id=<?php echo $d[0] ?>"><?php echo $d[1] ?> </a></h5>
+                                    <h5><a href="./admin/page/previewcontentpost.php?id=<?php echo $d[0] ?>"><?php echo $d[1] ?> </a></h5>
                                 </div>
                             </div>
                         </div>
@@ -330,10 +330,10 @@ session_start();
                             <div class="card-body">
                                 <div class="row ">
                                     <div class="col-lg-4" align="center">
-                                        <img src="./page/img/img/<?php echo $d[2]; ?>" style="width:100px;height:80px;" >
+                                        <img src="./admin/page/img/img/<?php echo $d[2]; ?>" style="width:100px;height:80px;" >
                                     </div>
                                     <div class="col-lg-8">
-                                        <h5> <a class="card-title" href="./page/previewcontentpost.php?id=<?php echo $d[0]; ?>"><?php echo $d[1]?></a></h5>
+                                        <h5> <a class="card-title" href="./admin/page/previewcontentpost.php?id=<?php echo $d[0]; ?>"><?php echo $d[1]?></a></h5>
                                         <p class="card-text"><small class="text-muted">วันที่ : <?php echo $d[4] ?></small></p>
                                     </div>
                                 </div>
@@ -370,12 +370,12 @@ session_start();
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-4" align="center">
-                                        <img src="./page/upload_download/uploads/img/<?php echo $d[1] ?>" style="width:90px;height:90px;">
+                                        <img src="./admin/page/upload_download/uploads/img/<?php echo $d[1] ?>" style="width:90px;height:90px;">
                                     </div>
                                     <div class="col-lg-8 text-center">
                                             <h6 class="card-title"><?php echo substr($d[2], 0, 88). "..." ?></h6>
                                             <h6 style="font-size:14px">จำนวนดาวน์โหลด : <?php echo $d[5]; ?> ครั้ง</h6>
-                                            <a href="./page/upload_download/uploads/file/<?php echo $d[2]?>" style="color:red;">Download</a>
+                                            <a href="./admin/page/upload_download/uploads/file/<?php echo $d[2]?>" style="color:red;">Download</a>
                                             
                                             <p class="card-text"><small class="text-muted">วันที่โพสต์ : <?php echo $d[7]; ?></small></p>
                                     </div>
