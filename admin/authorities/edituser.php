@@ -342,9 +342,9 @@ $array = mysqli_fetch_array($query);
                                 <div class="col-md-5">
                                   <div class="card">
                                     <div class="card-body">
-                                      <div class="col-lg-4 col-md-4 col-12">
+                                      <div>
                                         <div class="profile-image"> 
-                                          <div class="text-center">
+                                          <div class="col-lg-12  text-center">
                                             <img src="./profile/60039275-young-male-cartoon-profile-vector-illustration-graphic-design-.jpg" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
                                           </div>
                                           <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>
