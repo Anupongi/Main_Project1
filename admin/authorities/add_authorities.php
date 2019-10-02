@@ -338,7 +338,7 @@ $num_rows2 = mysqli_num_rows($query2);
                             <div class="row">
                                 <div class="col-3"></div>
                                 <div class="col-6">
-                                    <div class="card" style="width: 35rem;">
+                                    <div class="card">
                                         <div class="card-body" align="center">
                                             <form action="./insert.php" method="POST">
                                                 <div class="form-group col-md-6 ">
