@@ -205,10 +205,10 @@ session_start();
                                     $i = $i + 1;
                                 ?>
                                 <div class="carousel-item <?php if ($i == 1) { echo "active"; } ?>">
-                                    <img src="./page/img/img/<?php echo $d[2] ?>" class="d-block w-100" style="filter: grayscale(10%);">
+                                    <img src="./admin/page/img/img/<?php echo $d[2] ?>" class="d-block w-100" style="filter: grayscale(10%);">
         
                                     <div class="carousel-caption d-none d-md-block" style="background: linear-gradient(to right, rgba(255,255,0), rgba(255,255,0,0.3));width: 90%;">
-                                        <a href="./page/previewcontentpost.php?id=<?php echo $d[0] ?> ">
+                                        <a href="./previewcontentpost.php?id=<?php echo $d[0] ?> ">
                                             <h3 style=""><?php echo $d[1]  ?></h3>
                                             </h3>
                                         </a>
@@ -277,7 +277,7 @@ session_start();
                             </div>
                             <div class="row pt-2">
                                 <div class="col-sm-12">
-                                    <h5><a href="./admin/page/previewcontentpost.php?id=<?php echo $d[0] ?>"><?php echo $d[1] ?> </a></h5>
+                                    <h5><a href="./previewcontentpost.php?id=<?php echo $d[0] ?>"><?php echo $d[1] ?> </a></h5>
                                 </div>
                             </div>
                         </div>
@@ -429,32 +429,7 @@ session_start();
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <!-- <h5 class="text-uppercase">ประเภท</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="./pages/category.php?name=ถนนคนเดิน">ถนนคนเดิน</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=ห้าง">ห้าง</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=ตลาดกลางคืน">ตลาดกลางคืน</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=ที่ถ่ายรูป">ที่ถ่ายรูป</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=สวนสัตว์">สวนสัตว์</a>
-                        </li>
-                    </ul> -->
-
-                </div>
-                <!-- Grid column -->
+                
 
                 <!-- Grid column -->
                 <div class="col-md-3 mb-md-0 mb-3">
