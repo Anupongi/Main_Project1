@@ -105,7 +105,7 @@ $query = mysqli_query($conn,$sql);
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="../user_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
+      <a href="./user_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
     </ul>
 

@@ -82,7 +82,7 @@ if(mysqli_num_rows($result2)==1){
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="../user_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
+      <a href="./user_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
     </ul>
 
