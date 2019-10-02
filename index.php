@@ -460,7 +460,7 @@ session_start();
                 <div class="col-md-3 mb-md-0 mb-3">
 
                     <!-- Links -->
-                    <h5 class="text-uppercase">ติดต่อ</h5>
+                    <h5 class="text-uppercase">ติดต่อเรา</h5>
 
                     <ul class="list-unstyled">
                         <li>
@@ -502,7 +502,6 @@ session_start();
                     $('#back-to-top').fadeOut();
                 }
             });
-
             $('#back-to-top').click(function() {
                 $('#back-to-top').tooltip('hide');
                 $('body,html').animate({
