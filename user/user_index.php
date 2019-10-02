@@ -159,13 +159,13 @@ if(mysqli_num_rows($result2)==1){
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./user/editpicprofile.php" class="nav-link">
+                <a href="./editpicprofile.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เปลี่ยนรูปโปร์ไฟล์</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./user/editprofile.php" class="nav-link">
+                <a href="./editprofile.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>แก้ไขข้อมูลส่วนตัว</p>
                 </a>
