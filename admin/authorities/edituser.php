@@ -470,5 +470,12 @@ $array = mysqli_fetch_array($query);
 <script src="../../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script>
+// เปลี่ยนรูปแล้วชื่อขึ้น
+$(".custom-file-input").on("change", function() {
+var fileName = $(this).val().split("\\").pop();
+$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
 </body>
 </html>
