@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: login/index.php');
+    header('Location: ../../Login/index.php');
   }
 
 ?>  
@@ -14,7 +14,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
   
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>เพิ่มข้อมูลเจ้าหน้าที่ | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -104,7 +104,7 @@ $num_rows2 = mysqli_num_rows($query2);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $_SESSION["name"]?></a>
@@ -252,7 +252,7 @@ $num_rows2 = mysqli_num_rows($query2);
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./add_authorities.php" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข้อมูลเจ้าหน้าที่</p>
                 </a>
