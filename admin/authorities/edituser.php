@@ -56,7 +56,6 @@ $query = mysqli_query($conn,$sql);
 $num_rows = mysqli_num_rows($query);
 
 $id = $_GET['ID'];
-echo $id;
 mysqli_set_charset($conn,"utf8");
 $sql="SELECT * FROM `user` WHERE `ID` = $id ";
 // echo $sql;
@@ -354,9 +353,9 @@ $array = mysqli_fetch_array($query);
                                         <div class="profile-image"> 
                                           <div class="col-lg-12  text-center">
                                             <?php
-                                              $iduser = '';
+                                              $iduser = $_GET['ID'];
                                               mysqli_set_charset($conn,"utf8");
-                                              $sqlimg="SELECT * FROM `user` WHERE `Username` = '$id' ";
+                                              $sqlimg="SELECT * FROM `user` WHERE `Username` = '$iduser' ";
                                               echo $sqlimg;
                                               $query = mysqli_query($conn,$sqlimg);
                                               while($result=mysqli_fetch_array($query)){	
