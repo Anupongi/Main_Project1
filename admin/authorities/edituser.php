@@ -358,7 +358,9 @@ $array = mysqli_fetch_array($query);
                                               while($result=mysqli_fetch_array($query)){	
                                             ?>
                                             <img src="./profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
-                                            
+                                            <?php
+                                              }
+                                            ?>
                                           </div>
                                           <br>
                                           <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>
@@ -379,9 +381,6 @@ $array = mysqli_fetch_array($query);
                                           </div>
                                           </form>
                                         </div>
-                                        <?php
-                                          }
-                                        ?>
                                       </div>
                                     </div>
                                   </div>
