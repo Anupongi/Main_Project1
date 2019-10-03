@@ -369,17 +369,6 @@ $array = mysqli_fetch_array($query);
                                           <div class="custom-file">
                                               <input type="file" class="custom-file-input" id="customFile" name="image">
                                               <label class="custom-file-label" for="customFile">กรุณาเลือกรูป</label>
-                                              <?php
-
-                                                // mysqli_set_charset($conn,"utf8");
-                                                // $sqlid="SELECT * FROM `user` WHERE `ID` = $id ";
-                                                // $query = mysqli_query($conn,$sqlid);
-                                                // while($result=mysqli_fetch_array($query)){
-                                              ?>
-                                              <input type="text" name="id" id="id" value="<?php echo $result['profile']?>">
-                                              <?php 
-                                              // }
-                                              ?>
                                           </div>
                                           <br>
                                           <br>
