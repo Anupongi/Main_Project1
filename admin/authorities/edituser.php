@@ -357,12 +357,9 @@ $array = mysqli_fetch_array($query);
                                               $query = mysqli_query($conn,$sqlimg);
                                               while($result=mysqli_fetch_array($query)){	
                                             ?>
-                                            <input type="text" name="id" id="id" value="<?php echo $result["ID"]?>">
                                             <img src="./profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
-                                            <?php
-                                              }
-                                            ?>
-                                            </div>
+                                            
+                                          </div>
                                           <br>
                                           <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>
                                           <br>
@@ -370,7 +367,7 @@ $array = mysqli_fetch_array($query);
                                           <div class="custom-file">
                                               <input type="file" class="custom-file-input" id="customFile" name="image">
                                               <label class="custom-file-label" for="customFile">กรุณาเลือกรูป</label>
-                                              <input type="hidden" name="id" id="id" value="<?php echo $d[0]?>">
+                                              <input type="text" name="id" id="id" value="<?php echo $result['profile']?>">
                                           </div>
                                           <br>
                                           <br>
@@ -382,6 +379,9 @@ $array = mysqli_fetch_array($query);
                                           </div>
                                           </form>
                                         </div>
+                                        <?php
+                                          }
+                                        ?>
                                       </div>
                                     </div>
                                   </div>
