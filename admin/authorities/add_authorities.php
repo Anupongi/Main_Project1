@@ -105,6 +105,7 @@ $num_rows2 = mysqli_num_rows($query2);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
+          <input type="text" name="id" id="id" value="<?php echo $d[0]?>">
           <?php
             $id = $_SESSION['User'];
             mysqli_set_charset($conn,"utf8");
