@@ -13,6 +13,7 @@ $last_name = $_POST['last_name'];
 
 mysqli_set_charset($conn,"utf8");
 $sql = "UPDATE `user` SET `Username`= '$username' ,`Password`= '$password' ,`Firstname`= '$firstname' ,`Lastname` = '$last_name' WHERE `ID` = $id";
+echo $sql;
 $query = mysqli_query($conn,$sql);
- Header("Location: list_authorities.php"); 
+//  Header("Location: list_authorities.php"); 
 ?>
