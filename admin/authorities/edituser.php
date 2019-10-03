@@ -355,7 +355,7 @@ $array = mysqli_fetch_array($query);
                                             <?php
                                               $iduser = $_GET['ID'];
                                               mysqli_set_charset($conn,"utf8");
-                                              $sqlimg="SELECT * FROM `user` WHERE `Username` = '$iduser' ";
+                                              $sqlimg="SELECT * FROM `user` WHERE `ID` = '$iduser' ";
                                               echo $sqlimg;
                                               $query = mysqli_query($conn,$sqlimg);
                                               while($result=mysqli_fetch_array($query)){	
