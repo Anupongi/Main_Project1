@@ -357,6 +357,7 @@ $array = mysqli_fetch_array($query);
                                               $query = mysqli_query($conn,$sqlimg);
                                               while($result=mysqli_fetch_array($query)){	
                                             ?>
+                                            <input type="text" name="id" id="id" value="<?php echo $result["ID"]?>">
                                             <img src="./profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
                                             <?php
                                               }
