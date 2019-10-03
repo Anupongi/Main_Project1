@@ -108,7 +108,16 @@ $array = mysqli_fetch_array($query);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <?php
+            mysqli_set_charset($conn,"utf8");
+            $sqlimg="SELECT * FROM `user` WHERE `ID` = $id ";
+            $query = mysqli_query($conn,$sqlimg);
+            while($result=mysqli_fetch_array($query)){
+          ?>
+          <img src="./profile/<?php echo $result["profile"];?>" class="img-circle elevation-2" alt="User Image">
+          <?php 
+            }
+          ?>
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $_SESSION["name"]?></a>
@@ -335,7 +344,7 @@ $array = mysqli_fetch_array($query);
               <div class="col-12">
                     <div class="card">
                         <div class="card-header text-center">
-                            <h5>เพิ่มข้อมูลเจ้าหน้าที่</h5>
+                            <h5>แก้ไขข้อมูลเจ้าหน้าที่</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
