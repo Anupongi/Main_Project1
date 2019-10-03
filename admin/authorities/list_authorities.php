@@ -137,8 +137,9 @@ $per_page = 10;   // Per Page
         <div class="image">
           <?php
             $id = $_SESSION['User'];
+            echo $id;
             mysqli_set_charset($conn,"utf8");
-            $sqlimg="SELECT * FROM `user` WHERE `Username` = $id ";
+            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = $id ";
             $query1 = mysqli_query($conn,$sqlimg);
             while($result=mysqli_fetch_array($query1)){
           ?>
