@@ -373,6 +373,7 @@ $array = mysqli_fetch_array($query);
                                               <input type="file" class="custom-file-input" id="customFile" name="image">
                                               <label class="custom-file-label" for="customFile">กรุณาเลือกรูป</label>
                                               <?php 
+                                                $iduser = $_GET['ID'];
                                                 mysqli_set_charset($conn,"utf8");
                                                 $sqlimg="SELECT * FROM `user` WHERE `Username` = '$id' ";
                                                 $query = mysqli_query($conn,$sqlimg);
