@@ -399,7 +399,11 @@ $array = mysqli_fetch_array($query);
                                     <div class="card">
                                         <div class="card-body" align="center">
                                             <form action="./update.php" method="POST">
-                                              <input type="hidden" name="ID" value="<?php echo $id ?>">
+                                                  <?php
+                                                    // $sql = "SELECT * FROM user WHERE ID =1";
+                                                    // $query = mysqli_query($conn,$sql);
+                                                  ?>
+                                              <input type="text" name="ID" value="<?php echo $id ?>">
                                                 <div class="form-group col-md-6 ">
                                                     <label for="exampleInputEmail1">ชื่อผู้ใช้</label>
                                                     <input type="text" class="form-control" name="user_name" id="Username" aria-describedby="emailHelp" placeholder="Username" value="<?php echo $array[1] ?>" required>
