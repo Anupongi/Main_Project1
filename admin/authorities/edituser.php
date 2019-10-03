@@ -345,8 +345,17 @@ $array = mysqli_fetch_array($query);
                                       <div>
                                         <div class="profile-image"> 
                                           <div class="col-lg-12  text-center">
-                                            <img src="./profile/<?php echo $d[5]?>" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
-                                          </div>
+                                            <?php
+                                              mysqli_set_charset($conn,"utf8");
+                                              $sqlimg="SELECT * FROM `user` WHERE `ID` = $id ";
+                                              $query = mysqli_query($conn,$sqlimg);
+                                              while($result=mysqli_fetch_array($query)){	
+                                            ?>
+                                            <img src="./profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
+                                            <?php
+                                              }
+                                            ?>
+                                            </div>
                                           <br>
                                           <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>
                                           <br>
