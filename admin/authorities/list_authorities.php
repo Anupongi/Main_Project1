@@ -139,8 +139,8 @@ $per_page = 10;   // Per Page
             $id = $_SESSION['User'];
             mysqli_set_charset($conn,"utf8");
             $sqlimg="SELECT * FROM `user` WHERE `Username` = $id ";
-            $query = mysqli_query($conn,$sqlimg);
-            while($result=mysqli_fetch_array($query)){
+            $query1 = mysqli_query($conn,$sqlimg);
+            while($result=mysqli_fetch_array($query1)){
           ?>
           <img src="./profile/<?php echo $result["profile"];?>" class="img-circle elevation-2" alt="User Image">
           <?php 
