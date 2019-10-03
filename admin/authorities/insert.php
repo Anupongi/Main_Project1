@@ -1,11 +1,11 @@
 <?php
-    include("../connection/connection.php");
+    include("../../connection/connection.php");
     $user_name=$_POST['user_name'];
     $password=$_POST['password'];
     $first_name=$_POST['first_name'];
     $last_name=$_POST['last_name'];
 	$user_level= '01';
-	$image= './profile/default-profile.gif'
+	$image= 'default-profile.gif'
     date_default_timezone_set('asia/bangkok');
     $date=date("d-m-Y");
     function DateThai($strDate)
@@ -37,7 +37,7 @@
  
 		}else{
     //ถ้าไม่มีก็บันทึกลงฐานข้อมูล
-    $sql="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `Userlevel`, `date`) VALUES ('$user_name','$password','$first_name','$last_name','$user_level','$strDate')";
+    $sql="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `Userlevel`, `profile`, `date` ) VALUES ('$user_name','$password','$first_name','$last_name','$user_level','$image','$strDate')";
         $result = mysqli_query($con,$sql);
 //บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม   ปล.การทำระบบจริงๆ อาจกระโดดไปหน้าอื่นที่เรากำหนด
 	if($result){
