@@ -380,6 +380,7 @@ $per_page = 10;   // Per Page
                                     <table align="center">
                                         <thead>
                                             <tr>
+                                                <th width="110"> <div align="center">รูปประจำตัว </div></th>
                                                 <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
                                                 <th width="120"> <div align="center">รหัสผ่าน </div></th>
                                                 <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
@@ -394,7 +395,7 @@ $per_page = 10;   // Per Page
                                         {
                                         ?>
                                         <tr>
-                                            
+                                            <td><img src="./profile/<?php echo $result["profile"];?>" alt=""></td>
                                             <td><?php echo $result["Username"];?></td>
                                             <td><?php echo $result["Password"];?></td>
                                             <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
