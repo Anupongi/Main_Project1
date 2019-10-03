@@ -142,7 +142,7 @@ $per_page = 10;   // Per Page
             $query1 = mysqli_query($conn,$sqlimg);
             while($result=mysqli_fetch_array($query1)){
           ?>
-          <img src="./profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image">
+          <img src="./profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
           <?php 
             }
           ?>

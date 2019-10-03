@@ -112,7 +112,7 @@ $num_rows2 = mysqli_num_rows($query2);
             $query = mysqli_query($conn,$sqlimg);
             while($result=mysqli_fetch_array($query)){
           ?>
-          <img src="./profile/<?php echo $result["profile"];?>" class="img-circle elevation-2" alt="User Image">
+          <img src="./profile/<?php echo $result["profile"];?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
           <?php 
             }
           ?>
