@@ -151,7 +151,7 @@ $num_rows6 = mysqli_num_rows($query6);
             $query1 = mysqli_query($conn,$sqlimg);
             while($result=mysqli_fetch_array($query1)){
           ?>
-          <img src="./authorities/profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image">
+          <img src="./authorities/profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
           <?php 
             }
           ?>
