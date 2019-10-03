@@ -350,7 +350,7 @@ $array = mysqli_fetch_array($query);
                                           <br>
                                           <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>
                                           <br>
-                                          <form action="./updatepic.php" method="POST" enctype="multipart/form-data"> 
+                                          <form action="./updateimage.php" method="POST" enctype="multipart/form-data"> 
                                           <div class="custom-file">
                                               <input type="file" class="custom-file-input" id="customFile" name="image">
                                               <label class="custom-file-label" for="customFile">กรุณาเลือกรูป</label>
