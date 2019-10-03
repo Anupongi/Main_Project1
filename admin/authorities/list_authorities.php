@@ -395,7 +395,7 @@ $per_page = 10;   // Per Page
                                         {
                                         ?>
                                         <tr>
-                                            <td><img src="./profile/<?php echo $result["profile"];?>" alt="" style="width:100pxheight:100px"></td>
+                                            <td><img src="./profile/<?php echo $result["profile"];?>" alt="" style="width:100px;height:100px"></td>
                                             <td><?php echo $result["Username"];?></td>
                                             <td><?php echo $result["Password"];?></td>
                                             <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
