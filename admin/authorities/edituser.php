@@ -355,7 +355,6 @@ $array = mysqli_fetch_array($query);
                                             <?php
                                               mysqli_set_charset($conn,"utf8");
                                               $sqlimg="SELECT * FROM `user` WHERE `Username` = '$id' ";
-                                              echo $sqlimg;
                                               $query = mysqli_query($conn,$sqlimg);
                                               while($result=mysqli_fetch_array($query)){	
                                             ?>
@@ -371,6 +370,14 @@ $array = mysqli_fetch_array($query);
                                           <div class="custom-file">
                                               <input type="file" class="custom-file-input" id="customFile" name="image">
                                               <label class="custom-file-label" for="customFile">กรุณาเลือกรูป</label>
+                                              <?php 
+                                                mysqli_set_charset($conn,"utf8");
+                                                $sqlimg="SELECT * FROM `user` WHERE `Username` = '$id' ";
+                                                $query = mysqli_query($conn,$sqlimg);
+                                                while($result=mysqli_fetch_array($query)){	
+                                              ?>
+                                              <input type="hidden" name="id" id="id" value="<?php echo $result["ID"]?>">
+                                              <?php } ?>
                                           </div>
                                           <br>
                                           <br>
