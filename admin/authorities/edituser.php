@@ -74,9 +74,6 @@ $array = mysqli_fetch_array($query);
       <li class="nav-item d-none d-sm-inline-block">
       <a href="../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
