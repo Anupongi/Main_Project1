@@ -106,8 +106,9 @@ $array = mysqli_fetch_array($query);
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <?php
+            $id = $_SESSION['User'];
             mysqli_set_charset($conn,"utf8");
-            $sqlimg="SELECT * FROM `user` WHERE `ID` = $id ";
+            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
             $query = mysqli_query($conn,$sqlimg);
             while($result=mysqli_fetch_array($query)){
           ?>
