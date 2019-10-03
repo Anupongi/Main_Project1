@@ -142,7 +142,7 @@ $per_page = 10;   // Per Page
             $query1 = mysqli_query($conn,$sqlimg);
             while($result=mysqli_fetch_array($query1)){
           ?>
-          <img src="./profile/<?php echo $result["profile"];?>" class="img-circle elevation-2" alt="User Image">
+          <img src="./profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image">
           <?php 
             }
           ?>
@@ -380,7 +380,6 @@ $per_page = 10;   // Per Page
                                     <table align="center">
                                         <thead>
                                             <tr>
-                                                
                                                 <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
                                                 <th width="120"> <div align="center">รหัสผ่าน </div></th>
                                                 <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
