@@ -405,7 +405,7 @@ $array = mysqli_fetch_array($query);
                                                     $query = mysqli_query($conn,$sql);
                                                     while($result=mysqli_fetch_array($query)){	
                                                   ?>
-                                              <input type="text" name="ID" value="<?php echo $result["ID"] ?>">
+                                              <input type="hidden" name="ID" value="<?php echo $result["ID"] ?>">
                                                     <?php }?>
                                                 <div class="form-group col-md-6 ">
                                                     <label for="exampleInputEmail1">ชื่อผู้ใช้</label>
