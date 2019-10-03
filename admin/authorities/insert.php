@@ -7,7 +7,8 @@
 	$user_level= '01';
 	$image= 'default-profile.gif';
     date_default_timezone_set('asia/bangkok');
-    $date=date("d-m-Y");
+	$date=date("d-m-Y");
+	$phone='0979534778';
     function DateThai($strDate)
 	{
 		$strYear = date("Y",strtotime($strDate))+543;
@@ -37,7 +38,7 @@
  
 		}else{
     //ถ้าไม่มีก็บันทึกลงฐานข้อมูล
-    $sql="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `profile`, `Userlevel`,`date`) VALUES ('$user_name','$password','$first_name','$last_name','$image','$user_level','$strDate')";
+    $sql="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `profile`, `Userlevel`,`Phone`,`date`) VALUES ('$user_name','$password','$first_name','$last_name','$image','$user_level','$phone','$strDate')";
 	echo $sql;
 	$result = mysqli_query($con,$sql);
 //บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม   ปล.การทำระบบจริงๆ อาจกระโดดไปหน้าอื่นที่เรากำหนด
