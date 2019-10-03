@@ -108,7 +108,7 @@ $num_rows2 = mysqli_num_rows($query2);
           <?php
             $id = $_SESSION['User'];
             mysqli_set_charset($conn,"utf8");
-            $sqlimg="SELECT * FROM `user` WHERE `Username` = $id ";
+            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
             $query = mysqli_query($conn,$sqlimg);
             while($result=mysqli_fetch_array($query)){
           ?>
