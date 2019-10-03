@@ -56,7 +56,7 @@ $query = mysqli_query($conn,$sql);
 $num_rows = mysqli_num_rows($query);
 
 $id = $_GET['ID'];
-echo $id;
+
 mysqli_set_charset($conn,"utf8");
 $sql="SELECT * FROM `user` WHERE `ID` = $id ";
 // echo $sql;
