@@ -381,14 +381,15 @@ $per_page = 10;   // Per Page
                                     <table align="center">
                                         <thead>
                                             <tr>
-                                                <th width="110"> <div align="center">รูปประจำตัว </div></th>
-                                                <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
-                                                <th width="120"> <div align="center">รหัสผ่าน </div></th>
-                                                <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
-                                                <th width="80"><div align="center">สถานะผู้ใช้</div></th>
-                                                <th width="100"><div align="center">เริ่มสมัครสมาชิก</div></th>
-                                                <th width="59"> <div align="center">แก้ไข </div></th>
-                                                <th width="71"> <div align="center">ลบ </div></th>
+                                                <th> <div align="center">รูปประจำตัว </div></th>
+                                                <th> <div align="center">ชื่อผู้ใช้ </div></th>
+                                                <th> <div align="center">รหัสผ่าน </div></th>
+                                                <th> <div align="center">ชื่อ-นามสกุล </div></th>
+                                                <th> <div align="center">เบอร์โทรศัพท์ </div></th>
+                                                <th><div align="center">สถานะผู้ใช้</div></th>
+                                                <th><div align="center">เริ่มสมัครสมาชิก</div></th>
+                                                <th> <div align="center">แก้ไข </div></th>
+                                                <th> <div align="center">ลบ </div></th>
                                             </tr>
                                         </thead>
                                         <?php
@@ -400,6 +401,7 @@ $per_page = 10;   // Per Page
                                             <td><?php echo $result["Username"];?></td>
                                             <td><?php echo $result["Password"];?></td>
                                             <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
+                                            <td><div align="center"><?php echo $result["Phone"]?></div></td>
                                             <td><?php 
                                                 $level = $result["Userlevel"];
                                                 $sql1 = "SELECT * FROM `user_level` WHERE `userlevel_id` = $level ";
