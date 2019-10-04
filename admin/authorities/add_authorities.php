@@ -371,7 +371,7 @@ $num_rows2 = mysqli_num_rows($query2);
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="exampleInputPassword1">เบอร์โทรศัพท์</label>
+                                                    <label for="exampleInputPassword1">เบอร์โทรศัพท์ที่สามารถติดต่อได้</label>
                                                     <input type="text" class="form-control" id="phone" name="phone" placeholder="เบอร์โทรศัพท์" required>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">ยืนยัน</button>

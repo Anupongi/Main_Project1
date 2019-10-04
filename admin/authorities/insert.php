@@ -8,7 +8,7 @@
 	$image= 'default-profile.gif';
     date_default_timezone_set('asia/bangkok');
 	$date=date("d-m-Y");
-	$phone='0979534778';
+	$phone=$_POST['phone'];
     function DateThai($strDate)
 	{
 		$strYear = date("Y",strtotime($strDate))+543;
