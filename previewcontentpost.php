@@ -160,7 +160,7 @@ session_start();
         <div class="row mt-5">
             <div class="col-sm-8">
                 <div class="row mb-4">
-                    <div class="colsm-1">
+                    <div class="col-sm-1">
                         <?php
                             include "./connection/connection.php";
                             $sql_img = "SELECT `profile` FROM `user` WHERE `Username` = '$d[5]'";
