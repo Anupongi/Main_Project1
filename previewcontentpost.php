@@ -167,7 +167,7 @@ session_start();
                             $query_img = mysqli_query($conn, $sql_img);
                             while ($d_img = mysqli_fetch_array($query_img)) {
                         ?>
-                        <img src="./admin/authorities/profile/<?php echo $d_img[5];?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
+                        <img src="./admin/authorities/profile/<?php echo $d_img["profile"];?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
                     <?php 
                         }
                     ?>
