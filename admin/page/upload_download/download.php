@@ -2,7 +2,7 @@
   session_start();
   
   if(!isset($_SESSION["UserID"])){
-    header('Location: ../../Login/index.php');
+    header('Location: ../../../Login/index.php');
   }
 ?>
 
@@ -59,17 +59,14 @@ mysqli_set_charset($conn,"utf8");
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="../../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+      <a href="../../../admin/admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li>
       <?php
-        echo '<a href="../../logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
+        echo '<a href="../../../Login/logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
       ?>
         
           
@@ -129,19 +126,19 @@ mysqli_set_charset($conn,"utf8");
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="../alluser.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>รายชื่อสมาชิกทั้งหมด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="../user02.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>นักเรียน นักศึกษา</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="../user03.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ครู บุคลากร</p>
                 </a>
@@ -158,13 +155,13 @@ mysqli_set_charset($conn,"utf8");
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="../login_date.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ประจำวัน</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="../logindate_menu.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ทั้งหมด</p>
                 </a>
@@ -182,9 +179,15 @@ mysqli_set_charset($conn,"utf8");
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="../../treatment/treatment_list1.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ข้อมูลทั้งหมด</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../treatment/treatment_frm.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลเวชภัณฑ์ยา</p>
                 </a>
               </li>
             </ul>
