@@ -379,7 +379,7 @@ $per_page = 10;   // Per Page
                                 <div class="col-12">
                                   <div class="table-responsive-md">
                                     <table class="table" align="center">
-                                        <thead class="bg-success">
+                                        <thead>
                                             <tr>
                                                 <th width="110"> <div align="center">รูปประจำตัว </div></th>
                                                 <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
