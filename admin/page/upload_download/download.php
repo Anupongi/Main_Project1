@@ -330,7 +330,7 @@ mysqli_set_charset($conn,"utf8");
           <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-7">
+                <div class="col-md-7">
                   
                   <div class="card mb-3" style="max-width: 550px;">
                     <div class="row no-gutters">
@@ -350,8 +350,8 @@ mysqli_set_charset($conn,"utf8");
                     </div>
                   </div>
                 </div>  
-                <div class="col-2"></div>   
-                <div class="col-3" style="margin-top:1%;margin-bottom:auto%;">
+                <div class="col-md-2"></div>   
+                <div class="col-md-3" style="margin-top:1%;margin-bottom:auto%;">
                   <?php if($d[8] == "y"){ ?>
                     <a href="./editpage/hidden.php?id=<?php echo $d[0] ?>" class="btn btn-warning btn-block">ซ่อนเอกสาร</a>
                   <?php }else{ ?>
