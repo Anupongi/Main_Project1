@@ -160,7 +160,7 @@ session_start();
         <div class="row mt-5">
             <div class="col-sm-8">
                 <div class="row mb-4">
-                    <!-- <div class="colsm-1">
+                    <div class="colsm-1">
                         <img src="
                         <?php
                         include "./connection/connection.php";
@@ -170,7 +170,7 @@ session_start();
                             echo "./admin/authorities/profile/" . $d_img[0];
                         }
                         ?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
-                    </div> -->
+                    </div>
                     <div class="col-sm-4">
                         Published on <?php echo $d[4] ?> <br>
                         By <?php echo $d[5] ?>
