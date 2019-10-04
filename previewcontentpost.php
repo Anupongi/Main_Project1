@@ -169,6 +169,7 @@ session_start();
                         while ($d_img = mysqli_fetch_array($query_img)) {
                             echo "./admin/authorities/profile/" . $d_img[0];
                         }
+                        echo $d_img;
                         ?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
                     </div>
                     <div class="col-sm-4">
