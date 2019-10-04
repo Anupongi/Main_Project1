@@ -6,6 +6,7 @@
     $dbName = "post";
     $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn,"utf8");
+    $username = $_SESSION["User"];
     $id_admin = $_SESSION["name"];
     $title = $_POST['title'];
     $content = $_POST['editor1'];
@@ -31,8 +32,8 @@
         
     
 	// echo "ThaiCreate.Com Time now : ".DateThai($strDate);
-    $sql = "INSERT INTO `allpost`(`title`,`image`, `content`, `date` , `user_post`, `published`) 
-            VALUES ('$title','$file_name','$content','$date1','$id_admin','y');";
+    $sql = "INSERT INTO `allpost`(`title`,`image`, `content`, `date` ,`id_userpost`, `user_post`, `published`) 
+            VALUES ('$title','$file_name','$content','$date1','$username','$id_admin','y');";
     mysqli_query($conn,$sql);
     
      header('Location: allpost.php');
