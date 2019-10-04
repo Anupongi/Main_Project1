@@ -85,9 +85,9 @@ mysqli_set_charset($conn,"utf8");
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index1.html" class="brand-link">
-      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="../../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">สำหรับเจ้าหน้าที่</span>
     </a>
 
     <!-- Sidebar -->
@@ -95,7 +95,17 @@ mysqli_set_charset($conn,"utf8");
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <?php
+            $id = $_SESSION['User'];
+            mysqli_set_charset($conn,"utf8");
+            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
+            $query = mysqli_query($conn,$sqlimg);
+            while($result=mysqli_fetch_array($query)){
+          ?>
+          <img src="../../authorities/profile/<?php echo $result["profile"];?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
+          <?php 
+            }
+          ?>
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $_SESSION["name"]?></a>
@@ -309,34 +319,6 @@ mysqli_set_charset($conn,"utf8");
       mysqli_set_charset($conn,"utf8");
       $result = mysqli_query($conn, $sql);
       while ($d = mysqli_fetch_array($result)) {
-      
-    // if (isset($_GET['file_id'])) {
-    // $id = $_GET['file_id'];
-
-    // // fetch file to download from database
-    // $sql1 = "SELECT * FROM files WHERE id=$id";
-    // $result1 = mysqli_query($conn, $sql1);
-
-    // $file = mysqli_fetch_assoc($result1);
-    // $filepath = './uploads/' . $file['name'];
-    // if (file_exists($filepath)) {
-    //     header('Content-Description: File Transfer');
-    //     header('Content-Type: application/octet-stream');
-    //     header('Content-Disposition: attachment; filename=' . basename($filepath));
-    //     header('Expires: 0');
-    //     header('Cache-Control: must-revalidate');
-    //     header('Pragma: public');
-    //     header('Content-Length: ' . filesize('./uploads/' . $file['name']));
-    //     readfile('./uploads/' . $file['name']);
-
-    //     // Now update downloads count
-    //     $newCount = $file['downloads'] + 1;
-    //     $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
-    //     mysqli_query($conn, $updateQuery);
-    //     exit;
-    // }
-
-// }
 ?>
     <div class="container-fluid">
       <div class="row">
