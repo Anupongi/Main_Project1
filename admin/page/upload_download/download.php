@@ -14,7 +14,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
   
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>ไฟล์สำหรับดาวน์โหลด | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -96,10 +96,11 @@ mysqli_set_charset($conn,"utf8");
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <?php
+            include "../../../connection/connection.php";
             $id = $_SESSION['User'];
-            mysqli_set_charset($conn,"utf8");
+            mysqli_set_charset($con,"utf8");
             $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
-            $query = mysqli_query($conn,$sqlimg);
+            $query = mysqli_query($con,$sqlimg);
             while($result=mysqli_fetch_array($query)){
           ?>
           <img src="../../authorities/profile/<?php echo $result["profile"];?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
