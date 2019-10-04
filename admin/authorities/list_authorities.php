@@ -377,7 +377,7 @@ $per_page = 10;   // Per Page
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12">
-                                  <div class="table-responsive-sm">
+                                  <div class="table-responsive-xl">
                                     <table align="center">
                                         <thead>
                                             <tr>
