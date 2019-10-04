@@ -370,6 +370,10 @@ $num_rows2 = mysqli_num_rows($query2);
                                                         <input type="text" class="form-control" id="lastname" name="last_name" placeholder="นามสกุล" required>
                                                     </div>
                                                 </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="exampleInputPassword1">เบอร์โทรศัพท์</label>
+                                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="เบอร์โทรศัพท์" required>
+                                                </div>
                                                 <button type="submit" class="btn btn-primary">ยืนยัน</button>
                                                 <button type="reset" class="btn btn-warning">ยกเลิก</button>
                                             </form>
