@@ -166,10 +166,11 @@ session_start();
                             $sql_img = "SELECT `profile` FROM `user` WHERE `Username` = '$d[5]'";
                             $query_img = mysqli_query($conn, $sql_img);
                             while ($d_img = mysqli_fetch_array($query_img)) {
-                        }
                         ?>
                         <img src="./admin/authorities/profile/<?php echo $d_img[5];?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
-                         
+                    <?php 
+                        }
+                    ?>
                     </div>
                     <div class="col-sm-4">
                         เผยแพร่เมื่อ <?php echo $d[4] ?> <br>
