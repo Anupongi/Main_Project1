@@ -165,6 +165,7 @@ session_start();
                         <?php
                         include "./connection/connection.php";
                         $sql_img = "SELECT `profile` FROM `user` WHERE `Firstname` = $d[5]";
+                        echo $sql_img;
                         $query_img = mysqli_query($conn, $sql_img);
                         while ($d_img = mysqli_fetch_array($query_img)) {
                             echo "./admin/authorities/profile/" . $d_img[0];
