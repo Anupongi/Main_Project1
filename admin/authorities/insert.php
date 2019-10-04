@@ -42,19 +42,19 @@
 	echo $sql;
 	$result = mysqli_query($con,$sql);
 //บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม   ปล.การทำระบบจริงๆ อาจกระโดดไปหน้าอื่นที่เรากำหนด
-// 	if($result){
-// 			echo "<script type='text/javascript'>";
-// 				echo "alert('SUCCESSFULLY');";
-// 				echo "window.location='./list_authorities.php';";
-// 			echo "</script>";
-// 	  }
-// 	  else{
-// //ถ้าบันทึกไม่สำเร็จแสดงข้อความ Error และกระโดดกลับไปหน้าฟอร์ม
-// 		    echo "<script type='text/javascript'>";
-// 				echo "alert('Error!');";
-// 				echo "window.location='./add_authorities.php';";
-// 			echo "</script>";
-// 	  }
+	if($result){
+			echo "<script type='text/javascript'>";
+				echo "alert('SUCCESSFULLY');";
+				echo "window.location='./list_authorities.php';";
+			echo "</script>";
+	  }
+	  else{
+//ถ้าบันทึกไม่สำเร็จแสดงข้อความ Error และกระโดดกลับไปหน้าฟอร์ม
+		    echo "<script type='text/javascript'>";
+				echo "alert('Error!');";
+				echo "window.location='./add_authorities.php';";
+			echo "</script>";
+	  }
 	  
 
 }
