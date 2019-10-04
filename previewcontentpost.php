@@ -161,20 +161,19 @@ session_start();
             <div class="col-sm-8">
                 <div class="row mb-4">
                     <div class="colsm-1">
-                        <img src="
                         <?php
-                        include "./connection/connection.php";
-                        $sql_img = "SELECT `profile` FROM `user` WHERE `Username` = '$d[5]'";
-                        $query_img = mysqli_query($conn, $sql_img);
-                        while ($d_img = mysqli_fetch_array($query_img)) {
-                            echo "./admin/authorities/profile/" . $d_img[0];
+                            include "./connection/connection.php";
+                            $sql_img = "SELECT `profile` FROM `user` WHERE `Username` = '$d[5]'";
+                            $query_img = mysqli_query($conn, $sql_img);
+                            while ($d_img = mysqli_fetch_array($query_img)) {
                         }
-                        echo $d_img;
-                        ?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
+                        ?>
+                        <img src="./admin/authorities/profile/<?php echo $d_img[0];?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
+                         
                     </div>
                     <div class="col-sm-4">
-                        Published on <?php echo $d[4] ?> <br>
-                        By <?php echo $d[5] ?>
+                        เผยแพร่เมื่อ <?php echo $d[4] ?> <br>
+                        โดย <?php echo $d[6] ?>
                     </div>
                 </div>
             </div>    
