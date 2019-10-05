@@ -37,6 +37,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <script src="../../plugins/ckeditor/ckeditor.js"></script>
+  <script src="http://example.com/ckeditor/plugins/uploadimage"></script>
   <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/decoupled-document/ckeditor.js"></script> -->
   <!-- <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script> -->
   <link rel="icon" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
