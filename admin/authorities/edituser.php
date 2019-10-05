@@ -518,7 +518,6 @@ $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
             reader.onload = function(e) {
             $('#picprofile').attr('src', e.target.result);
             }
-    
             reader.readAsDataURL(input.files[0]);
         }
         }
