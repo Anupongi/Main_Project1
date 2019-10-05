@@ -426,8 +426,8 @@ $num_rows1 = mysqli_num_rows($query1)
 <script>
   
   CKEDITOR.replace('editor1',{
-    filebrowserBrowseUrl: '',
-	  filebrowserUploadUrl: ''
+    filebrowserBrowseUrl: '/browser/browse.php',
+    filebrowserUploadUrl: '/uploader/upload.php'
   });
 </script>
 <script>
