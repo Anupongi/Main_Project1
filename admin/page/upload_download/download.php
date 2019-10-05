@@ -180,7 +180,7 @@ mysqli_set_charset($conn,"utf8");
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../treatment/treatment_list1.php" class="nav-link">
+                <a href="../../treatment/treatment_list.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ข้อมูลทั้งหมด</p>
                 </a>
