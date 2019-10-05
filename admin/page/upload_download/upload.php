@@ -342,13 +342,13 @@
                   $date1 = DateThai($strDate);
                   
                   if($file_name == 'docx'){
-                    $file_image = 'img src=.uploadsimgword-file-icon-8.png';
+                    $file_image = 'word-file-icon.png';
                   }elseif($file_name == 'pdf'){
                       $file_image = '833px-PDF_file_icon.svg.png';
                   }elseif($file_name == 'zip'){
                       $file_image = 'www.downloadzen.com_.png';  
                   }elseif($file_name == 'doc'){
-                    $file_image = 'img src=.uploadsimgword-file-icon-8.png';  
+                    $file_image = 'word-file-icon.png';  
                   }elseif($file_name == 'xls'){
                     $file_image = '782px-Microsoft_Excel_2013_logo.png';  
                   }
