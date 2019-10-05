@@ -422,10 +422,11 @@ $num_rows1 = mysqli_num_rows($query1)
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <script>
-  CKEDITOR.replace('editor1',{
-    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
-	  filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
-  });
+  CKEDITOR.replace('editor1');
+  // CKEDITOR.replace('editor1',{
+  //   filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+	//   filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+  // });
 </script>
 <script>
            $('input[type="file"]').change(function(e){
