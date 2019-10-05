@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
   <link rel="icon" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
 </head>
 <body class="hold-transition sidebar-mini">
@@ -64,7 +64,6 @@ $sql1 = "SELECT * FROM login_date";
 $query1 = mysqli_query($conn,$sql1);
 $num_rows1 = mysqli_num_rows($query1)
 
-
 ?>
 <div class="wrapper">
 
@@ -78,14 +77,7 @@ $num_rows1 = mysqli_num_rows($query1)
       <li class="nav-item d-none d-sm-inline-block">
       <a href="../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
-
-  
-
-    
     <ul class="navbar-nav ml-auto">
       <li>
       <?php
@@ -93,7 +85,6 @@ $num_rows1 = mysqli_num_rows($query1)
       ?>
       </li>
     </ul>
-
   </nav>
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
@@ -348,14 +339,11 @@ $num_rows1 = mysqli_num_rows($query1)
                   <input type="text" class="form-control" name="title" id="title" placeholder="หัวข้อของคุณ">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputFile">รูปภาพ</label>
+                  <label for="exampleInputFile">รูปภาพหน้าปก</label>
                   <div class="input-group mb-3">
                     <div class="custom-file">
                       <input type="file" class="custom-file-input" id="inputGroupFile02" name="image">
                       <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
                     </div>
                   </div>
                 </div>
