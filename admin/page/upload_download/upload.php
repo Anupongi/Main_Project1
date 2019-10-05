@@ -389,8 +389,8 @@
     <section class="content">
       <div class="container">
         <div class="row">
-          <div class="col-1"></div>
-          <div class="col-10">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
             <div class="card">
               <div class="card-header">
                 เพิ่มเอกสารดาวน์โหลด
@@ -402,9 +402,6 @@
                       <input type="file" class="custom-file-input" id="inputGroupFile02" name="myfile">
                       <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
                     </div>
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                    </div>
                   </div>
                   <button type="submit" name="save"  class="btn btn-success">upload</button>
                   <br>
@@ -413,7 +410,7 @@
               </div>
             </div>
           </div>
-          <div class="col-1"></div>
+          <div class="col-md-1"></div>
         </div>
       </div>
     </section>
