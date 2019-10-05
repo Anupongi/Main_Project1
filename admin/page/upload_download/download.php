@@ -38,6 +38,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="icon" href="../../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
 </head>
 <body class="hold-transition sidebar-mini" style="font-family: 'Kanit', sans-serif;">
 <?php
