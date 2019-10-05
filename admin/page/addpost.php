@@ -37,6 +37,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+  <link rel="icon" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
 </head>
 <body class="hold-transition sidebar-mini">
 <?php
@@ -209,6 +210,30 @@ $num_rows1 = mysqli_num_rows($query1)
               </li>
             </ul>
           </li>
+          <li class="nav-header">ประวัติการรักษา</li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                ประวัติการรักษา
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../treatment/treatment.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลประวัติการรักษา</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../treatment/treatment_list1.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>ประวัติการรักษาทั้งหมด</p>
+                </a>
+              </li>
+              </ul>
+            </li>
           <li class="nav-header">ข่าวประชาสัมพันธ์</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -220,7 +245,7 @@ $num_rows1 = mysqli_num_rows($query1)
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./addpost.php" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข่าวประชาสัมพันธ์</p>
                 </a>
@@ -243,13 +268,13 @@ $num_rows1 = mysqli_num_rows($query1)
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./upload.php" class="nav-link">
+                <a href="./upload_download/upload.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มเอกสารดาวน์โหลด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./download.php" class="nav-link">
+                <a href="./upload_download/download.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เอกสารดาวน์โหลดทั้งหมด</p>
                 </a>
