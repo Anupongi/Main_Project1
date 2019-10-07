@@ -12,7 +12,7 @@
 	    //หากไม่ได้ Active ในเวลาที่กำหนด
 	  if($seclogin>$sessionlifetime){
 		  //goto logout page
-		  header("location: ../Login/logoutForSes.php");
+		  header("location: logoutForSes.php");
 		exit;
 	  }else{
 		  $_SESSION["timeLasetdActive"] = time();
