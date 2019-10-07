@@ -13,10 +13,10 @@
  * (1) https://ckeditor.com/cke4/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) https://ckeditor.com/cke4/builder/34a13e43843b398063b386f5c04836f2
+ * (2) https://ckeditor.com/cke4/builder/5e2fd8cc88935adee1e3c30e0e35a013
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) https://ckeditor.com/cke4/builder/download/34a13e43843b398063b386f5c04836f2
+ * (3) https://ckeditor.com/cke4/builder/download/5e2fd8cc88935adee1e3c30e0e35a013
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -65,7 +65,6 @@ var CKBUILDER_CONFIG = {
 		'dialogadvtab' : 1,
 		'div' : 1,
 		'elementspath' : 1,
-		'emoji' : 1,
 		'enterkey' : 1,
 		'entities' : 1,
 		'filebrowser' : 1,
@@ -76,7 +75,6 @@ var CKBUILDER_CONFIG = {
 		'format' : 1,
 		'forms' : 1,
 		'horizontalrule' : 1,
-		'html5video' : 1,
 		'htmlwriter' : 1,
 		'iframe' : 1,
 		'image' : 1,
@@ -104,6 +102,7 @@ var CKBUILDER_CONFIG = {
 		'selectall' : 1,
 		'showblocks' : 1,
 		'showborders' : 1,
+		'simage' : 1,
 		'smiley' : 1,
 		'sourcearea' : 1,
 		'specialchar' : 1,
@@ -117,12 +116,10 @@ var CKBUILDER_CONFIG = {
 		'undo' : 1,
 		'uploadfile' : 1,
 		'uploadimage' : 1,
-		'video' : 1,
 		'wsc' : 1,
 		'wysiwygarea' : 1
 	},
 	languages : {
-		'en' : 1,
-		'th' : 1
+		'en' : 1
 	}
 };
