@@ -423,7 +423,6 @@ $num_rows1 = mysqli_num_rows($query1)
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <script>
-  
   CKEDITOR.replace('editor1');
 </script>
 <script>
