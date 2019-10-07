@@ -37,7 +37,6 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <script src="../../plugins/ckeditor/ckeditor.js"></script>
-  <script src="../../plugins/ckeditor/plugins/uploadimage"></script>
   <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/decoupled-document/ckeditor.js"></script> -->
   <!-- <script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script> -->
   <link rel="icon" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
@@ -425,10 +424,7 @@ $num_rows1 = mysqli_num_rows($query1)
 <script src="../../dist/js/demo.js"></script>
 <script>
   
-  CKEDITOR.replace('editor1',{
-    filebrowserBrowseUrl: '',
-    filebrowserUploadUrl: '/uploader/upload.php'
-  });
+  CKEDITOR.replace('editor1');
 </script>
 <script>
            $('input[type="file"]').change(function(e){
