@@ -13,10 +13,17 @@
  * (1) https://ckeditor.com/cke4/builder
  *     Visit online builder to build CKEditor from scratch.
  *
+<<<<<<< HEAD
  * (2) https://ckeditor.com/cke4/builder/cc4558cdcd7009994f6c1e43dfa35650
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
  * (3) https://ckeditor.com/cke4/builder/download/cc4558cdcd7009994f6c1e43dfa35650
+=======
+ * (2) https://ckeditor.com/cke4/builder/5e2fd8cc88935adee1e3c30e0e35a013
+ *     Visit online builder to build CKEditor, starting with the same setup as before.
+ *
+ * (3) https://ckeditor.com/cke4/builder/download/5e2fd8cc88935adee1e3c30e0e35a013
+>>>>>>> 6cb199b0bc81cfb058596132149d5a1a22cd35f5
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -81,6 +88,11 @@ var CKBUILDER_CONFIG = {
 		'resize' : 1,
 		'scayt' : 1,
 		'showborders' : 1,
+<<<<<<< HEAD
+=======
+		'simage' : 1,
+		'smiley' : 1,
+>>>>>>> 6cb199b0bc81cfb058596132149d5a1a22cd35f5
 		'sourcearea' : 1,
 		'specialchar' : 1,
 		'stylescombo' : 1,
@@ -90,6 +102,11 @@ var CKBUILDER_CONFIG = {
 		'tabletools' : 1,
 		'toolbar' : 1,
 		'undo' : 1,
+<<<<<<< HEAD
+=======
+		'uploadfile' : 1,
+		'uploadimage' : 1,
+>>>>>>> 6cb199b0bc81cfb058596132149d5a1a22cd35f5
 		'wsc' : 1,
 		'wysiwygarea' : 1
 	},
