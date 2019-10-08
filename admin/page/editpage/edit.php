@@ -71,9 +71,6 @@ $array = mysqli_fetch_array($query);
       <li class="nav-item d-none d-sm-inline-block">
       <a href="../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
 
   
@@ -111,9 +108,9 @@ $array = mysqli_fetch_array($query);
         <div class="image">
           <?php
             include "../../connection/connection.php";
-            $id = $_SESSION['User'];
+            $id1 = $_SESSION['User'];
             mysqli_set_charset($con,"utf8");
-            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
+            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id1' ";
             $query = mysqli_query($con,$sqlimg);
             while($result=mysqli_fetch_array($query)){
           ?>
