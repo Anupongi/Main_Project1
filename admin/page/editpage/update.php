@@ -29,9 +29,9 @@ date_default_timezone_set('asia/bangkok');
 
         $strDate = $date;
         $date1 = DateThai($strDate);
-mysqli_set_charset($conn,"utf8");
-$sql = "UPDATE `allpost` SET `title`= '$title' ,`image`= '$file_name' ,`content`= '$content' ,`date` = '$date1',`user_post`= '$id_admin' WHERE `post_id` = $id";
-// echo $sql;
-$query = mysqli_query($conn,$sql);
-//  Header("Location: ../allpost.php"); 
+	mysqli_set_charset($conn,"utf8");
+	$sql = "UPDATE `allpost` SET `title`= '$title' ,`image`= '$file_name' ,`content`= '$content' ,`date` = '$date1',`id_userpost`=$id ,`user_post`= '$id_admin' WHERE `post_id` = $id";
+	// echo $sql;
+	$query = mysqli_query($conn,$sql);
+ Header("Location: ../allpost.php"); 
 ?>
