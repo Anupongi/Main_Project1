@@ -155,18 +155,19 @@ session_start();
 	<script>
   		$(document).ready(function() {
 			$(".submit").click(function() {
-				var Username = $('#username_log').val();
-				var Password = $('#password_log').val();
-				var json = {
-					username_log: Username,
-					password_log: Password,
-				};
-        		console.log(json);
-				$.ajax({
-					type: "post",
-					url: "./check_login.php",
-					data: json,
-					success: function(response) {
+				alert("OK");
+				// var Username = $('#username_log').val();
+				// var Password = $('#password_log').val();
+				// var json = {
+				// 	username_log: Username,
+				// 	password_log: Password,
+				// };
+        		// console.log(json);
+				// $.ajax({
+				// 	type: "post",
+				// 	url: "./check_login.php",
+				// 	data: json,
+				// 	success: function(response) {
             	// if (response == 1) {
 				// 			window.location.href = "../admin/admin_index.php";
 				// 		}else{
@@ -178,7 +179,7 @@ session_start();
     			// 				confirmButtonColor: "#DD6B55"
 				// 			})
 				// 		}
-					}
+					// }
 				});
 			});
 		});
