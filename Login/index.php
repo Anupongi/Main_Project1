@@ -39,7 +39,7 @@ session_start();
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="./check.php" method="POST" style="padding: 50px 55px 55px 55px;">
+				<!-- <form class="login100-form validate-form" action="./check.php" method="POST" style="padding: 50px 55px 55px 55px;"> -->
 					<span class="login100-form-title p-b-40" style="font-family: 'Kanit', sans-serif;">
 						ห้องพยาบาล วิทยาลัยเทคนิคเชียงใหม่
 					</span>
@@ -124,7 +124,7 @@ session_start();
 
 						
 					</div>
-				</form>
+				<!-- </form> -->
 
 				<div class="login100-more" style="background-image: url('../dist/img/ห้องพยาบาล_๑๗๑๒๐๕_0008.jpg');">
 				</div>
