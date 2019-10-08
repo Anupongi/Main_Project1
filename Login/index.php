@@ -27,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/main1.css">
 <!--===============================================================================================-->
 	<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
 </head>
 <body style="background-color: #666666; font-family: 'Kanit', sans-serif;">
 <?
@@ -35,7 +36,7 @@ session_start();
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="./check.php" method="POST">
+				<form class="login100-form validate-form" action="./check.php" method="POST" style="padding: 50px 55px 55px 55px;">
 					<span class="login100-form-title p-b-40" style="font-family: 'Kanit', sans-serif;">
 						ห้องพยาบาล วิทยาลัยเทคนิคเชียงใหม่
 					</span>
