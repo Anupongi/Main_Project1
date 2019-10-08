@@ -69,7 +69,7 @@ $array = mysqli_fetch_array($query);
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
+      <a href="../../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
     </ul>
 
@@ -80,7 +80,7 @@ $array = mysqli_fetch_array($query);
       <!-- Messages Dropdown Menu -->
       <li>
       <?php
-        echo '<a href="../logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
+        echo '<a href="../../../Login/logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
       ?>
         
           
