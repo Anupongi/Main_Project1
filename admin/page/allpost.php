@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  
+  <link rel="icon" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
 </head>
 <body class="hold-transition sidebar-mini">
 <?php

@@ -13,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
   
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>เพิ่มข่าวประชาสัมพันธ์ | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
