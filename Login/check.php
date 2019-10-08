@@ -13,7 +13,7 @@ session_start();
                   $result = mysqli_query($con,$sql);
 				            
                   if(mysqli_num_rows($result)==1){
-                      
+                    
                       $row = mysqli_fetch_array($result);
 
                       $_SESSION["UserID"] = $row["ID"];
@@ -22,7 +22,7 @@ session_start();
                       $_SESSION["name"] = $row["Firstname"]." ".$row["Lastname"];
                       // $_SESSION["Username"] = $row["Username"];
                       $_SESSION["Userlevel"] = $row["Userlevel"];
-                      
+                      echo 1;
                       
                       // if($_SESSION["Userlevel"]=="01"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
                       //   echo 1;
