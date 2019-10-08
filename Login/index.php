@@ -168,9 +168,7 @@ session_start();
 					data: json,
 					success: function(response) {
             	if (response == 1) {
-					// if($_SESSION["Userlevel"]=="01"){
-						Header("Location: ../admin/admin_index.php");
-					// }
+					window.location.href = "../admin/admin_index.php";
 				}else{
 							Swal.fire({
 								type: 'error',
