@@ -41,9 +41,9 @@ session_start();
                         Header("Location: ../user/user_index.php");
 
                       }
-                      echo 1;
+                      // echo 1;
                   }else{
-                    echo 0;
+                    // echo 0;
                     // echo "<script>";
                     //     echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
                     //     echo "window.history.back()";
