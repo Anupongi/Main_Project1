@@ -318,7 +318,7 @@ $array = mysqli_fetch_array($query);
               <form action="./update.php" method="POST" enctype="multipart/form-data">
               <div class="card-body">
                 <div class="form-group">
-                  <input type="text" name="id" value="<?php echo $id ?>">
+                  <input type="hidden" name="id" value="<?php echo $id ?>">
                   <label for="title">หัวข้อ</label>
                   <input type="text" class="form-control" name="title" id="title" placeholder="หัวข้อของคุณ" value="<?php echo $array[1] ?>">
                 </div>
