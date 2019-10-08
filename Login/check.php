@@ -43,17 +43,17 @@ session_start();
                       }
 
                   }else{
-                    echo "<script>";
-                        echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
-                        echo "window.history.back()";
-                    echo "</script>";
+                    // echo "<script>";
+                    //     echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
+                    //     echo "window.history.back()";
+                    // echo "</script>";
 
                   }
 
         }else{
 
 
-             Header("Location: ../index.php"); //user & password incorrect back to login again
+            //  Header("Location: ../index.php"); //user & password incorrect back to login again
 
         }
 ?>

@@ -28,6 +28,9 @@
 <!--===============================================================================================-->
 	<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" href="../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.js"></script>  
+
 </head>
 <body style="background-color: #666666; font-family: 'Kanit', sans-serif;">
 <?
@@ -149,6 +152,37 @@ session_start();
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	<script>
+  		$(document).ready(function() {
+			$(".submit").click(function() {
+				var Username = $('#txtUsername').val();
+				var Password = $('#txtPassword').val();
+				var json = {
+					txtUsername: Username,
+					txtPassword: Password,
+				};
+        		console.log(json);
+				$.ajax({
+					type: "post",
+					url: "./check_login.php",
+					data: json,
+					success: function(response) {
+            	if (response == 1) {
+							window.location.href = " ../index.php";
+						}else{
+							Swal.fire({
+								type: 'error',
+								title: 'ข้อความจากระบบ',
+								text: 'Username หรือ Password ไม่ถูกต้อง',
+								confirmButtonText: 'ยกเลิก',
+    							confirmButtonColor: "#DD6B55"
+							})
+						}
+					}
+				});
+			});
+		});
+  
+  	</script>
 </body>
 </html>
