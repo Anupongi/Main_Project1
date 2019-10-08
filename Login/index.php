@@ -106,7 +106,7 @@ session_start();
 					</script>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn submit">
 							Login
 						</button>
 					</div>
