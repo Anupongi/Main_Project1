@@ -24,23 +24,23 @@ session_start();
                       $_SESSION["Userlevel"] = $row["Userlevel"];
                       
                       
-                      if($_SESSION["Userlevel"]=="01"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
+                      // if($_SESSION["Userlevel"]=="01"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
 
-                        Header("Location: ../admin/admin_index.php");
+                      //   Header("Location: ../admin/admin_index.php");
 
-                      }
+                      // }
 
-                      if ($_SESSION["Userlevel"]=="02"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
+                      // if ($_SESSION["Userlevel"]=="02"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
 
-                        // Header("Location: ../user/user_index.php");
+                      //   // Header("Location: ../user/user_index.php");
 
-                      }
+                      // }
 
-                      if ($_SESSION["Userlevel"]=="03"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
+                      // if ($_SESSION["Userlevel"]=="03"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
 
-                        // Header("Location: ../user/user_index.php");
+                      //   // Header("Location: ../user/user_index.php");
 
-                      }
+                      // }
                       
                   }else{
                     echo 0;
