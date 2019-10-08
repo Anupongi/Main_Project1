@@ -162,15 +162,15 @@ mysqli_set_charset($conn,"utf8");
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="./login_date.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ประจำวัน</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="./logindate_menu.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>การลงชื่อเข้าใช้ประจำเดือน</p>
+                  <p>การลงชื่อเข้าใช้ทั้งหมด</p>
                 </a>
               </li>
             </ul>
@@ -186,13 +186,43 @@ mysqli_set_charset($conn,"utf8");
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="../treatment/treatment_list.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ข้อมูลทั้งหมด</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="../treatment/treatment_frm.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลเวชภัณฑ์ยา</p>
+                </a>
+              </li>
             </ul>
           </li>
+          <li class="nav-header">ประวัติการรักษา</li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                ประวัติการรักษา
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../treatment/treatment.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลประวัติการรักษา</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../treatment/treatment_list1.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>ประวัติการรักษาทั้งหมด</p>
+                </a>
+              </li>
+              </ul>
+            </li>
           <li class="nav-header">ข่าวประชาสัมพันธ์</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -210,7 +240,7 @@ mysqli_set_charset($conn,"utf8");
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./allpost.php" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ข่าวประชาสัมพันธ์ทั้งหมด</p>
                 </a>
@@ -302,11 +332,11 @@ mysqli_set_charset($conn,"utf8");
                 while ($d = mysqli_fetch_array($query)) {
             ?>
             <div class="row">
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-md-6">
                                     <div class="card mb-3" style="max-width: 540px;">
                                         <div class="row no-gutters">
                                             <div class="col-md-5">
@@ -324,7 +354,7 @@ mysqli_set_charset($conn,"utf8");
                                 
                                 </div>
                                 <div class="col-3"></div>
-                                <div class="col-3">
+                                <div class="col-md-3">
                                     <?php if($d[6] == "y"){ ?>
                                     <a href="./editpage/hidden.php?id=<?php echo $d[0] ?>" class="btn btn-warning btn-block">ซ่อนโพสต์</a>
                                     <?php }else{ ?>
