@@ -52,7 +52,7 @@ session_start();
                   }
 
         }else{
-          echo 0;
+          
 
             //  Header("Location: ../index.php"); //user & password incorrect back to login again
 
