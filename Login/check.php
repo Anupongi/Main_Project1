@@ -11,7 +11,7 @@ session_start();
                   $sql="SELECT * FROM `user` Where Username='".$Username."' and Password='".$Password."' ";
                     
                   $result = mysqli_query($con,$sql);
-				
+				            echo 1;
                   if(mysqli_num_rows($result)==1){
 
                       $row = mysqli_fetch_array($result);
@@ -23,7 +23,7 @@ session_start();
                       // $_SESSION["Username"] = $row["Username"];
                       $_SESSION["Userlevel"] = $row["Userlevel"];
                       
-
+                      
                       if($_SESSION["Userlevel"]=="01"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
 
                         Header("Location: ../admin/admin_index.php");
@@ -41,9 +41,9 @@ session_start();
                         // Header("Location: ../user/user_index.php");
 
                       }
-                      echo 1;
+                      
                   }else{
-                    echo 0;
+                    
                     // echo "<script>";
                     //     echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
                     //     echo "window.history.back()";
@@ -52,7 +52,7 @@ session_start();
                   }
 
         }else{
-
+        echo 0;
 
             //  Header("Location: ../index.php"); //user & password incorrect back to login again
 
