@@ -9,11 +9,11 @@ session_start();
         //query 
                   mysqli_set_charset($con,"utf8");
                   $sql="SELECT * FROM `user` Where Username='".$Username."' and Password='".$Password."' ";
-                    
+                  echo 1;   
                   $result = mysqli_query($con,$sql);
 				          
                   if(mysqli_num_rows($result)==1){
-                      echo 1;  
+                       
                       $row = mysqli_fetch_array($result);
 
                       $_SESSION["UserID"] = $row["ID"];
@@ -43,7 +43,7 @@ session_start();
                       // }
                       
                   }else{
-                    echo 0;
+                    
                     // echo "<script>";
                     //     echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
                     //     echo "window.history.back()";
@@ -52,7 +52,7 @@ session_start();
                   }
 
         }else{
-        
+          echo 0;
 
             //  Header("Location: ../index.php"); //user & password incorrect back to login again
 
