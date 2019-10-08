@@ -43,7 +43,7 @@ session_start();
                       // }
                       
                   }else{
-                    
+                    echo 0;
                     // echo "<script>";
                     //     echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
                     //     echo "window.history.back()";
