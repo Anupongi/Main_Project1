@@ -155,14 +155,13 @@ session_start();
 	<script>
   		$(document).ready(function() {
 			$(".submit").click(function() {
-				alert("OK");
-				// var Username = $('#username_log').val();
-				// var Password = $('#password_log').val();
-				// var json = {
-				// 	username_log: Username,
-				// 	password_log: Password,
-				// };
-        		// console.log(json);
+				var Username = $('#username_log').val();
+				var Password = $('#password_log').val();
+				var json = {
+					username_log: Username,
+					password_log: Password,
+				};
+        		console.log(json);
 				// $.ajax({
 				// 	type: "post",
 				// 	url: "./check_login.php",
