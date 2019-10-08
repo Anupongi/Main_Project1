@@ -50,14 +50,14 @@ session_start();
         				}
       				?>
 					<div class="wrap-input100 validate-input" data-validate = "ชื่อผู้ใช้: xxxxxxxxxx">
-						<input class="input100" type="text" name="username_log">
+						<input class="input100" type="text" name="username_log" id="username_log">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Username</span>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="ต้องการรหัสผ่าน">
-						<input class="input100" type="password" name="password_log">
+						<input class="input100" type="password" name="password_log" id="password_log">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
 					</div>
@@ -155,11 +155,11 @@ session_start();
 	<script>
   		$(document).ready(function() {
 			$(".submit").click(function() {
-				var Username = $('#txtUsername').val();
-				var Password = $('#txtPassword').val();
+				var Username = $('#username_log').val();
+				var Password = $('#password_log').val();
 				var json = {
-					txtUsername: Username,
-					txtPassword: Password,
+					username_log: Username,
+					password_log: Password,
 				};
         		console.log(json);
 				$.ajax({
@@ -168,7 +168,7 @@ session_start();
 					data: json,
 					success: function(response) {
             	if (response == 1) {
-							window.location.href = " ../index.php";
+							window.location.href = "./index.php";
 						}else{
 							Swal.fire({
 								type: 'error',
