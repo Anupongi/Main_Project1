@@ -11,10 +11,7 @@ session_start();
                   $sql="SELECT * FROM `user` Where Username='".$Username."' and Password='".$Password."' ";
                     
                   $result = mysqli_query($con,$sql);
-				          
-                  if(mysqli_num_rows($result)==1){
-                      echo 1;  
-                      $row = mysqli_fetch_array($result);
+				          $row = mysqli_fetch_array($result);
 
                       $_SESSION["UserID"] = $row["ID"];
                       $_SESSION["User"] = $row["Username"];
@@ -22,13 +19,16 @@ session_start();
                       $_SESSION["name"] = $row["Firstname"]." ".$row["Lastname"];
                       // $_SESSION["Username"] = $row["Username"];
                       $_SESSION["Userlevel"] = $row["Userlevel"];
+                  // if(mysqli_num_rows($result)==1){
+                      // echo 1;  
                       
                       
-                      // if($_SESSION["Userlevel"]=="01"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
-                      //   echo 1;
-                      //   Header("Location: ../admin/admin_index.php");
+                      
+                      if($_SESSION["Userlevel"]=="01"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
+                        echo 1;
+                        Header("Location: ../admin/admin_index.php");
 
-                      // }
+                      }
 
                       // if ($_SESSION["Userlevel"]=="02"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
 
