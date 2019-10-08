@@ -167,17 +167,17 @@ session_start();
 					url: "./check_login.php",
 					data: json,
 					success: function(response) {
-            	if (response == 1) {
-							window.location.href = "../admin/admin_index.php";
-						}else{
-							Swal.fire({
-								type: 'error',
-								title: 'ข้อความจากระบบ',
-								text: 'Username หรือ Password ไม่ถูกต้อง',
-								confirmButtonText: 'ยกเลิก',
-    							confirmButtonColor: "#DD6B55"
-							})
-						}
+            	// if (response == 1) {
+				// 			window.location.href = "../admin/admin_index.php";
+				// 		}else{
+				// 			Swal.fire({
+				// 				type: 'error',
+				// 				title: 'ข้อความจากระบบ',
+				// 				text: 'Username หรือ Password ไม่ถูกต้อง',
+				// 				confirmButtonText: 'ยกเลิก',
+    			// 				confirmButtonColor: "#DD6B55"
+				// 			})
+				// 		}
 					}
 				});
 			});
