@@ -785,7 +785,11 @@ $(document).ready(function(){
   var id= $('#employee_list').val();
   if(id == '')
   {
-    alert("กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง");
+    Swal.fire({
+      type: 'warning',
+      title: 'กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง'
+    })
+    // alert("กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง");
   }
   else{
    $.ajax({
@@ -799,7 +803,10 @@ $(document).ready(function(){
       
     //  $('#employee_designation').text(data.Userlevel);
       if(data == 2){
-        alert("ไม่พบข้อมูลผู้ใช้แล้ว");
+        Swal.fire({
+        type: 'error',
+        title: 'ผิดพลาด!!! ไม่พบข้อมูลผู้ใช้นี้'
+        })
       }else{
         // alert("พบข้อมูลผู้ใช้แล้ว");
         Swal.fire({
