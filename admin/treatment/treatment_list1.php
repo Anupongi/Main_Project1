@@ -39,6 +39,8 @@
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   <link rel="stylesheet" href="../../dist/css/alluser.css">
   <link rel="icon" type="image/png" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.js"></script>  
   <style>
     .bg {
   height: 100%;
@@ -467,14 +469,48 @@ $per_page = 10;   // Per Page
                                         ?>
                                         <tr>
                                             
-                                            <td><?php echo $count;?></td>
+                                            <td><?php echo $count;?> <div ><?php echo $count;?></div></td>
                                             <td><?php echo $result["Student_id"];?></td>
                                             <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
                                             <td align="right"><?php echo $result["Sick"];?></td>
                                             <td align="right"><?php echo $result["user_save"];?></td>
                                             <td align="right"><?php echo $result["date"];?></td>
                                             <td align="right"> <a href="./check_list.php?ID=<?php echo $result[0]; ?>" class="btn btn-warning">เพิ่มเติม</a></td>
-                                            <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"> <a class="btn btn-danger submit_<?php echo $result[0];?>">ลบ</a></td>
+                                            <script>
+                                              $(document).ready(function() {
+                                              $(".submit_<?php echo $result[0];?>").click(function() {
+                                                var delete = <?php echo $result[0];?>;
+                                                var json = {
+                                                  ID: delete
+                                                };
+                                                    console.log(json);
+                                                // $.ajax({
+                                                //   type: "post",
+                                                //   url: "./check.php",
+                                                //   data: json,
+                                                //   success: function(response) {
+                                                //       if (response == 3) {
+                                                //   window.location.href = "../admin/admin_index.php";
+                                                // }else if(response == 4){
+                                                //   window.location.href = "../user/user_index.php";
+                                                // }else if(response == 5){
+                                                //   window.location.href = "../user/user_index.php";
+                                                // }else{
+                                                //       Swal.fire({
+                                                //         type: 'error',
+                                                //         title: 'ข้อความจากระบบ',
+                                                //         text: 'Username หรือ Password ไม่ถูกต้อง',
+                                                //         confirmButtonText: 'ยกเลิก',
+                                                //           confirmButtonColor: "#DD6B55"
+                                                //       })
+                                                //     }
+                                                //   }
+                                                // });
+                                              });
+                                            });
+                                          
+                                            </script>
                                         </tr>
                                         <?php
                                         $count=$count+1;
