@@ -517,7 +517,7 @@ $per_page = 10;   // Per Page
                                                         //     confirmButtonColor: "#DD6B55"
                                                         //   })
                                                         // }
-                                                      }
+                                                      
                                                       });
                                                       }
                                                     })
