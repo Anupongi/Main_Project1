@@ -803,10 +803,8 @@ $(document).ready(function(){
       }else{
         // alert("พบข้อมูลผู้ใช้แล้ว");
         Swal.fire({
-        type: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
-        footer: '<a href>Why do I have this issue?</a>'
+        type: 'success',
+        title: 'พบข้อมูลผู้ใช้แล้ว'
         });
         $('#std_id').val(data.Username);
         $('#firstname').val(data.Firstname);
