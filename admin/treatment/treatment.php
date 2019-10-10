@@ -433,7 +433,7 @@ $num_rows4 = mysqli_num_rows($query4);
             <form action="#" method="post">
               <div class="form-row">
                   <div class="form-group col-md-6">
-                    <input type="text" id="employee_list" class="form-control" placeholder="รหัสนักศึกษา" autocomplete="off">
+                    <input type="text" id="employee_list" class="form-control" placeholder="รหัสผู้ใช้" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <button type="button" name="search" id="search" class="btn btn-info">ค้นหา</button>
@@ -783,7 +783,7 @@ $(document).ready(function(){
   var id= $('#employee_list').val();
   if(id == '')
   {
-    alert("Please Select Employee");
+    alert("กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง");
     
   }else{
    $.ajax({
@@ -793,7 +793,7 @@ $(document).ready(function(){
     dataType:"JSON",
     success:function(data)
     {
-      alert("พบข้อมูลหนักเรียนนักศึกษาแล้ว");
+      alert("พบข้อมูลผู้ใช้แล้ว");
      $('#std_id').val(data.Username);
      $('#firstname').val(data.Firstname);
      $('#lastname').val(data.Lastname);
