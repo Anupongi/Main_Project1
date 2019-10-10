@@ -480,11 +480,11 @@ $per_page = 10;   // Per Page
                                             <script>
                                               $(document).ready(function() {
                                               $(".submit_<?php echo $result[0];?>").click(function() {
-                                                var delete = <?php echo $result[0];?>;
-                                                var json = {
-                                                  ID: delete
-                                                };
-                                                    console.log(json);
+                                                // var delete = <?php echo $result[0];?>;
+                                                // var json = {
+                                                //   ID: delete
+                                                // };
+                                                    console.log("json");
                                                 // $.ajax({
                                                 //   type: "post",
                                                 //   url: "./check.php",
