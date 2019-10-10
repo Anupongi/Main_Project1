@@ -551,34 +551,34 @@ $per_page = 10;   // Per Page
                                   </div>
                                     <br>
                                     Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
-<?php
+                                      <?php
 
-if($prev_page)
-{
-	echo " <a href='$_SERVER[SCRIPT_NAME]?Page=$prev_page'><< Back</a> ";
-}
+                                      if($prev_page)
+                                      {
+                                        echo " <a href='$_SERVER[SCRIPT_NAME]?Page=$prev_page'><< Back</a> ";
+                                      }
 
-for($i=1; $i<=$num_pages; $i++){
-	if($i != $page)
-	{
-		echo "[ <a href='$_SERVER[SCRIPT_NAME]?Page=$i'>$i</a> ]";
-	}
-	else
-	{
-		echo "<b> $i </b>";
-	}
-}
-if($page!=$num_pages)
-{
-	echo " <a href ='$_SERVER[SCRIPT_NAME]?Page=$next_page'>Next>></a> ";
-}
-$conn = null;
-?>
+                                      for($i=1; $i<=$num_pages; $i++){
+                                        if($i != $page)
+                                        {
+                                          echo "[ <a href='$_SERVER[SCRIPT_NAME]?Page=$i'>$i</a> ]";
+                                        }
+                                        else
+                                        {
+                                          echo "<b> $i </b>";
+                                        }
+                                      }
+                                      if($page!=$num_pages)
+                                      {
+                                        echo " <a href ='$_SERVER[SCRIPT_NAME]?Page=$next_page'>Next>></a> ";
+                                      }
+                                      $conn = null;
+                                      ?>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-9"></div>
-                                <div class="col-3">
+                                <div class="col-md-9"></div>
+                                <div class="col-md-3">
                                     <a href="../Exportfile/export1.php" class="btn btn-success"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
                                 </div>
                             </div>
