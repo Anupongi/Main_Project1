@@ -794,14 +794,16 @@ $(document).ready(function(){
     success:function(data)
     {
       // alert(data);
-      alert("พบข้อมูลผู้ใช้แล้ว");
-     $('#std_id').val(data.Username);
-     $('#firstname').val(data.Firstname);
-     $('#lastname').val(data.Lastname);
-     $('#phone').val(data.Phone);
+      
     //  $('#employee_designation').text(data.Userlevel);
       if(data == 2){
         alert("ไม่พบข้อมูลผู้ใช้แล้ว");
+      }else{
+        alert("พบข้อมูลผู้ใช้แล้ว");
+        $('#std_id').val(data.Username);
+        $('#firstname').val(data.Firstname);
+        $('#lastname').val(data.Lastname);
+        $('#phone').val(data.Phone);
       }
     }
    });
