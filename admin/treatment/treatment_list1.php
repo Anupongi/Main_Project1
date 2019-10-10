@@ -496,11 +496,29 @@ $per_page = 10;   // Per Page
                                                       confirmButtonText: 'Yes, delete it!'
                                                     }).then((result) => {
                                                       if (result.value) {
-                                                        Swal.fire(
-                                                          'Deleted!',
-                                                          'Your file has been deleted.',
-                                                          'success'
-                                                        )
+                                                        $.ajax({
+                                                        type: "post",
+                                                        url: "./deluser.php",
+                                                        data: json,
+                                                        success: function(response) {
+                                                          if(response == 1){
+                                                            Swal.fire(
+                                                              'Deleted!',
+                                                              'Your file has been deleted.',
+                                                              'success'
+                                                            )
+                                                          }
+                                                        }// }else{
+                                                        //   Swal.fire({
+                                                        //     type: 'error',
+                                                        //     title: 'ข้อความจากระบบ',
+                                                        //     text: 'Username หรือ Password ไม่ถูกต้อง',
+                                                        //     confirmButtonText: 'ยกเลิก',
+                                                        //     confirmButtonColor: "#DD6B55"
+                                                        //   })
+                                                        // }
+                                                      }
+                                                      });
                                                       }
                                                     })
 
