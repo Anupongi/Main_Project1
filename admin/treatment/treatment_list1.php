@@ -501,12 +501,13 @@ $per_page = 10;   // Per Page
                                                         url: "./deluser.php",
                                                         data: json,
                                                         success: function(response) {
-                                                          if(response == 1){
-                                                            Swal.fire(
-                                                              'Deleted!',
-                                                              'Your file has been deleted.',
-                                                              'success'
-                                                            )
+                                                          alart(response);
+                                                          // if(response == 1){
+                                                          //   Swal.fire(
+                                                          //     'Deleted!',
+                                                          //     'Your file has been deleted.',
+                                                          //     'success'
+                                                          //   )
                                                           }
                                                         }// }else{
                                                         //   Swal.fire({
