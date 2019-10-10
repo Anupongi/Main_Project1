@@ -502,12 +502,12 @@ $per_page = 10;   // Per Page
                                                         data: json,
                                                         success: function(response) {
                                                           console.log(response);
-                                                          // if(response == 1){
-                                                          //   Swal.fire(
-                                                          //     'Deleted!',
-                                                          //     'Your file has been deleted.',
-                                                          //     'success'
-                                                          //   )
+                                                          if(response == 1){
+                                                            Swal.fire(
+                                                              'Deleted!',
+                                                              'Your file has been deleted.',
+                                                              'success'
+                                                            )
                                                           }
                                                         // }// }else{
                                                         //   Swal.fire({
