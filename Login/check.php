@@ -31,13 +31,13 @@ session_start();
                       }
 
                       if ($_SESSION["Userlevel"]=="02"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
-
+                        echo 4;
                         // Header("Location: ../user/user_index.php");
 
                       }
 
                       if ($_SESSION["Userlevel"]=="03"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
-
+                        echo 5;
                         // Header("Location: ../user/user_index.php");
 
                       }
