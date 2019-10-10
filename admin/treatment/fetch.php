@@ -7,15 +7,22 @@ if(isset($_POST["id"]))
  $username = $_POST['id'] ;
  $query = "SELECT * FROM user WHERE `Username` = '".$_POST["id"]."' ";
  $result = mysqli_query($connect, $query);
-   
- while($row = mysqli_fetch_array($result))
- {
-  $data["Username"] = $row["Username"];
-  $data["Firstname"] = $row["Firstname"];
-  $data["Lastname"] = $row["Lastname"];
-  $data["Userlevel"] = $row["Userlevel"];
-  $data["Phone"] = $row["Phone"];
- }
- echo json_encode($data);
+   if($result == 1){
+       while($row = mysqli_fetch_array($result))
+        {
+            $data["Username"] = $row["Username"];
+            $data["Firstname"] = $row["Firstname"];
+            $data["Lastname"] = $row["Lastname"];
+            $data["Userlevel"] = $row["Userlevel"];
+            $data["Phone"] = $row["Phone"];
+        }
+        echo json_encode($data);
+   }else{
+        echo "<script>";
+        echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
+        echo "window.history.back()";
+        echo "</script>";
+   }
+ 
 }
 ?>

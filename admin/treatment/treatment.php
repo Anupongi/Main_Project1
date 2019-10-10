@@ -803,16 +803,16 @@ $(document).ready(function(){
    });
    
   }else{
-    $.ajax({
-      url:"fetch.php",
-      method:"POST",
-      data:{id:id},
-      dataType:"JSON",
-      success:function(data)
-      {
-        alert("ไม่พบข้อมูลผู้ใช้แล้ว");
-      }
-    });
+    // $.ajax({
+    //   url:"fetch.php",
+    //   method:"POST",
+    //   data:{id:id},
+    //   dataType:"JSON",
+    //   success:function(data)
+    //   {
+    //     alert("ไม่พบข้อมูลผู้ใช้แล้ว");
+    //   }
+    // });
   }
   
  });
