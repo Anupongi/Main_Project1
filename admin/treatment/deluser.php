@@ -8,7 +8,7 @@
     $sqlDele = "DELETE FROM `tb_med` WHERE `med_id` = $id";
     $queryDele = mysqli_query($con,$sqlDele);
     // echo 1;
-    echo $id;
+    echo $sqlDele;
     // header('Location: treatment_list.php');
 
 ?>
