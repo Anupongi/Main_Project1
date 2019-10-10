@@ -18,11 +18,15 @@ if(isset($_POST["id"]))
         }
         echo json_encode($data);
    }else{
-        echo "<script>";
-        echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
-        echo "window.history.back()";
-        echo "</script>";
+        while($row = mysqli_fetch_array($result)){
+            $data1["Username"] = $row["Username"];
+        }
+        // echo "<script>";
+        // echo "alert(\" Username หรือ  password ของคุณไม่ถูกต้อง\");"; 
+        // echo "window.history.back()";
+        // echo "</script>";
+        echo json_encode($data1);
    }
- 
+   
 }
 ?>
