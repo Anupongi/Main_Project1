@@ -375,8 +375,8 @@ session_start();
                                     <div class="col-lg-8 text-center">
                                             <h6 class="card-title"><?php echo substr($d[2], 0, 88). "..." ?></h6>
                                             <h6 style="font-size:14px">จำนวนดาวน์โหลด : <?php echo $d[5]; ?> ครั้ง</h6>
-                                            <a href="./admin/page/upload_download/uploads/file/<?php echo $d[2]?>" style="color:red;">Download</a>
-                                            
+                                            <!-- <a href="./admin/page/upload_download/uploads/file/<?php echo $d[2]?>" style="color:red;">Download</a> -->
+                                            <a href="./admin/page/upload_download/downloads.php?path=<?php echo $d[2]?>" style="color:red;">Download</a>
                                             <p class="card-text"><small class="text-muted">วันที่โพสต์ : <?php echo $d[7]; ?></small></p>
                                     </div>
                                 </div>
@@ -487,6 +487,9 @@ session_start();
 
             $('#back-to-top').tooltip('show');
 
+        });
+        $("p").click(function(){
+            
         });
     </script>
 </body>
