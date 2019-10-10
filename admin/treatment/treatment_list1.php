@@ -458,8 +458,9 @@ $per_page = 10;   // Per Page
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12">
-                                    <table align="center">
+                                <div class="col-md-12">
+                                  <div class="table-responsive-xl">
+                                    <table align="center" class="table">
                                         <thead>
                                             <tr>
                                                 
@@ -547,6 +548,7 @@ $per_page = 10;   // Per Page
                                         }
                                         ?>
                                     </table>
+                                  </div>
                                     <br>
                                     Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 <?php
