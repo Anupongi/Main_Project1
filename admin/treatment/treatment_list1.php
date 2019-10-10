@@ -213,7 +213,7 @@ $per_page = 10;   // Per Page
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index1.html" class="brand-link">
-      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">สำหรับเจ้าหน้าที่</span>
     </a>
@@ -223,7 +223,17 @@ $per_page = 10;   // Per Page
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <?php
+            $id = $_SESSION['User'];
+            mysqli_set_charset($conn,"utf8");
+            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
+            $query1 = mysqli_query($conn,$sqlimg);
+            while($result=mysqli_fetch_array($query1)){
+          ?>
+          <img src="../authorities/profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
+          <?php 
+            }
+          ?>
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $_SESSION["name"]?></a>
@@ -527,25 +537,6 @@ $per_page = 10;   // Per Page
                                                       });
                                                       }
                                                     })
-
-
-                                                // $.ajax({
-                                                //   type: "post",
-                                                //   url: "./deluser.php",
-                                                //   data: json,
-                                                //   success: function(response) {
-                                                      
-                                                // }else{
-                                                //       Swal.fire({
-                                                //         type: 'error',
-                                                //         title: 'ข้อความจากระบบ',
-                                                //         text: 'Username หรือ Password ไม่ถูกต้อง',
-                                                //         confirmButtonText: 'ยกเลิก',
-                                                //           confirmButtonColor: "#DD6B55"
-                                                //       })
-                                                //     }
-                                                //   }
-                                                // });
                                               });
                                             });
                                           
@@ -556,6 +547,7 @@ $per_page = 10;   // Per Page
                                         }
                                         ?>
                                     </table>
+                                    <br>
                                     Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 <?php
 
