@@ -170,7 +170,7 @@ $num_rows4 = mysqli_num_rows($query4);
       <!-- Messages Dropdown Menu -->
       <li>
       <?php
-        echo '<a href="../logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
+        echo '<a href="../../Login/logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
       ?>
       </li>
       <!-- Notifications Dropdown Menu -->
