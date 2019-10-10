@@ -798,7 +798,10 @@ $(document).ready(function(){
      $('#firstname').val(data.Firstname);
      $('#lastname').val(data.Lastname);
      $('#phone').val(data.Phone);
-     $('#employee_designation').text(data.Userlevel);
+    //  $('#employee_designation').text(data.Userlevel);
+      if(data == 2){
+        alert("ไม่พบข้อมูลผู้ใช้แล้ว");
+      }
     }
    });
   }
