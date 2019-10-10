@@ -802,7 +802,7 @@ $(document).ready(function(){
     }
    });
    
-  }else{
+  }else if(id == id){
     $.ajax({
       url:"fetch.php",
       method:"POST",
