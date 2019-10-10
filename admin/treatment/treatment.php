@@ -793,7 +793,8 @@ $(document).ready(function(){
     dataType:"JSON",
     success:function(data)
     {
-      alert("พบข้อมูลผู้ใช้แล้ว");
+      alert(data);
+      // alert("พบข้อมูลผู้ใช้แล้ว");
      $('#std_id').val(data.Username);
      $('#firstname').val(data.Firstname);
      $('#lastname').val(data.Lastname);
