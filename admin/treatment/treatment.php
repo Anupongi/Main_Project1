@@ -785,7 +785,7 @@ $(document).ready(function(){
   {
     alert("กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง");
   }
-  else(id == id){
+  else{
    $.ajax({
     url:"fetch.php",
     method:"POST",
