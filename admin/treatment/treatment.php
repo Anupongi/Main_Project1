@@ -799,7 +799,13 @@ $(document).ready(function(){
       if(data == 2){
         alert("ไม่พบข้อมูลผู้ใช้แล้ว");
       }else{
-        alert("พบข้อมูลผู้ใช้แล้ว");
+        // alert("พบข้อมูลผู้ใช้แล้ว");
+        Swal.fire({
+        type: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+        footer: '<a href>Why do I have this issue?</a>'
+        });
         $('#std_id').val(data.Username);
         $('#firstname').val(data.Firstname);
         $('#lastname').val(data.Lastname);
