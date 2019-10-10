@@ -784,19 +784,8 @@ $(document).ready(function(){
   if(id == '')
   {
     alert("กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง");
-  }else if(id != id){
-    $.ajax({
-      url:"fetch.php",
-      method:"POST",
-      data:{id:id},
-      dataType:"JSON",
-      success:function(data1)
-      {
-        alert("ไม่พบข้อมูลผู้ใช้แล้ว");
-      }
-    });
   }
-  else if(id == id){
+  else(id == id){
    $.ajax({
     url:"fetch.php",
     method:"POST",
@@ -813,10 +802,7 @@ $(document).ready(function(){
     }
    });
   }
-
-  
  });
- 
 });
 </script>
 </body>
