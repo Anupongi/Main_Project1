@@ -313,7 +313,7 @@ $num_rows4 = mysqli_num_rows($query4);
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./treatment/treatment_list1.php" class="nav-link">
+                <a href="./treatment_list1.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ประวัติการรักษาทั้งหมด</p>
                 </a>
