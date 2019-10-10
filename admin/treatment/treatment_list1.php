@@ -40,7 +40,8 @@
   <link rel="stylesheet" href="../../dist/css/alluser.css">
   <link rel="icon" type="image/png" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.js"></script>  
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.js"></script>
+  <script src="../../plugins/jquery/jquery.min.js"></script>  
   <style>
     .bg {
   height: 100%;
@@ -582,7 +583,7 @@ $conn = null;
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
