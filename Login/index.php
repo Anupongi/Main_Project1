@@ -169,11 +169,11 @@ session_start();
 					success: function(response) {
             	if (response == 3) {
 					window.location.href = "../admin/admin_index.php";
-				};else if(response == 4){
+				}else if(response == 4){
 					window.location.href = "../user/user_index.php";
 				}else if(response == 5){
 					window.location.href = "../user/user_index.php";
-				} else{
+				}else{
 							Swal.fire({
 								type: 'error',
 								title: 'ข้อความจากระบบ',
