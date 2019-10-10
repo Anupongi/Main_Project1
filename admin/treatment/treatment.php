@@ -457,7 +457,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                 <h3>ข้อมูลเบื้องต้น</h3> 
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
-                                        <label for="inputEmail4">รหัสนักศึกษา</label>
+                                        <label for="inputEmail4">รหัสผู้ใช้</label>
                                         <input type="text" class="form-control" id="std_id" name="std_id" placeholder="รหัสนักศึกษา" required>
                                     </div>
                                     <div class="form-group col-md-3">
@@ -785,7 +785,7 @@ $(document).ready(function(){
   {
     alert("กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง");
     
-  }else{
+  }else if{
    $.ajax({
     url:"fetch.php",
     method:"POST",
@@ -802,6 +802,8 @@ $(document).ready(function(){
     }
    });
    
+  }else{
+    alert("ไม่พบข้อมูลผู้ใช้แล้ว");
   }
   
  });
