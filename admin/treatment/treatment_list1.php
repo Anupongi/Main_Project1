@@ -501,7 +501,7 @@ $per_page = 10;   // Per Page
                                                         url: "./deluser.php",
                                                         data: json,
                                                         success: function(response) {
-                                                          alart(response);
+                                                          alert(response);
                                                           // if(response == 1){
                                                           //   Swal.fire(
                                                           //     'Deleted!',
