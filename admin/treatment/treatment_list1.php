@@ -485,7 +485,7 @@ $per_page = 10;   // Per Page
                                                 var json = {
                                                   ID: delete1
                                                 };
-                                                    console.log("json");
+                                                    console.log(json);
                                                     Swal.fire({
                                                       title: 'Are you sure?',
                                                       text: "You won't be able to revert this!",
