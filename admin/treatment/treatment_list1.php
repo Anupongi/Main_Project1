@@ -483,7 +483,7 @@ $per_page = 10;   // Per Page
                                               $(".submit_<?php echo $result[0];?>").click(function() {
                                                 var delete1 = 1;
                                                 var json = {
-                                                  ID: delete
+                                                  ID: delete1
                                                 };
                                                     console.log("json");
                                                 // $.ajax({
