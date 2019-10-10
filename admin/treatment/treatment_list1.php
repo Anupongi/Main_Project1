@@ -476,10 +476,10 @@ $per_page = 10;   // Per Page
                                             <td align="right"><?php echo $result["user_save"];?></td>
                                             <td align="right"><?php echo $result["date"];?></td>
                                             <td align="right"> <a href="./check_list.php?ID=<?php echo $result[0]; ?>" class="btn btn-warning">เพิ่มเติม</a></td>
-                                            <td align="right"> <a class="btn btn-danger submit_<?php echo $result[0];?>">ลบ</a></td>
+                                            <td align="right"> <a class="btn btn-danger submit">ลบ</a></td>
                                             <script>
                                               $(document).ready(function() {
-                                              $(".submit_<?php echo $result[0];?>").click(function() {
+                                              $(".submit").click(function() {
                                                 // var delete = <?php echo $result[0];?>;
                                                 // var json = {
                                                 //   ID: delete
