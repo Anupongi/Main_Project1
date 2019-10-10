@@ -470,7 +470,7 @@ $per_page = 10;   // Per Page
                                         ?>
                                         <tr>
                                             
-                                            <td><?php echo $count;?> <div ><?php echo $count;?></div></td>
+                                            <td><?php echo $count;?></td>
                                             <td><?php echo $result["Student_id"];?></td>
                                             <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
                                             <td align="right"><?php echo $result["Sick"];?></td>
