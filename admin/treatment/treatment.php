@@ -34,6 +34,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <link rel="icon" type="image/png" href="../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
   <style>
     .bg {
   height: 100%;
@@ -226,19 +227,19 @@ $num_rows4 = mysqli_num_rows($query4);
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./page/alluser.php" class="nav-link">
+                <a href="../page/alluser.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>รายชื่อสมาชิกทั้งหมด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="../page/user02.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>นักเรียน นักศึกษา</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="../page/user03.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ครู บุคลากร</p>
                 </a>
@@ -255,15 +256,15 @@ $num_rows4 = mysqli_num_rows($query4);
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./page/login_date.php" class="nav-link">
+                <a href="../page/login_date.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ประจำวัน</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="../page/logindate_menu.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>การลงชื่อเข้าใช้ประจำเดือน</p>
+                  <p>การลงชื่อเข้าใช้ทั้งหมด</p>
                 </a>
               </li>
             </ul>
@@ -279,9 +280,15 @@ $num_rows4 = mysqli_num_rows($query4);
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="./treatment_list.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ข้อมูลทั้งหมด</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./treatment_list.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลเวชภัณฑ์ยา</p>
                 </a>
               </li>
             </ul>
@@ -297,13 +304,13 @@ $num_rows4 = mysqli_num_rows($query4);
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./page/addpost.php" class="nav-link">
+                <a href="../page/addpost.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข่าวประชาสัมพันธ์</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./page/allpost.php" class="nav-link">
+                <a href="../page/allpost.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ข่าวประชาสัมพันธ์ทั้งหมด</p>
                 </a>
@@ -321,13 +328,13 @@ $num_rows4 = mysqli_num_rows($query4);
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./page/upload_download/upload.php" class="nav-link">
+                <a href="../page/upload_download/upload.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มเอกสารดาวน์โหลด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./page/upload_download/download.php" class="nav-link">
+                <a href="../page/upload_download/download.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เอกสารดาวน์โหลดทั้งหมด</p>
                 </a>
@@ -392,7 +399,7 @@ $num_rows4 = mysqli_num_rows($query4);
             <div class="col-md-4"></div>
             <div class="col-md-6 text-center">
             <?php
-              $connect = mysqli_connect("localhost", "root", "KZTuR1v3aaVA7t", "user_login");
+              $connect = mysqli_connect("localhost", "root", "Ice@2019","user_login");
               $query = "SELECT * FROM user ORDER BY Username ASC";
               $result = mysqli_query($connect, $query);
             ?>
@@ -495,7 +502,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                 <div class="form-row">
                                   <div class="form-group col-md-3">
                                     <label for="inputAddress">เบอร์โทรศัพท์ที่สามารถติดต่อได้</label>
-                                    <input type="text" class="form-control" name="phone" required> 
+                                    <input type="text" class="form-control" name="phone" id="phone" required> 
                                   </div>
                                   <div class="form-group col-md-2">
                                     <label for="inputAddress">เบอร์โทรศัพท์ผู้ปกครอง</label>
@@ -759,11 +766,11 @@ $(document).ready(function(){
     dataType:"JSON",
     success:function(data)
     {
-      alert("OK");
+      alert("พบข้อมูลหนักเรียนนักศึกษาแล้ว");
      $('#std_id').val(data.Username);
      $('#firstname').val(data.Firstname);
      $('#lastname').val(data.Lastname);
-     $('#employee_gender').text(data.Lastname);
+     $('#phone').val(data.Phone);
      $('#employee_designation').text(data.Userlevel);
     }
    });
