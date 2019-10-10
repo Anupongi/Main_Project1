@@ -784,24 +784,6 @@ $(document).ready(function(){
   if(id == '')
   {
     alert("กรุณากรอกรหัสผู้ใช้ให้ถูกต้อง");
-    
-  // }else if(id == id){
-  //  $.ajax({
-  //   url:"fetch.php",
-  //   method:"POST",
-  //   data:{id:id},
-  //   dataType:"JSON",
-  //   success:function(data)
-  //   {
-  //     alert("พบข้อมูลผู้ใช้แล้ว");
-  //    $('#std_id').val(data.Username);
-  //    $('#firstname').val(data.Firstname);
-  //    $('#lastname').val(data.Lastname);
-  //    $('#phone').val(data.Phone);
-  //    $('#employee_designation').text(data.Userlevel);
-  //   }
-  //  });
-   
   }else if(id == id){
     $.ajax({
       url:"fetch.php",
@@ -814,6 +796,24 @@ $(document).ready(function(){
       }
     });
   }
+  else{
+   $.ajax({
+    url:"fetch.php",
+    method:"POST",
+    data:{id:id},
+    dataType:"JSON",
+    success:function(data)
+    {
+      alert("พบข้อมูลผู้ใช้แล้ว");
+     $('#std_id').val(data.Username);
+     $('#firstname').val(data.Firstname);
+     $('#lastname').val(data.Lastname);
+     $('#phone').val(data.Phone);
+     $('#employee_designation').text(data.Userlevel);
+    }
+   });
+  }
+
   
  });
  
