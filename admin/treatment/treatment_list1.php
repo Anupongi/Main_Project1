@@ -507,7 +507,11 @@ $per_page = 10;   // Per Page
                                                               'Deleted!',
                                                               'Your file has been deleted.',
                                                               'success'
-                                                            )
+                                                            ).then((result) => {
+                                                                if (result.value) {
+                                                                  location.reload();
+                                                                }
+                                                              })
                                                           }
                                                         }
                                                         // }// }else{
