@@ -14,6 +14,7 @@ if(isset($_POST["id"]))
   $data["Firstname"] = $row["Firstname"];
   $data["Lastname"] = $row["Lastname"];
   $data["Userlevel"] = $row["Userlevel"];
+  $data["Phone"] = $row["Phone"];
  }
  echo json_encode($data);
 }
