@@ -165,6 +165,9 @@ $array = mysqli_fetch_array($result);
                                       <div class="form-row">
                                         <button type="button" class="btn btn-success" onclick="window.location.href='./treatment_list1.php'">ตกลง</button>
                                       </div>
+                                      <div class="form-row">
+                                        <a href="../Exportfile/export3.php" class="btn btn-danger"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Export to PDF</a>
+                                      </div>
                                     </div>
                                     <div class="col-md-3"></div>
                                   </div>
