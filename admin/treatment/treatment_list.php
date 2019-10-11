@@ -13,7 +13,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../plugins/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
@@ -459,8 +459,9 @@ $per_page = 10;   // Per Page
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12">
-                                    <table align="center">
+                                <div class="col-md-12">
+                                  <div class="table-responsive-xl">
+                                    <table align="center" class="table">
                                         <thead>
                                             <tr>
                                                 
@@ -495,6 +496,7 @@ $per_page = 10;   // Per Page
                                         }
                                         ?>
                                     </table>
+                                  </div>
                                     <br>
                                     Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 <?php
