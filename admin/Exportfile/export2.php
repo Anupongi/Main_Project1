@@ -25,7 +25,7 @@
     while($d = mysqli_fetch_array($query_vs)){
         // echo "'A'.$row,$d[$i]";
         $excelObj->getActiveSheet()->setCellValue('A'.$row,$i);
-        $excelObj->getActiveSheet()->setCellValue('B'.$row,$d[1]);
+        $excelObj->getActiveSheet()->setCellValue('B'.$row,$d[0]);
         $excelObj->getActiveSheet()->setCellValue('C'.$row,$d[2]." ".$d[3]);
         $excelObj->getActiveSheet()->setCellValue('D'.$row,$d[15]);
         $excelObj->getActiveSheet()->setCellValue('E'.$row,$d[24]);
