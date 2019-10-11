@@ -496,7 +496,7 @@ $per_page = 10;   // Per Page
                                             <tr>
                                                 
                                                 <th width="50"> <div align="center">ลำดับ </div></th>
-                                                <th width="100"> <div align="center">รหัสนักศึกษา </div></th>
+                                                <th width="100"> <div align="center">รหัสผู้ใช้ </div></th>
                                                 <th width="130"> <div align="center">ชื่อ-นามสกุล</div></th>
                                                 <th width="200"><div align="center">อาการเบื้องต้น</div></th>
                                                 <th width="80"><div align="center">ผู้บันทึกข้อมูล</div></th>
@@ -610,7 +610,7 @@ $per_page = 10;   // Per Page
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3">
-                                    <a href="../Exportfile/export1.php" class="btn btn-success"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
+                                    <a href="../Exportfile/export2.php" class="btn btn-success"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
                                 </div>
                             </div>
                         </div>
