@@ -160,13 +160,13 @@ $array = mysqli_fetch_array($result);
                                   </div>
                                 </div>
                                   <div class="row">
-                                    <div class="col-md-5"></div>
+                                    <div class="col-md-4"></div>
                                     <div class="col-md-4">
                                       <div class="form-row">
-                                        <div class="col">
+                                        <div class="col-md-4">
                                           <button type="button" class="btn btn-success" onclick="window.location.href='./treatment_list1.php'">ตกลง</button>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-md-6">
                                           <a href="../Exportfile/export3.php" class="btn btn-danger"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Export to PDF</a>
                                         </div>
                                       </div>
