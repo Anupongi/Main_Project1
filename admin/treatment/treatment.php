@@ -806,7 +806,11 @@ $(document).ready(function(){
         Swal.fire({
         type: 'error',
         title: 'ผิดพลาด!!! ไม่พบข้อมูลผู้ใช้นี้'
-        })
+        });
+        $('#std_id').val(' ');
+        $('#firstname').val(' ');
+        $('#lastname').val(' ');
+        $('#phone').val('');
       }else{
         // alert("พบข้อมูลผู้ใช้แล้ว");
         Swal.fire({
