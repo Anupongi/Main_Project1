@@ -26,10 +26,10 @@
         // echo "'A'.$row,$d[$i]";
         $excelObj->getActiveSheet()->setCellValue('A'.$row,$i);
         $excelObj->getActiveSheet()->setCellValue('B'.$row,$d[0]);
-        $excelObj->getActiveSheet()->setCellValue('C'.$row,$d[2]." ".$d[3]);
-        $excelObj->getActiveSheet()->setCellValue('D'.$row,$d[15]);
-        $excelObj->getActiveSheet()->setCellValue('E'.$row,$d[24]);
-        $excelObj->getActiveSheet()->setCellValue('F'.$row,$d[25]);
+        $excelObj->getActiveSheet()->setCellValue('C'.$row,$d[1]." ".$d[2]);
+        $excelObj->getActiveSheet()->setCellValue('D'.$row,$d[3]);
+        $excelObj->getActiveSheet()->setCellValue('E'.$row,$d[4]);
+        $excelObj->getActiveSheet()->setCellValue('F'.$row,$d[5]);
         $i++;
         $row++; 
     }
