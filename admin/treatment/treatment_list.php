@@ -527,7 +527,7 @@ $per_page = 10;   // Per Page
                             <div class="row">
                                 <div class="col-md-9"></div>
                                 <div class="col-md-3">
-                                    <a href="../Exportfile/export1.php" class="btn btn-success"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
+                                    <a href="" class="btn btn-success"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
                                 </div>
                             </div>
                         </div>
