@@ -461,7 +461,7 @@ $per_page = 10;   // Per Page
                             <div class="row">
                                 <div class="col-md-12">
                                   <div class="table-responsive-xl">
-                                    <table align="center" class="table">
+                                    <table align="center">
                                         <thead>
                                             <tr>
                                                 
