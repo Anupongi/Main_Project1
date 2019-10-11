@@ -334,13 +334,13 @@ $per_page = 10;   // Per Page
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./treatment.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข้อมูลประวัติการรักษา</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./treatment_list1.php" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ประวัติการรักษาทั้งหมด</p>
                 </a>
