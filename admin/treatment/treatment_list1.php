@@ -257,19 +257,19 @@ $per_page = 10;   // Per Page
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./page/alluser.php" class="nav-link">
+                <a href="../page/alluser.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>รายชื่อสมาชิกทั้งหมด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="../page/user02.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>นักเรียน นักศึกษา</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="../page/user03.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ครู บุคลากร</p>
                 </a>
@@ -294,7 +294,7 @@ $per_page = 10;   // Per Page
               <li class="nav-item">
                 <a href="pages/tables/data.html" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>การลงชื่อเข้าใช้ประจำเดือน</p>
+                  <p>การลงชื่อเข้าใช้ทั้งหมด</p>
                 </a>
               </li>
             </ul>
@@ -310,13 +310,43 @@ $per_page = 10;   // Per Page
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="./treatment_list.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ข้อมูลทั้งหมด</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="./treatment_frm.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลเวชภัณฑ์ยา</p>
+                </a>
+              </li>
             </ul>
           </li>
+          <li class="nav-header">ประวัติการรักษา</li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                ประวัติการรักษา
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>เพิ่มข้อมูลประวัติการรักษา</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./treatment_list1.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>ประวัติการรักษาทั้งหมด</p>
+                </a>
+              </li>
+              </ul>
+            </li>
           <li class="nav-header">ข่าวประชาสัมพันธ์</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
