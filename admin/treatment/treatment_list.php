@@ -1,6 +1,8 @@
 <?php 
   session_start();
-  
+  if(!isset($_SESSION["UserID"])){
+    header('Location: ../../../../Login/index.php');
+  }
 ?>  
 <!DOCTYPE html>
 <html>
