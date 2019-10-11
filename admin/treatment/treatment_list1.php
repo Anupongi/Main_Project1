@@ -224,7 +224,7 @@ $per_page = 10;   // Per Page
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <?php
-            include "../../connection/connection.php"
+            include "../../connection/connection.php";
             $id = $_SESSION['User'];
             mysqli_set_charset($con,"utf8");
             $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
