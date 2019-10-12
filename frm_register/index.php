@@ -234,16 +234,16 @@
                                 </div>
                             </div>
                                 <div class="form-row text-center">
-                                    <div class="col-md-6"></div>
+                                    <div class="col-md-3"></div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <a herf="../Login/index.php" class="btn btn-block btn-warning">ยกเลิก</a>
                                         </div>
                                     </div>
-                                    <div class="col-md-6"></div>
+                                    <div class="col-md-3"></div>
                                 </div>
                         </form>
                     </div>
