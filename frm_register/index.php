@@ -233,18 +233,18 @@
                                     <input type="text" name="your_email1" id="your_email1" class="form-control"  placeholder="อีเมลของคุณ">
                                 </div>
                             </div>
-                            <div class="col-md-3"></div>
-                            <div class="col-md-3">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
                                 <div class="form-row text-center">
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group">
                                         <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
                                     </div>
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group">
                                         <a herf="../Login/index.php" class="btn btn-block btn-warning">ยกเลิก</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3"></div>
+                            <div class="col-md-6"></div>
                         </form>
                     </div>
                 </div>
