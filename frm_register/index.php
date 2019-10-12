@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>สมัครสมาชิกใหม่</title>
 
     <!-- Font Icon -->
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style6.css">
+    <link rel="icon" type="image/png" href="../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
     
 </head>
 <body>
@@ -78,8 +79,14 @@
                                             <option >ปวช.1</option>
                                             <option >ปวช.2</option>
                                             <option >ปวช.3</option>
-                                            <option >ปวส.1</option>
-                                            <option >ปวส.2</option>
+                                            <option >ปวส.1(ตรง)</option>
+                                            <option >ปวส.1(ทวิ)</option>
+                                            <option >ปวส.1(ม.6)</option>
+                                            <option >ปวส.2(ตรง)</option>
+                                            <option >ปวส.2(ม.6)</option>
+                                            <option >ปวส.3</option>
+                                            <option >ป.ตรี ปีที่ 1</option>
+                                            <option >ป.ตรี ปีที่ 2</option>
                                         </select>
                                 </div>
                                 <div class="form-group col-md-2">
