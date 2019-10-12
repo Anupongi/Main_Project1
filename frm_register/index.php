@@ -238,7 +238,7 @@
                                     <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
+                                    <input type="submit" name="signupsubmit" value="ยกเลิก" class="btn btn-block btn-primary">
                                 </div>
                             </div>
                         </form>
