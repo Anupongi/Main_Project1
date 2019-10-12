@@ -233,8 +233,13 @@
                                     <input type="text" name="your_email1" id="your_email1" class="form-control"  placeholder="อีเมลของคุณ">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
+                                </div>
                             </div>
                         </form>
                     </div>
