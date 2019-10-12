@@ -240,7 +240,7 @@
                                         <input type="submit" name="signupsubmit" value="สมัครสมาชิก" class="btn btn-block btn-primary">
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <a herf="../Login/index.php" value="ยกเลิก" class="btn btn-block btn-warning">
+                                        <a herf="../Login/index.php" class="btn btn-block btn-warning">ยกเลิก</a>
                                     </div>
                                 </div>
                             </div>
