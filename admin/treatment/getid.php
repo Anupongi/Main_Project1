@@ -9,7 +9,7 @@
         if(mysqli_num_rows($result)==1){
             $row = mysqli_fetch_array($result);
             $userid = $row["Student_id"];
-            if($userid==1){
+            if($userid == $userid){
                 include "../../connection/connection.php";
                 $sql1 = "SELECT * FROM `user` ";
                 echo $sql1;
