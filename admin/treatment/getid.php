@@ -12,6 +12,7 @@
             if($userid == $userid){
                 include "../../connection/connection.php";
                 $sql1 = "SELECT * FROM `user` WHERE Username = '$userid'";
+                echo $sql1;
                 $query = mysqli_query($connn, $sql1);
                 $row1 = mysqli_fetch_array($query);
                 $userlevel = $row1["Userlevel"];
