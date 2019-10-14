@@ -171,7 +171,7 @@ $array = mysqli_fetch_array($result);
                                         </div>
                                         <br>
                                         <div class="col-md-8">
-                                          <a href="../Exportfile/export3.php" class="btn btn-danger"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Export to PDF</a>
+                                          <a href="./getid.php?ID='<?php echo $array[0];?>'" class="btn btn-danger"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Export to PDF</a>
                                         </div>
                                       </div>
                                     </div>
