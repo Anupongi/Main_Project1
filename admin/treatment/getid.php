@@ -8,6 +8,8 @@
         if(mysqli_num_rows($result)==1){
             $row = mysqli_fetch_array($result);
             $userlevel = $row["Userlevel"];
-            echo $userlevel;
+            if($userlevel == '02'){
+                echo 'window.location.href = "./test.php?ID=<?php echo $array[1]; ?>"';
+            }
         }
 ?>
