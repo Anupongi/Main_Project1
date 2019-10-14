@@ -7,9 +7,11 @@
     // $array = mysqli_fetch_array($result);
         if(mysqli_num_rows($result)==1){
             $row = mysqli_fetch_array($result);
+            $ID = $row["id"];
+            echo $ID;
             $userlevel = $row["Userlevel"];
-            if($userlevel == '02'){
-                Header("Location: ./test.php?ID=<?php echo $id?>");
-            }
+            // if($userlevel == '02'){
+            //     Header("Location: ./test.php?ID=$id");
+            // }
         }
 ?>
