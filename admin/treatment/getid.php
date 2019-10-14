@@ -5,5 +5,5 @@
     echo $sql;
     $result = mysqli_query($con, $sql);
     $array = mysqli_fetch_array($result);
-    echo $array[1];
+    echo $array[6];
 ?>
