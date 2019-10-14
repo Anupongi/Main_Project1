@@ -16,7 +16,9 @@
                 $query = mysqli_query($con, $sql1);
                 $row = mysqli_fetch_array($query);
                 $userlevel = $row["Userlevel"];
-                echo $userlevel;
+                    if($userlevel == '02'){
+                        Header("Location: ./test.php?ID=$id");
+                    }
             }
             // include "../../connection/connection.php";
             // $sql = "SELECT * FROM `user` ";
