@@ -11,8 +11,11 @@
             $userid = $row["Student_id"];
             if($userid == $userid){
                 include "../../connection/connection.php";
-                $sql1 = "SELECT * FROM `user` ";
-                echo $sql1;
+                $sql1 = "SELECT * FROM `user` WHERE Username = '$userid'";
+                $query = mysqli_query($connn, $sql1);
+                $row1 = mysqli_fetch_array($query);
+                $userlevel = $row1["Userlevel"];
+                echo $userlevel;
             }
             // include "../../connection/connection.php";
             // $sql = "SELECT * FROM `user` ";
