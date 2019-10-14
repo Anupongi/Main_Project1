@@ -9,7 +9,7 @@
             $row = mysqli_fetch_array($result);
             $userlevel = $row["Userlevel"];
             if($userlevel == '02'){
-                Header("Location: ./test.php");
+                Header("Location: ./test.php?ID=<?php echo $id?>");
             }
         }
 ?>
