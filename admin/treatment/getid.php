@@ -9,7 +9,11 @@
         if(mysqli_num_rows($result)==1){
             $row = mysqli_fetch_array($result);
             $userid = $row["Student_id"];
-            echo $userid;
+            if($userid==1){
+                include "../../connection/connection.php";
+                $sql1 = "SELECT * FROM `user` ";
+                echo $sql1;
+            }
             // include "../../connection/connection.php";
             // $sql = "SELECT * FROM `user` ";
             // $row = mysqli_fetch_array($result);
