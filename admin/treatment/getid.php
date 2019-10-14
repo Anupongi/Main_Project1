@@ -9,7 +9,7 @@
             $row = mysqli_fetch_array($result);
             $userlevel = $row["Userlevel"];
             if($userlevel == '02'){
-                echo 'window.location.href = "./test.php?ID=<?php echo $array[1]; ?>"';
+                Header("Location: ./test.php");
             }
         }
 ?>
