@@ -138,7 +138,7 @@ $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 
 
 mysqli_set_charset($conn, "utf8");
-$sql = "SELECT * FROM tb_treatment ";
+$sql = "SELECT * FROM tb_treatment ORDER BY date DESC";
 $query = mysqli_query($conn,$sql);
 
 $num_rows = mysqli_num_rows($query);
