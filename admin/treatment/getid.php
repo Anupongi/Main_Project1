@@ -19,6 +19,9 @@
                     if($userlevel == '02'){
                         Header("Location: ./test.php?ID=$id");
                     }
+                    else if($userlevel == '03'){
+                        Header("Location: ./test1.php?ID=$id");
+                    }
             }
             // include "../../connection/connection.php";
             // $sql = "SELECT * FROM `user` ";
