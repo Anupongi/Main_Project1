@@ -13,7 +13,7 @@
                 include "../../connection/connection.php";
                 $sql1 = "SELECT * FROM `user` WHERE Username = '$userid'";
                 echo $sql1;
-                $query = mysqli_query($connn, $sql1);
+                $query = mysqli_query($con, $sql1);
                 $row = mysqli_fetch_array($query);
                 $userlevel = $row["Userlevel"];
                 echo $userlevel;
