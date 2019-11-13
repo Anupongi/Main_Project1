@@ -40,7 +40,7 @@
   <link rel="icon" type="image/png" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.js"></script> 
-  <script src="//cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
+  <script src="//cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
   <style>
     .bg {
   height: 100%;
@@ -477,23 +477,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                  <div class="form-group col-md-2">
-                                      <label for="inputAddress">วัน/เดือน/ปีเกิด</label>
-                                      <div class="md-form">
-                                        <input class="form-control" name="dateofbirth" date-picker-example type="text" data-provide="datepicker" data-date-language="th-th" data-date-format="dd/mm/yyyy" placeholder="xx/xx/xxxx" autocomplete="off" required>
-                                      </div>
-                                      <!-- <div class="md-form">
-                                        <input placeholder="xx/xx/xxxx" type="text" id="date-picker-example" class="form-control datepicker">
-                                        <label for="date-picker-example">Try me...</label>
-                                        </div>-->
-                                      <script>
-                                        function demo() {
-                                          $('.datepicker').datepicker();
-                                          
-                                          }
-                                          
-                                      </script> 
-                                  </div>
+                                  
                                   <div class="form-group col-md-1">
                                       <label for="inputAddress">สัญชาติ</label>
                                       <input type="text" class="form-control" name="Nationality">
