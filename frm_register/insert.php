@@ -68,7 +68,7 @@
         echo "</script>";
 
       }else{
-          $sql4="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `Department`, `Class`, `Room`, `House_number`, `Alley`, `Road`, `District`, `Amphur`, `Zipcode`, `Province`, `Userlevel`, `Phone`, `Email`, `date`) VALUES ('$user_name','$password','$first_name','$last_name','$position','$class','$room','$number','$alley','$street','$district3','$amphur3','$zipcode3','$province3','$user_level','$phone','$your_email','$date')";
+          $sql4="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`,`Card_number`, `Dateofbirth`, `Department`, `Class`, `Room`, `House_number`, `Alley`, `Road`, `District`, `Amphur`, `Zipcode`, `Province`, `Userlevel`, `Phone`, `Email`, `date`) VALUES ('$user_name','$password','$first_name','$last_name','$card_number','$dateofbirth','$position','$class','$room','$number','$alley','$street','$district3','$amphur3','$zipcode3','$province3','$user_level','$phone','$your_email','$date')";
             $query4 = mysqli_query($con,$sql4);
             if($query4){
                 echo "<script type='text/javascript'>";
@@ -93,6 +93,8 @@
         $password1=$_POST['password1'];
         $first_name1=$_POST['first_name1'];
         $last_name1=$_POST['last_name1'];
+        $card_number1=$_POST['card_number1'];
+        $dateofbirth1=$_POST['dateofbirth1'];
         $user_level= '03';
         $number1=$_POST['number1'];
         $alley1=$_POST['alley1'];
@@ -142,7 +144,7 @@
         echo "</script>";
 
         }else{
-            $sql4="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `House_number`, `Alley`, `Road`, `District`, `Amphur`, `Zipcode`, `Province`, `Userlevel`, `Phone`, `Email`, `date`) VALUES ('$user_name1','$password1','$first_name1','$last_name1','$number1','$alley1','$street1','$district3','$amphur3','$zipcode3','$province3','$user_level','$phone1','$your_email1','$date')";
+            $sql4="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`,`Card_number`, `Dateofbirth`, `House_number`, `Alley`, `Road`, `District`, `Amphur`, `Zipcode`, `Province`, `Userlevel`, `Phone`, `Email`, `date`) VALUES ('$user_name1','$password1','$first_name1','$last_name1','$card_number1','$dateofbirth1','$number1','$alley1','$street1','$district3','$amphur3','$zipcode3','$province3','$user_level','$phone1','$your_email1','$date')";
             $query4 = mysqli_query($con,$sql4);
             if($query4){
                 echo "<script type='text/javascript'>";

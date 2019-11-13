@@ -202,6 +202,16 @@
                                     <input type="text" class="form-control" id="last_name1" name="last_name1" placeholder="นามสกุล">
                                 </div>
                             </div>
+                            <div class="form-row text-center">
+                                <div class="form-group col-md-6">
+                                    <label class="font-weight-bold">รหัสบัตรประจำตัวประชาชน <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="card_number" name="card_number1" placeholder="รหัสบัตรประจำตัวประชาชน">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="font-weight-bold">วัน/เดือน/ปีเกิด <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="dateofbirth" name="dateofbirth1" placeholder="วัน/เดือน/ปีเกิด">
+                                </div>
+                            </div>
                             <br>
                             <h2>ส่วนสำหรับติดต่อ</h2>
                             <div class="form-row">
