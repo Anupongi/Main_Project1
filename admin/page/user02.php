@@ -109,7 +109,9 @@
 								$count=$count+1;
 								}
 								?>	
-								<br>
+										
+							</tbody>
+							<br>
 									Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 									<?php
 
@@ -133,8 +135,7 @@
 										echo " <a href ='$_SERVER[SCRIPT_NAME]?Page=$next_page'>Next>></a> ";
 									}
 									$conn = null;
-									?>		
-							</tbody>
+									?>
 						</table>
 					</div>
 				</div>
