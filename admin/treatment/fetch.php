@@ -13,8 +13,8 @@ if(isset($_POST["id"]))
             $data["Username"] = $row["Username"];
             $data["Firstname"] = $row["Firstname"];
             $data["Lastname"] = $row["Lastname"];
-            $data["Dateofbirth"] = $row["Dateofbirth"];
             $data["Card_number"] = $row["Card_number"];
+            $data["Dateofbirth"] = $row["Dateofbirth"];
             $data["Userlevel"] = $row["Userlevel"];
             $data["Phone"] = $row["Phone"];
         }

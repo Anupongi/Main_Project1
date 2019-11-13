@@ -812,8 +812,8 @@ $(document).ready(function(){
         $('#std_id').val(' ');
         $('#firstname').val(' ');
         $('#lastname').val(' ');
-        $('#dateofbirth').val(' ');
         $('#card_id').val('');
+        $('#dateofbirth').val(' ');
         $('#phone').val('');
       }else{
         // alert("พบข้อมูลผู้ใช้แล้ว");
@@ -824,8 +824,8 @@ $(document).ready(function(){
         $('#std_id').val(data.Username);
         $('#firstname').val(data.Firstname);
         $('#lastname').val(data.Lastname);
-        $('#dateofbirth').val(data.Dateofbirth);
         $('#card_id').val(data.Card_number);
+        $('#dateofbirth').val(data.Dateofbirth);
         $('#phone').val(data.Phone);
       }
     }
