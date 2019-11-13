@@ -61,48 +61,64 @@
 	$sql .= " ORDER BY ID ASC LIMIT $row_start ,$row_end ";
 	$query = mysqli_query($conn,$sql);
 ?>
-<h1>รายชื่อนักเรียน นักศึกษาผู้สมัครสมาชิก</h1>
-<table align="center">
-<thead>
-    <tr>
-        <th width="91"> <div align="center">ลำดับ</div></th>
-        <th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
-        <th width="120"> <div align="center">รหัสผ่าน </div></th>
-        <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
-        <th width="80"><div align="center">สถานะผู้ใช้</div></th>
-        <th width="100"><div align="center">เริ่มสมัครสมาชิก</div></th>
-        <th width="59"> <div align="center">แก้ไข </div></th>
-        <th width="71"> <div align="center">ลบ </div></th>
-    </tr>
-  </thead>
-<?php
-$count = 1;
-while($result=mysqli_fetch_array($query))
-{
-?>
-  <tr>
-    <td><div align="center"><?php echo $count;?></div></td>
-    <td><?php echo $result["Username"];?></td>
-    <td><?php echo $result["Password"];?></td>
-    <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
-	<td><?php 
-	$level = $result["Userlevel"];
-	$sql1 = "SELECT * FROM `user_level` WHERE `userlevel_id` = $level ";
-	$query1 = mysqli_query($conn,$sql1);
-	$userlevel = mysqli_fetch_array($query1);
-	echo $userlevel[1];
-	
-	
-	?></td>
-    <td align="right"><?php echo $result["date"];?></td>
-    <td align="right"><a href="./edituser.php?ID=<?php echo $result[0] ?>" class="btn btn-warning text-white">แก้ไข</a></td>
-    <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
-  </tr>
-<?php
-$count=$count+1;
-}
-?>
-</table>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center">รายชื่อนักเรียน นักศึกษาผู้สมัครสมาชิก</h1>
+			<div class="card">
+				<div class="card-body">
+					<div class="table-responsive-xl">
+						<table align="center">
+							<thead>
+    							<tr>
+									<th width="91"> <div align="center">ลำดับ</div></th>
+									<th width="110"> <div align="center">ชื่อผู้ใช้ </div></th>
+									<th width="120"> <div align="center">รหัสผ่าน </div></th>
+									<th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
+									<th width="80"><div align="center">สถานะผู้ใช้</div></th>
+									<th width="100"><div align="center">เริ่มสมัครสมาชิก</div></th>
+									<th width="59"> <div align="center">แก้ไข </div></th>
+									<th width="71"> <div align="center">ลบ </div></th>
+								</tr>
+  							</thead>
+							<?php
+								$count = 1;
+								while($result=mysqli_fetch_array($query))
+								{
+							?>
+							<tbody>
+								<tr>
+									<td><div align="center"><?php echo $count;?></div></td>
+									<td><?php echo $result["Username"];?></td>
+									<td><?php echo $result["Password"];?></td>
+									<td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
+									<td><?php 
+									$level = $result["Userlevel"];
+									$sql1 = "SELECT * FROM `user_level` WHERE `userlevel_id` = $level ";
+									$query1 = mysqli_query($conn,$sql1);
+									$userlevel = mysqli_fetch_array($query1);
+									echo $userlevel[1];
+									
+									
+									?></td>
+									<td align="right"><?php echo $result["date"];?></td>
+									<td align="right"><a href="./edituser.php?ID=<?php echo $result[0] ?>" class="btn btn-warning text-white">แก้ไข</a></td>
+									<td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+								</tr>
+								<?php
+								$count=$count+1;
+								}
+								?>		
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <br>
 Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 <?php
