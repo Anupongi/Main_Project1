@@ -30,7 +30,7 @@
         $excelObj->getActiveSheet()->setCellValue('C'.$row,$d[1]);
         $excelObj->getActiveSheet()->setCellValue('D'.$row,$d[2]);
         $excelObj->getActiveSheet()->setCellValue('E'.$row,$d[3]);
-
+        $excelObj->getActiveSheet()->setCellValue('F'.$row,$d[4]);
         $i++;
         $row++; 
     }
