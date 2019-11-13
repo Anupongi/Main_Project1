@@ -477,7 +477,23 @@ $num_rows4 = mysqli_num_rows($query4);
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                  
+                                  <div class="form-group col-md-2">
+                                      <label for="inputAddress">วัน/เดือน/ปีเกิด</label>
+                                      <div class="md-form">
+                                        <input class="form-control" name="dateofbirth" type="text" placeholder="xx/xx/xxxx" autocomplete="off" required>
+                                      </div>
+                                      <!-- <div class="md-form">
+                                        <input placeholder="xx/xx/xxxx" type="text" id="date-picker-example" class="form-control datepicker">
+                                        <label for="date-picker-example">Try me...</label>
+                                        </div>-->
+                                      <script>
+                                        function demo() {
+                                          $('.datepicker').datepicker();
+                                          
+                                          }
+                                          
+                                      </script> 
+                                  </div>
                                   <div class="form-group col-md-1">
                                       <label for="inputAddress">สัญชาติ</label>
                                       <input type="text" class="form-control" name="Nationality">
@@ -816,6 +832,7 @@ $(document).ready(function(){
 </script>
 <script>
   CKEDITOR.replace('Sick');
+  CKEDITOR.replace('Treatment');
 </script>
 </body>
 </html>
