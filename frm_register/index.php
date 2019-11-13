@@ -53,6 +53,16 @@
                                     <input type="text" class="form-control" id="last_name" name="last_name" placeholder="นามสกุล">
                                 </div>
                             </div>
+                            <div class="form-row text-center">
+                                <div class="form-group col-md-6">
+                                    <label class="font-weight-bold">รหัสบัตรประจำตัวประชาชน <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="card_number" name="card_number" placeholder="รหัสบัตรประจำตัวประชาชน">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="font-weight-bold">วัน/เดือน/ปีเกิด <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="dateofbirth" name="dateofbirth" placeholder="วัน/เดือน/ปีเกิด">
+                                </div>
+                            </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label class="font-weight-bold">แผนกวิชา <span class="text-danger">*</span></label>
