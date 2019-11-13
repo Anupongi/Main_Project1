@@ -16,7 +16,7 @@
     $excelObj = $excelReader->load("../Exportfile/doc_xlsxflie/รายชื่อผู้ลงชื่อเข้าใช้ประจำวัน.xlsx");
     $excelObj->setActiveSheetIndex(0);
     mysqli_select_db($conn, 'user_login');
-    $sql_vs = "SELECT login_date.Username,user.Firstname, user.Lastname,login_date.Lastdate FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date' ";
+    $sql_vs = "SELECT login_date.Username,user.Firstname, user.Lastname,login_date.Lastdate,login_date.time FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date' ";
     // echo $sql_vs;
     $query_vs = mysqli_query($conn, $sql_vs);
     
