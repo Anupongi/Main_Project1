@@ -126,7 +126,7 @@ $per_page = 10;   // Per Page
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index1.html" class="brand-link">
-      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">สำหรับเจ้าหน้าที่</span>
     </a>
@@ -437,7 +437,8 @@ $per_page = 10;   // Per Page
                                 <?php
                                 $conn = mysqli_connect("localhost","root","Ice@2019","user_login");
                                 mysqli_set_charset($conn, "utf8");
-                                $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate,login_date.time FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
+                                $date=date("d/m/Y");
+                                $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate,login_date.time FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate`='$date' DESC ";
                                 // echo $sql;
                                 $query = mysqli_query($conn,$sql);
                                 $count = 0;
