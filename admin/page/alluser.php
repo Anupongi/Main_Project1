@@ -107,7 +107,8 @@
 									}
 								?>
 							</tbody>
-							<br>
+						</table>
+						<br>
 								Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
 							<?php
 
@@ -132,7 +133,6 @@
 							}
 							$conn = null;
 							?>
-						</table>
 					</div>
 				</div>
 			</div>
