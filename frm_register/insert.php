@@ -14,6 +14,8 @@
     $password=$_POST['password'];
     $first_name=$_POST['first_name'];
     $last_name=$_POST['last_name'];
+    $card_number=$_POST['card_number'];
+    $dateofbirth=$_POST['dateofbirth'];
     $position=$_POST['position'];
     $class=$_POST['class'];
     $room=$_POST['room'];
