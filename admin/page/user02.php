@@ -111,15 +111,15 @@
 								?>	
 										
 							</tbody>
-							<br>
-									Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
-									<?php
-
+							
+						</table>
+						<br>
+							Total <?php echo $num_rows;?> Record : <?php echo $num_pages;?> Page :
+								<?php
 									if($prev_page)
 									{
 										echo " <a href='$_SERVER[SCRIPT_NAME]?Page=$prev_page'><< Back</a> ";
 									}
-
 									for($i=1; $i<=$num_pages; $i++){
 										if($i != $page)
 										{
@@ -135,8 +135,7 @@
 										echo " <a href ='$_SERVER[SCRIPT_NAME]?Page=$next_page'>Next>></a> ";
 									}
 									$conn = null;
-									?>
-						</table>
+								?>
 					</div>
 				</div>
 			</div>
