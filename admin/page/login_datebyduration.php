@@ -55,7 +55,7 @@ mysqli_set_charset($conn, "utf8");
 if(isset($_POST['datetimepicker1'])){  
   $datestart = $_POST['datetimepicker1'];
   $dateend = $_POST['datetimepicker2'];
-  $sql = "SELECT * FROM `login_date` WHERE `Lastname` = '$datestart' AND $dateend";
+  $sql = "SELECT * FROM `login_date` WHERE `Lastname` BETWEEN '$datestart' AND $dateend";
 $query = mysqli_query($conn,$sql);
 
 $num_rows = mysqli_num_rows($query);
