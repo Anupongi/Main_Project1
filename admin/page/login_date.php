@@ -414,7 +414,7 @@ $per_page = 10;   // Per Page
                                             </tr>
                                         </thead>
                                         <?php
-                                        $sql1 = "SELECT login_date.ID,login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date'";
+                                        $sql1 = "SELECT login_date.ID,login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date' ORDER BY `login_date`.`time` DESC";
                                         
                                         $query = mysqli_query($conn,$sql1);
                                         $count = 1;
