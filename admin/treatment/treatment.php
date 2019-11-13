@@ -473,14 +473,14 @@ $num_rows4 = mysqli_num_rows($query4);
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="inputPassword4">รหัสบัตรประจำตัวประชาชน</label>
-                                        <input type="text" class="form-control" name="card_id" placeholder="รหัสบัตรประจำตัวประชาชน" required>
+                                        <input type="text" class="form-control" name="card_id" id="card_id" placeholder="รหัสบัตรประจำตัวประชาชน" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-2">
                                       <label for="inputAddress">วัน/เดือน/ปีเกิด</label>
                                       <div class="md-form">
-                                        <input class="form-control" name="dateofbirth" type="text" placeholder="xx/xx/xxxx" autocomplete="off" required>
+                                        <input class="form-control" name="dateofbirth" id="dateofbirth" type="text" placeholder="xx/xx/xxxx" autocomplete="off" required>
                                       </div>
                                       <!-- <div class="md-form">
                                         <input placeholder="xx/xx/xxxx" type="text" id="date-picker-example" class="form-control datepicker">
