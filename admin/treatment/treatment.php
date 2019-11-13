@@ -40,6 +40,7 @@
   <link rel="icon" type="image/png" href="../../dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" >
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.18.1/dist/sweetalert2.min.js"></script> 
+  <script src="//cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
   <style>
     .bg {
   height: 100%;
@@ -544,6 +545,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                   <div class="form-group col-md-7">
                                     <label for="inputAddress2">อาการเบื้องต้น</label>
                                     <textarea class="form-control" name="Sick" rows="3" required></textarea>
+                                    <!-- <textarea class="form-control" name="Sick" rows="3" required></textarea> -->
                                   </div>
                                   <div class="form-group col-md-4">
                                     <label for="inputCity">ยาที่แพ้</label>
@@ -827,6 +829,9 @@ $(document).ready(function(){
   }
  });
 });
+</script>
+<script>
+  CKEDITOR.replace('Sick');
 </script>
 </body>
 </html>
