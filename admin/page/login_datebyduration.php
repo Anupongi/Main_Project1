@@ -56,6 +56,7 @@ if(isset($_POST['datetimepicker1'])){
   $datestart = $_POST['datetimepicker1'];
   $dateend = $_POST['datetimepicker2'];
   $sql = "SELECT * FROM `login_date` WHERE `Lastdate` BETWEEN '$datestart' AND '$dateend'";
+  echo $sql;
 $query = mysqli_query($conn,$sql);
 
 $num_rows = mysqli_num_rows($query);
@@ -491,7 +492,7 @@ $per_page = 10;   // Per Page
                                         $datestart = $_POST['datetimepicker1'];
                                         $dateend = $_POST['datetimepicker2'];
                                         
-                                        $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate ,login_date.time FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate BETWEEN '$datestart' AND '$dateend'  ORDER BY `Lastdate` DESC";
+                                        $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate ,login_date.time FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate BETWEEN '$datestart' AND '$dateend'  ORDER BY `login_date`.`time` DESC";
                                         // echo $sql;
                                         $query = mysqli_query($conn,$sql);
                                         
@@ -531,7 +532,7 @@ $per_page = 10;   // Per Page
                                         
                                         if(isset($_POST['datetimepicker3'])){
                                           $date1 = $_POST['datetimepicker3'];
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1' ORDER BY `Lastdate` DESC";
+                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate FROM login_date INNER JOIN user ON login_date.Username=user.Username WHERE login_date.Lastdate = '$date1' ORDER BY `login_date`.`time` DESC";
                                           
                                           $query = mysqli_query($conn,$sql);
                                           while ($d = mysqli_fetch_array($query)) {
