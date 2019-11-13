@@ -77,7 +77,7 @@
 									<th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
 									<th width="80"><div align="center">สถานะผู้ใช้</div></th>
 									<th width="100"><div align="center">เริ่มสมัครสมาชิก</div></th>
-									<th width="59"> <div align="center">แก้ไข </div></th>
+									<!-- <th width="59"> <div align="center">แก้ไข </div></th> -->
 									<th width="71"> <div align="center">ลบ </div></th>
 								</tr>
   							</thead>
