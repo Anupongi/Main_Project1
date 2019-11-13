@@ -105,9 +105,6 @@ $per_page = 10;   // Per Page
       <li class="nav-item d-none d-sm-inline-block">
       <a href="../admin_index.php" class="nav-link"><i class="ion-ios-home"></i> หน้าแรก</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
@@ -131,7 +128,7 @@ $per_page = 10;   // Per Page
     <a href="index1.html" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">สำหรับเจ้าหน้าที่</span>
     </a>
 
     <!-- Sidebar -->
