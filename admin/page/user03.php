@@ -71,7 +71,6 @@
         <th width="150"> <div align="center">ชื่อ-นามสกุล </div></th>
         <th width="80"><div align="center">สถานะผู้ใช้</div></th>
         <th width="100"><div align="center">เริ่มสมัครสมาชิก</div></th>
-        <th width="59"> <div align="center">แก้ไข </div></th>
         <th width="71"> <div align="center">ลบ </div></th>
     </tr>
   </thead>
@@ -95,8 +94,7 @@ while($result=mysqli_fetch_array($query))
 	
 	?></td>
     <td align="right"><?php echo $result["date"];?></td>
-    <td align="right"><a href="./edituser.php?ID=<?php echo $result[0] ?>" class="btn btn-warning text-white">แก้ไข</a></td>
-    <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+    <td align="right"> <a href="./deluser2.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
   </tr>
 <?php
 $count=$count+1;
