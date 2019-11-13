@@ -472,7 +472,7 @@ $per_page = 10;   // Per Page
                                         </tr>
                                         <?php
                                         }}else{
-                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate,login_date.time FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `Lastdate` DESC ";
+                                          $sql ="SELECT login_date.Username, user.Firstname, user.Lastname , login_date.Lastdate,login_date.time FROM login_date INNER JOIN user ON login_date.Username=user.Username ORDER BY `login_date`.`time` DESC";
                                           // echo $sql;
                                           $query = mysqli_query($conn,$sql);
                                           while ($d = mysqli_fetch_array($query)) {
@@ -539,12 +539,12 @@ $per_page = 10;   // Per Page
                             }
                             $conn = null;
                             ?>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-9"></div>
                                 <div class="col-3">
                                     <a href="../Exportfile/export.php" class="btn btn-success"><i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>    
                         <div class="card-footer text-muted text-center">
 
