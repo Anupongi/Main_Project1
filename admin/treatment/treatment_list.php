@@ -514,7 +514,7 @@ $per_page = 10;   // Per Page
                                             <td align="right"><?php echo $result["total"];?></td>
                                             <td align="right"><?php echo $result["user_post"];?></td>
                                             <td align="right"><?php echo $result["date"];?></td>
-                                            <td align="right"><a href="./edituser.php?ID=<?php echo $result[0] ?>" class="btn btn-warning text-white">แก้ไข</a></td>
+                                            <td align="right"><a href="./editmed.php?ID=<?php echo $result[0] ?>" class="btn btn-warning text-white">แก้ไข</a></td>
                                             <td align="right"> <a href="./deluser.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
