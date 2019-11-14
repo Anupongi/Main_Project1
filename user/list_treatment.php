@@ -76,7 +76,7 @@ if(mysqli_num_rows($result2)==1){
   // print_r($_SESSION);
   mysqli_set_charset($con, "utf8");
   $date=date("d/m/Y");
-  $sql = "SELECT * FROM tb_treatment WHERE Student_id='".$name."' AND 'date'='$date' ";
+  $sql = "SELECT * FROM `tb_treatment` WHERE `Student_id`='$name' AND `date`='$date'";
   echo $sql;
   $query = mysqli_query($con,$sql);
   
