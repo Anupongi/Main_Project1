@@ -77,6 +77,7 @@ if(mysqli_num_rows($result2)==1){
   mysqli_set_charset($con, "utf8");
   $date=date("d/m/Y");
   $sql = "SELECT * FROM tb_treatment WHERE Student_id='".$name."' AND Lastdate='$date' ";
+  echo $sql;
   $query = mysqli_query($con,$sql);
   
   $num_rows = mysqli_num_rows($query);
