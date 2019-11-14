@@ -359,19 +359,19 @@ if(mysqli_num_rows($result2)==1){
                                     <div class="form-group col-md-4">
                                     <label class="font-weight-bold">จังหวัด <span class="text-danger">*</span></label>
                                     <select name="province"  id="province" name="province" class="form-control">
-                                        <option id="province_list"	><?php echo $d[16]?></option>
+                                        <option id="province_list"	><?php echo $d[19]?></option>
                                     </select>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="font-weight-bold">อำเภอ <span class="text-danger">*</span></label>
                                         <select name="amphur"  id="amphur" name="amphur" class="form-control">
-                                            <option name="amphur"><?php echo $d[14]?></option>
+                                            <option name="amphur"><?php echo $d[18]?></option>
                                         </select>
                                         <!-- <input type="text" name="zipcode"  id="zipcode" class="form-control" value="">	 -->
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label class="font-weight-bold">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
-                                        <input type="text" name="zipcode"  id="zipcode" class="form-control" value="<?php echo $d[15]?>">
+                                        <input type="text" name="zipcode"  id="zipcode" class="form-control" value="<?php echo $d[17]?>">
                                         <!-- <select name="zipcode"  id="zipcode" class="form-control">
                                             <option id="zipcode">รหัสไปรษณีย์</option>
                                         </select> -->
@@ -379,7 +379,7 @@ if(mysqli_num_rows($result2)==1){
                                     <div class="form-row col-md-3">
                                         <label class="font-weight-bold">ตำบล <span class="text-danger">*</span></label>
                                         <select  id="district"	name="district" class="form-control">
-                                            <option><?php echo $d[13]?></option>
+                                            <option><?php echo $d[16]?></option>
                                         </select>
                                     </div>			
                                 </div><br>
