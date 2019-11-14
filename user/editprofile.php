@@ -291,18 +291,18 @@ if(mysqli_num_rows($result2)==1){
                                 <div class="form-row text-center">
                                     <div class="form-group col-md-6">
                                         <label class="font-weight-bold">ชื่อ <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="first_name" name="first_name" value="<?php echo $d[3]?>">
+                                        <input type="text" class="form-control" id="first_name" name="first_name" value="<?php echo $d[4]?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="font-weight-bold">นามสกุล <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="last_name" name="last_name" value="<?php echo $d[4]?>">
+                                        <input type="text" class="form-control" id="last_name" name="last_name" value="<?php echo $d[5]?>">
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label class="font-weight-bold">แผนกวิชา <span class="text-danger">*</span></label>
                                         <select class="form-control" id="position" name="position">
-                                            <option selected ><?php echo $d[7]?></option>
+                                            <option selected ><?php echo $d[8]?></option>
                                             <option >แผนกวิชาช่างยนต์</option>
                                             <option>แผนกวิชาช่างกลโรงงาน</option>
                                             <option >แผนกวิชาช่างเชื่อมโลหะ</option>
