@@ -270,7 +270,7 @@ if(mysqli_num_rows($result2)==1){
                     <div class="col-lg-12"></div>
                     <br>
                     <div class="col-lg-12  text-center">
-                        <img src="./img/img/profile/<?php echo $d[5]?>" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
+                        <img src="./img/img/profile/<?php echo $d[8]?>" class="img-circle elevation-2" alt="User Image" style="width:200px;height:200px;" id="picprofile">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title  text-center">เปลี่ยนรูปโปรไฟล์</h5>

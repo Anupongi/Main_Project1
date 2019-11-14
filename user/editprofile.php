@@ -258,7 +258,7 @@ if(mysqli_num_rows($result2)==1){
           <div class="col-md-12">
             <div class="card text-center">
                 <div class="card-header">
-                    Featured
+                    ข้อมูลส่วนตัว
                 </div>
                 <div class="card-body">
                 <?php
