@@ -173,7 +173,7 @@ if(mysqli_num_rows($result2)==1){
           $query = mysqli_query($conn,$sql1);
           while ($d = mysqli_fetch_array($query)) {
           ?>
-          <img src="./img/img/profile/<?php echo $d[5]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
+          <img src="./img/img/profile/<?php echo $d[8]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
           <?php
           }
           ?>
