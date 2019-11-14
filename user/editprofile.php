@@ -365,13 +365,13 @@ if(mysqli_num_rows($result2)==1){
                                     <div class="form-group col-md-4">
                                         <label class="font-weight-bold">อำเภอ <span class="text-danger">*</span></label>
                                         <select name="amphur"  id="amphur" name="amphur" class="form-control">
-                                            <option name="amphur"><?php echo $d[18]?></option>
+                                            <option name="amphur"><?php echo $d[17]?></option>
                                         </select>
                                         <!-- <input type="text" name="zipcode"  id="zipcode" class="form-control" value="">	 -->
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label class="font-weight-bold">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
-                                        <input type="text" name="zipcode"  id="zipcode" class="form-control" value="<?php echo $d[17]?>">
+                                        <input type="text" name="zipcode"  id="zipcode" class="form-control" value="<?php echo $d[18]?>">
                                         <!-- <select name="zipcode"  id="zipcode" class="form-control">
                                             <option id="zipcode">รหัสไปรษณีย์</option>
                                         </select> -->
@@ -386,11 +386,11 @@ if(mysqli_num_rows($result2)==1){
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label class="font-weight-bold">เบอร์โทรศัพท์ <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="phone" id="phone" value="<?php echo $d[17]?>" required>
+                                        <input type="text" class="form-control" name="phone" id="phone" value="<?php echo $d[20]?>" required>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
-                                        <input type="text" name="your_email" id="your_email" class="form-control"  value="<?php echo $d[18]?>">
+                                        <input type="text" name="your_email" id="your_email" class="form-control"  value="<?php echo $d[21]?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
