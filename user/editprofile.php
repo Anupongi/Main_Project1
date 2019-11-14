@@ -130,7 +130,7 @@ if(mysqli_num_rows($result2)==1){
       $query = mysqli_query($conn,$sql1);
       while ($d = mysqli_fetch_array($query)) {
       ?>
-          <img src="./img/img/profile/<?php echo $d[5]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
+          <img src="./img/img/profile/<?php echo $d[8]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
         <?php
           }
           ?>
@@ -302,7 +302,7 @@ if(mysqli_num_rows($result2)==1){
                                     <div class="form-group col-md-6">
                                         <label class="font-weight-bold">แผนกวิชา <span class="text-danger">*</span></label>
                                         <select class="form-control" id="position" name="position">
-                                            <option selected ><?php echo $d[8]?></option>
+                                            <option selected ><?php echo $d[10]?></option>
                                             <option >แผนกวิชาช่างยนต์</option>
                                             <option>แผนกวิชาช่างกลโรงงาน</option>
                                             <option >แผนกวิชาช่างเชื่อมโลหะ</option>
@@ -320,7 +320,7 @@ if(mysqli_num_rows($result2)==1){
                                     <div class="form-group col-md-4">
                                         <label class="font-weight-bold">ชั้นปี <span class="text-danger">*</span></label>
                                             <select class="form-control" id="class" name="class">
-                                                <option selected><?php echo $d[8]?></option>
+                                                <option selected><?php echo $d[11]?></option>
                                                 <option >ปวช.1</option>
                                                 <option >ปวช.2</option>
                                                 <option >ปวช.3</option>
@@ -336,23 +336,23 @@ if(mysqli_num_rows($result2)==1){
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label class="font-weight-bold">ห้อง <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="room" name="room" value="<?php echo $d[9]?>">
+                                        <input type="text" class="form-control" id="room" name="room" value="<?php echo $d[12]?>">
                                     </div>
                                 </div>
                                 <br>
                                 <h2>ส่วนสำหรับติดต่อ</h2>
                                 <div class="form-row">
                                     <label class="font-weight-bold">บ้านเลขที่ <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="number" name="number" value="<?php echo $d[10]?>" required>
+                                    <input type="text" class="form-control" id="number" name="number" value="<?php echo $d[13]?>" required>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label class="font-weight-bold">ซอย </label>
-                                        <input type="text" class="form-control" id="alley" name="alley" value="<?php echo $d[11]?>">
+                                        <input type="text" class="form-control" id="alley" name="alley" value="<?php echo $d[14]?>">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label class="font-weight-bold">ถนน</label>
-                                        <input type="text" class="form-control" id="street" name="street" value="<?php echo $d[12]?>">
+                                        <input type="text" class="form-control" id="street" name="street" value="<?php echo $d[15]?>">
                                     </div>
                                 </div>
                                 <div class="form-row">
