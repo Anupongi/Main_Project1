@@ -50,7 +50,7 @@ $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 date_default_timezone_set('asia/bangkok');	
 $date = date('d/m/Y');
 mysqli_set_charset($conn, "utf8");
-$sql = "SELECT * FROM `login_date` WHERE `Username`='$name' AND `Lastdate`='$date' ";
+$sql = "SELECT login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.Username = '$name' AND `Lastdate`= '$date' ";
 $query = mysqli_query($conn,$sql);
 
 // echo $name;
