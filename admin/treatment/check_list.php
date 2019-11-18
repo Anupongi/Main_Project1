@@ -170,9 +170,9 @@ $array = mysqli_fetch_array($result);
                                           <button type="button" class="btn btn-success" onclick="window.location.href='./treatment_list1.php'">ตกลง</button>
                                         </div>
                                         <br>
-                                        <div class="col-md-8">
+                                        <!-- <div class="col-md-8">
                                           <a href="./getid.php?ID=<?php echo $array[0]; ?>" class="btn btn-danger"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Export to PDF</a>
-                                        </div>
+                                        </div> -->
                                       </div>
                                     </div>
                                     <div class="col-md-3"></div>
