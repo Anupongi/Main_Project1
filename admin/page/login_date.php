@@ -317,13 +317,13 @@ $per_page = 10;   // Per Page
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./add_authorities.php" class="nav-link">
+                <a href="../authorities/add_authorities.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข้อมูลเจ้าหน้าที่</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./list_authorities.php" class="nav-link">
+                <a href="../authorities/list_authorities.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>รายชื่อเจ้าหน้าที่</p>
                 </a>
