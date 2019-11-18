@@ -68,7 +68,7 @@
         echo "</script>";
 
       }else{
-            $sql4="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `Card_number`, `Dateofbirth`, `Userlevel`, `Department`, `Class`, `Room`, `House_number`, `Alley`, `Road`, `District`, `Amphur`, `Zipcode`, `Province`, `Phone`, `Email`, `date`) VALUES ('$user_name','$password','$first_name','$last_name','$card_number','$dateofbirth','$position','$class','$room','$number','$alley','$street','$district3','$amphur3','$zipcode3','$province3','$user_level','$phone','$your_email','$date')";
+            $sql4="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `Card_number`, `Dateofbirth`, `Department`, `Class`, `Room`, `House_number`, `Alley`, `Road`, `District`, `Amphur`, `Zipcode`, `Province`,  `Userlevel`,`Phone`, `Email`, `date`) VALUES ('$user_name','$password','$first_name','$last_name','$card_number','$dateofbirth','$position','$class','$room','$number','$alley','$street','$district3','$amphur3','$zipcode3','$province3','$user_level','$phone','$your_email','$date')";
             $query4 = mysqli_query($con,$sql4);
             if($query4){
                 echo "<script type='text/javascript'>";
