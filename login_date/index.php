@@ -110,9 +110,9 @@ $(document).ready(function(){
     success:function(data)
     {
      $('#employee_details').css("display", "block");
-    //  setTimeout(function(){   
-		// 	$("#employee_details").fadeOut("Slow");  
-    //   }, 2000);
+     setTimeout(function(){   
+			$("#employee_details").fadeOut("Slow");  
+      }, 2000);
      $('#employee_name').text(data.Username);
      $('#employee_name1').val(data.Firstname);
      $('#employee_address').text(data.Firstname);
