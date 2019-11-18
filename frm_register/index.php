@@ -44,6 +44,10 @@
                                 </div>
                             </div>
                             <div class="form-row text-center">
+                                <div class="form-group col-md-2">
+                                    <label class="font-weight-bold">คำนำหน้า <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name_title" name="name_title" placeholder="คำนำหน้า">
+                                </div>
                                 <div class="form-group col-md-6">
                                     <label class="font-weight-bold">ชื่อ <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="ชื่่อ">
@@ -193,15 +197,15 @@
                                 </div>
                             </div>
                             <div class="form-row text-center">
-                                <div class="form-group col-md-3">
+                                <div class="form-group col-md-2">
+                                    <label class="font-weight-bold">คำนำหน้า <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name_title1" name="name_title1" placeholder="คำนำหน้า">
+                                </div>
+                                <div class="form-group col-md-5">
                                     <label class="font-weight-bold">ชื่อ <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="first_name1" name="first_name1" placeholder="ชื่่อ">
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label class="font-weight-bold">ชื่อ <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="first_name1" name="first_name1" placeholder="ชื่่อ">
-                                </div>
-                                <div class="form-group col-md-4">
+                                <div class="form-group col-md-5">
                                     <label class="font-weight-bold">นามสกุล <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="last_name1" name="last_name1" placeholder="นามสกุล">
                                 </div>
