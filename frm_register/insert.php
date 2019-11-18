@@ -152,7 +152,7 @@
             if($query4){
                 echo "<script type='text/javascript'>";
                     echo "alert('บันทึกข้อมูลสำเร็จ');";
-                    echo "window.location='../login.php';";
+                    echo "window.location.href='../Login/index.php';";
                 echo "</script>";
           }
           else{
