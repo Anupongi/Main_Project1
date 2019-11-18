@@ -171,7 +171,7 @@ if(mysqli_num_rows($result2)==1){
                   <p>ข้อมูลส่วนตัว</p>
                 </a>
                 <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./deleteuser.php?username=<?php echo $name?>" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ลบบัญชี</p>
                 </a>
