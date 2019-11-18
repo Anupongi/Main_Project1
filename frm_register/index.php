@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="font-weight-bold">รหัสผ่าน <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="password" name="password" placeholder="รหัสผ่าน">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="รหัสผ่าน">
                                 </div>
                             </div>
                             <div class="form-row text-center">
@@ -193,7 +193,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="font-weight-bold">รหัสผ่าน <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="password1" name="password1" placeholder="รหัสผ่าน">
+                                    <input type="password" class="form-control" id="password1" name="password1" placeholder="รหัสผ่าน">
                                 </div>
                             </div>
                             <div class="form-row text-center">
