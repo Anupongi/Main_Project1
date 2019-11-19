@@ -159,7 +159,7 @@
     //ถ้าบันทึกไม่สำเร็จแสดงข้อความ Error และกระโดดกลับไปหน้าฟอร์ม
                 echo "<script type='text/javascript'>";
                     echo "alert('ผิดพลาด ไม่สามารถบันทึกข้อมูลได้!');";
-                    echo "window.location='./index.php';";
+                    echo "window.location.back();";
                 echo "</script>";
           }
           
