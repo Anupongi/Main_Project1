@@ -38,7 +38,7 @@
  
 		}else{
     //ถ้าไม่มีก็บันทึกลงฐานข้อมูล
-    $sql="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `profile`, `Userlevel`,`Phone`,`date`) VALUES ('$user_name','$password','$first_name','$last_name','$image','$user_level','$phone','$strDate')";
+    $sql="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `Card_number`, `profile`, `Userlevel`,`Phone`,`date`) VALUES ('$user_name','$password','$first_name','$last_name','$user_name','$image','$user_level','$phone','$strDate')";
 	echo $sql;
 	$result = mysqli_query($con,$sql);
 
