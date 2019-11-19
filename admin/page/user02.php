@@ -21,7 +21,7 @@
     
    $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
    mysqli_set_charset($conn, "utf8");
-	$sql = "SELECT `Username`, `Password`, `Firstname`, `Lastname`, `Userlevel`, `date` FROM user WHERE Userlevel IN ('02') ";
+	$sql = "SELECT `ID`,`Username`, `Password`, `Firstname`, `Lastname`, `Userlevel`, `date` FROM user WHERE Userlevel IN ('02') ";
 	$query = mysqli_query($conn,$sql);
     
 	$num_rows = mysqli_num_rows($query);
