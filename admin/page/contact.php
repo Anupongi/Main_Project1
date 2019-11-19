@@ -162,9 +162,9 @@ session_start();
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav mx-auto">
-                            <a class="nav-item nav-link active" href="../../index.php">หน้าแรก <span class="sr-only">(current)</span></a>
-                            <a class="nav-item nav-link" href="./about.php">เกี่ยวกับ</a>
-                            <a class="nav-item nav-link" href="./contact.php">ติดต่อ</a>
+                            <a class="nav-item nav-link " href="../../index.php">หน้าแรก </a>
+                            <a class="nav-item nav-link" href="./about.php">เกี่ยวกับ <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link active" href="./contact.php">ติดต่อ</a>
                             <a class="nav-item nav-link" href="../../Login/index.php">เข้าสู่ระบบ</a>
                         </div>
                     </div>
