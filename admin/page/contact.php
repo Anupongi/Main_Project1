@@ -180,18 +180,18 @@ session_start();
         <div class="row popular_text">
             <div class="col-sm-8 py-2">
                 <div class="container">
-                    <div class="row">
-                      
-                        <p> สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคเชียงใหม่ <br>
-                        เลขที่ 9 ถ.เวียงแก้ว ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50300</p>
+                   <div class="row">
+                       <div class="col-md-6"><hr> <br>
+                            <p> สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคเชียงใหม่ <br>
+                            เลขที่ 9 ถ.เวียงแก้ว ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50300</p>
                         
-                        <img src="img/it.png" class="it">
+                        <img src="../../dist/img/fb.png" class="it">
                         <a href="https://www.facebook.com/itcmtc">Facebook:&nbsp; &nbsp;Information Technology</a> <br>
-                        <img src="img/it into.png" class="it">
+                        <img src="../../dist/img/it.png" class="it">
                         <a href="http://it.cmtc.ac.th/web2017/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81">Web:&nbsp; &nbsp;Information Technology</a>
                         <br><br><br><br>
-                    </div>
-                       <div class="col-6"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1158614175765!2d98.98128031437267!3d18.792989265691926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9a71d80adf%3A0xe41f657fc5052416!2z4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LiZ4Li04LiE4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmI!5e0!3m2!1sth!2sth!4v1563455554252!5m2!1sth!2sth" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe></div>
+                        </div>
+                       <div class="col-md-6"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1158614175765!2d98.98128031437267!3d18.792989265691926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9a71d80adf%3A0xe41f657fc5052416!2z4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LiZ4Li04LiE4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmI!5e0!3m2!1sth!2sth!4v1563455554252!5m2!1sth!2sth" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe></div>
                    </div> 
                 </div>
             </div>
