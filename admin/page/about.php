@@ -266,6 +266,7 @@ session_start();
                 </div>
             </div>
         </div>
+        <h1 class="p-3 display-4 content_text font">ความเป็นมาของเว็บไซต์ </h1>
     </div>
     <!-- End content -->
     </div>
