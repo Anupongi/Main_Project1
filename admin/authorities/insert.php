@@ -39,23 +39,23 @@
 		}else{
     //ถ้าไม่มีก็บันทึกลงฐานข้อมูล
     $sql="INSERT INTO `user`(`Username`, `Password`, `Firstname`, `Lastname`, `profile`, `Userlevel`,`Phone`,`date`) VALUES ('$user_name','$password','$first_name','$last_name','$image','$user_level','$phone','$strDate')";
-	// echo $sql;
+	echo $sql;
 	$result = mysqli_query($con,$sql);
 
 	//บันทึกสำเร็จแจ้งเตือนและกระโดดกลับไปหน้าฟอร์ม   ปล.การทำระบบจริงๆ อาจกระโดดไปหน้าอื่นที่เรากำหนด
-	if($result){
-			echo "<script type='text/javascript'>";
-				echo "alert('ระบบบันทึกข้อมูลสำเร็จ');";
-				echo "window.location='./list_authorities.php';";
-			echo "</script>";
-	  }
-	  else{
-	//ถ้าบันทึกไม่สำเร็จแสดงข้อความ Error และกระโดดกลับไปหน้าฟอร์ม
-		    echo "<script type='text/javascript'>";
-				echo "alert('ผิดพลาด! ระบบไม่สามารถบันทึกข้อมูลได้สำเร็จ');";
-				echo "window.location='./add_authorities.php';";
-			echo "</script>";
-	  }
+	// if($result){
+	// 		echo "<script type='text/javascript'>";
+	// 			echo "alert('ระบบบันทึกข้อมูลสำเร็จ');";
+	// 			echo "window.location='./list_authorities.php';";
+	// 		echo "</script>";
+	//   }
+	//   else{
+	// //ถ้าบันทึกไม่สำเร็จแสดงข้อความ Error และกระโดดกลับไปหน้าฟอร์ม
+	// 	    echo "<script type='text/javascript'>";
+	// 			echo "alert('ผิดพลาด! ระบบไม่สามารถบันทึกข้อมูลได้สำเร็จ');";
+	// 			echo "window.location='./add_authorities.php';";
+	// 		echo "</script>";
+	//   }
 }	  
 ?>
     
