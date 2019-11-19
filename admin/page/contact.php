@@ -181,7 +181,7 @@ session_start();
             <div class="col-sm-8 py-2">
                 <div class="container">
                    <div class="row">
-                       <div class="col-md-7"><hr> <br>
+                       <div class="col-md-10"><hr> <br>
                             <p> สาขาวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคเชียงใหม่ <br>
                             เลขที่ 9 ถ.เวียงแก้ว ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50300</p>
                         
