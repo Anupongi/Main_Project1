@@ -74,14 +74,14 @@
             if($query4){
                 echo "<script type='text/javascript'>";
                     echo "alert('บันทึกข้อมูลสำเร็จ');";
-                    echo "window.location='../login.php';";
+                    echo "window.location.href='../Login/index.php';";
                 echo "</script>";
           }
           else{
     //ถ้าบันทึกไม่สำเร็จแสดงข้อความ Error และกระโดดกลับไปหน้าฟอร์ม
                 echo "<script type='text/javascript'>";
                     echo "alert('ผิดพลาด ไม่สามารถบันทึกข้อมูลได้!');";
-                    echo "window.location='./index.php';";
+                    echo "window.location.back();";
                 echo "</script>";
                 echo $sql4;
           }
