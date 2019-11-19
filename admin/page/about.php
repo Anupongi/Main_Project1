@@ -177,77 +177,12 @@ session_start();
         <!-- content -->
         <div class=" float-left mr-3 mt-3" style="height:60px;width:15px;background-color: #0064CA;">
         </div>
-        <h1 class="p-3 display-4 content_text font">ข่าวประชาสัมพันธ์ </h1>
+        <h1 class="p-3 display-4 content_text font">ความเป็นมาของเว็บไซต์ </h1>
         <div class="row popular_text">
-            <div class="col-sm-8 py-2">
-                <?php
-                
+        ในปัจจุบันห้องพยาบาลหลาย ๆแห่งไม่ว่าจะเป็นห้องพยาบาลของโรงเรียน วิทยาลัย มหาวิทยาลัยล้วนประสบปัญหาด้านการจัดการข้อมูลและสถิติผู้ใช้งาน รวมไปถึงปัญหาด้านอื่น ๆ เช่น ปัญหาการจัดเก็บข้อมูลครุภัณฑ์ ยา อุปกรณ์ทางการแพทย์ เนื่องจากรูปเดิมของการจัดเก็บข้อมูลยังคงเป็นรูปแบบเอกสารธรรมดา และใช้เจ้าหน้าที่เป็นผู้เขียนบันทึกข้อมูลโดยตรง ทำให้ข้อมูลมีผิดพลาดสูงและเสี่ยงต่อการสูญหายของข้อมูล ดังนั้นในสถานศึกษาทุกแห่งจำเป็นและต้องมีระบบที่เกี่ยวข้องกับห้องพยาบาล เพื่อให้คนมาใช้บริการเกิดความสะดวกมากขึ้น	
+ข้าพเจ้าได้เล็งเห็นปัญหาดังกล่าว จึงได้สร้างเว็บไซต์นี้ขึ้นมาโดยที่เว็บไซต์นี้สามารถจัดเก็บข้อมูลผู้มาใช้บริการห้องพยาบาลได้และสามารถเก็บข้อมูลบุคลกรทางการศึกษาที่มาใช้บริการได้ในแต่ละวัน และในส่วนของผู้ดูแลระบบยังสามารถตรวจสอบจำนวนครุภัณฑ์ ยา อุปกรณ์ทางการแพทย์ได้ และยังสามารถดูจำนวนการเข้าใช้งานห้องพยาบาลได้ 
+	ข้าพเจ้าคาดว่าเว็บไซต์นี้จะเป็นประโยชน์ต่อผู้มาใช้บริการห้องพยาบาล และเจ้าหน้าที่ที่ปฏิบัติงานในห้องพยาบาล เมื่อเกิดกรณีฉุกเฉินเจ้าหน้าที่สามารถตรวจสอบข้อมูลผู้มาใช้บริการและผู้มาใช้บริการเองก็สามารถทราบข้อมูลและสถิติการเข้าใช้บริการห้องพยาบาลได้ด้วยตนเอง
 
-                $results_per_page = 6;
-
-                $sql = "SELECT * FROM `allpost` WHERE `published` = 'y'";
-                $result = mysqli_query($conn, $sql);
-                $number_of_results = mysqli_num_rows($result);
-                $number_of_pages = ceil($number_of_results / $results_per_page);
-
-                if (!isset($_GET['page'])) {
-                    $page = 1;
-                } else {
-                    $page = $_GET['page'];
-                }
-
-                $this_page_first_result = ($page - 1) * $results_per_page;
-
-                $sql = "SELECT * FROM `allpost` WHERE `published` = 'y' ORDER BY `post_id` DESC LIMIT $this_page_first_result,$results_per_page";
-                $result = mysqli_query($conn, $sql);
-                while ($d = mysqli_fetch_array($result)) {
-                    ?>
-                    <div class="card float-left m-3 wow fadeInUp shadow p-3 " data-wow-duration="1s" style="width: 20rem;height: 21rem">
-                        <img class="card-img-top rounded" src="./admin/page/img/img/<?php echo $d[2] ?>" height="180" alt="Card image cap">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <!-- <a href="./pages/category.php?name=<?php echo $d[0] ?>" class="btn btn-primary btn-sm float-left" style="font-size:12px;"><?php echo $d[2] ?></a> -->
-                                    <h5 class="float-left m-1 text-muted" style="font-size:15px;"><?php echo $d[4] ?></h5>
-                                </div>
-
-                            </div>
-                            <div class="row pt-2">
-                                <div class="col-sm-12">
-                                    <h5><a href="./previewcontentpost.php?id=<?php echo $d[0] ?>"><?php echo $d[1] ?> </a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-                <?php
-                if ($number_of_results >= 7) {
-                    ?>
-                    <div class=" float-left  wow fadeInUp " data-wow-duration="1s" style="width: 95%;">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <nav aria-label="Page navigation example">
-                                        <ul class="pagination">
-                                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                            <?php
-                                            for ($page = 1; $page <= $number_of_pages; $page++) {
-                                                echo '<li class="page-item"><a class="page-link" href="index.php?page=' . $page . '">' . $page . '</a> </li>';
-                                            }
-                                            ?>
-                                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
 
             <div class="col-md-4">
                 <b>
