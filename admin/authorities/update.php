@@ -10,9 +10,10 @@ $username = $_POST['user_name'];
 $password = $_POST['password']; 
 $firstname = $_POST['first_name'];
 $last_name = $_POST['last_name'];
+$phone = $_POST['phone'];
 
 mysqli_set_charset($conn,"utf8");
-$sql = "UPDATE `user` SET `Username`= '$username' ,`Password`= '$password' ,`Firstname`= '$firstname' ,`Lastname` = '$last_name' WHERE `ID` = $id";
+$sql = "UPDATE `user` SET `Username`= '$username' ,`Password`= '$password' ,`Firstname`= '$firstname' ,`Lastname` = '$last_name',`Phone`='$phone' WHERE `ID` = $id";
 // echo $sql;
 $query = mysqli_query($conn,$sql);
  Header("Location: list_authorities.php"); 

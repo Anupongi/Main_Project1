@@ -438,17 +438,22 @@ $array = mysqli_fetch_array($query);
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="exampleInputPassword1">รหัสผ่าน</label>
-                                                    <input type="text" class="form-control" id="password" name="password" placeholder="Password" value="<?php echo $array[2] ?>" required>
+                                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="<?php echo $array[2] ?>" required>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="inputEmail4">ชื่อ</label>
-                                                        <input type="text" class="form-control" id="firstname" name="first_name" placeholder="ชื่อ" value="<?php echo $array[3] ?>" required>
+                                                        <input type="text" class="form-control" id="firstname" name="first_name" placeholder="ชื่อ" value="<?php echo $array[4] ?>" required>
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="inputPassword4">นามสกุล</label>
-                                                        <input type="text" class="form-control" id="lastname" name="last_name" placeholder="นามสกุล" value="<?php echo $array[4] ?>" required>
+                                                        <input type="text" class="form-control" id="lastname" name="last_name" placeholder="นามสกุล" value="<?php echo $array[5] ?>" required>
                                                     </div>
+                                                    <div class="form-group col-md-6 ">
+                                                      <label for="exampleInputEmail1">เบอร์โทรศัพท์</label>
+                                                      <input type="text" class="form-control" name="phone" id="phone" aria-describedby="emailHelp" placeholder="เบอร์โทรศัพท์ที่สามารถติดต่อ" value="<?php echo $array[20] ?>" required>
+                                                    
+                                                </div>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">ยืนยัน</button>
                                                 <button type="reset" class="btn btn-warning">ยกเลิก</button>
