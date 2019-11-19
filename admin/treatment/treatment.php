@@ -544,8 +544,8 @@ $num_rows4 = mysqli_num_rows($query4);
                                 <div class="form-row">
                                   <div class="form-group col-md-7">
                                     <label for="inputAddress2">อาการเบื้องต้น</label>
-                                    <textarea class="form-control" name="Sick" rows="3" required></textarea>
                                     <!-- <textarea class="form-control" name="Sick" rows="3" required></textarea> -->
+                                    <textarea class="form-control" name="Sick" rows="3" required></textarea>
                                   </div>
                                   <div class="form-group col-md-4">
                                     <label for="inputCity">ยาที่แพ้</label>
@@ -834,9 +834,9 @@ $(document).ready(function(){
  });
 });
 </script>
-<script>
+<!-- <script>
   CKEDITOR.replace('Sick');
   CKEDITOR.replace('Treatment');
-</script>
+</script> -->
 </body>
 </html>
