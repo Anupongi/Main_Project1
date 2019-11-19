@@ -190,7 +190,7 @@ session_start();
                         <img src="../../dist/img/it.png" class="it" width="16px" height="16px">
                         <a href="http://it.cmtc.ac.th/web2017/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81">Web:&nbsp; &nbsp;Information Technology</a>
                         <br><br><br><br>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1158614175765!2d98.98128031437267!3d18.792989265691926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9a71d80adf%3A0xe41f657fc5052416!2z4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LiZ4Li04LiE4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmI!5e0!3m2!1sth!2sth!4v1563455554252!5m2!1sth!2sth" width="360" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.1158614175765!2d98.98128031437267!3d18.792989265691926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a9a71d80adf%3A0xe41f657fc5052416!2z4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LiZ4Li04LiE4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmI!5e0!3m2!1sth!2sth!4v1563455554252!5m2!1sth!2sth"  frameborder="0" style="border:0" allowfullscreen=""></iframe>
                         </div>
                        <!-- <div class="col-md-6"></div> -->
                    </div> 
