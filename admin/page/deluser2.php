@@ -1,5 +1,5 @@
 <?php 
-    include("../connection/connection.php");
+    include("../../connection/connection.php");
     $id =  $_GET['ID'];
         // $sql = "SELECT `img` FROM `tb_employee_6139010002` WHERE `id` = $id";
         // $query = mysqli_query($con,$sql);
