@@ -187,7 +187,7 @@ session_start();
                         
                         <img src="../../dist/img/fb.png" class="it" width="16px" height="16px">
                         <a href="https://www.facebook.com/itcmtc">Facebook:&nbsp; &nbsp;Information Technology</a> <br>
-                        <img src="../../dist/img/it.png" class="it">
+                        <img src="../../dist/img/it.png" class="it" width="16px" height="16px">
                         <a href="http://it.cmtc.ac.th/web2017/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81">Web:&nbsp; &nbsp;Information Technology</a>
                         <br><br><br><br>
                         </div>
