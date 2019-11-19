@@ -175,8 +175,8 @@ session_start();
                                     <a class="dropdown-item" href="./pages/category.php?name=สวนสัตว์">สวนสัตว์</a>
                                 </div>
                             </div> -->
-                            <!-- <a class="nav-item nav-link" href="#">เกี่ยวกับ</a>
-                            <a class="nav-item nav-link" href="#">ติดต่อ</a> -->
+                            <a class="nav-item nav-link" href="./admin/page/about.php">เกี่ยวกับ</a>
+                            <a class="nav-item nav-link" href="./admin/page/contact.php">ติดต่อ</a>
                             <a class="nav-item nav-link" href="./Login/index.php">เข้าสู่ระบบ</a>
                         </div>
                     </div>

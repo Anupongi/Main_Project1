@@ -6,10 +6,7 @@ session_start();
     $dbName = "post";
     $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn,"utf8");
-    $id = $_GET['id'];
-    $sql ="SELECT * FROM `allpost` WHERE `post_id` = $id ";
-    $result = mysqli_query($conn, $sql);
-    $d = mysqli_fetch_array($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +24,7 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./asset/css/style_font.css">
     <meta name="google-site-verification" content="HfyyLXEy_HeeCFIgiuZzjfHteEU4fs8HsAzuS1CGD-M" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./dist/img/206-2067143_no-wait-emergency-room-medical-bed-icon.png" type="image/png">
     <style>
         /* body {
@@ -40,7 +38,7 @@ session_start();
             font-size: 3em;
         }
 
-        .carousel {
+         .carousel {
             margin-bottom: 4rem;
         }
 
@@ -50,28 +48,60 @@ session_start();
         }
 
         .carousel-item {
-            height: 32rem;
             background-color: #fff;
         }
-
-        .carousel-item>img {
+        .carousel-item>img{
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            max-width: 100%;
+            max-height:100%;
+            height:100vh;
+        }
+        @media only screen and (min-width: 360px) and (max-width: 640px) {
+            .carousel-item>img{
+                top: 0;
+                left: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                max-width: 100%;
+                min-height:100%;
+                height:40vh;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            .carousel-item>img{
+                top: 0;
+                left: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                max-width: 100%;
+                min-height:100%;
+                height:40vh;
+            }
+        }
+        /* .carousel-item>img {
             position: absolute;
             top: 0;
             left: 0;
-            /* min-width: 100%;
-            height: 40rem; */
             background-size: cover;
             background-repeat: no-repeat;
-            
-        }
-
+        } */
+        .carousel-item h3{
+            font-weight:bold;
+            color: white;
+            text-shadow: .1em .1em .2em rgba(0, 0, 0, 0.9);
+        } 
         a {
             color: black;
             font-family: 'Kanit', sans-serif;
+            text-decoration: none;
         }
 
         a:hover {
             color: black;
+            text-decoration: none;
         }
 
         .navbar-nav a {
@@ -91,13 +121,6 @@ session_start();
         .catego,
         .font {
             font-family: 'Kanit', sans-serif;
-        }
-        .page-content{
-            text-align:justify;
-        }
-        .page-content img {
-        max-width: 100%;
-        height: auto!important;
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -139,11 +162,10 @@ session_start();
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav mx-auto">
-                            <a class="nav-item nav-link active" href="./index.php">หน้าแรก <span class="sr-only">(current)</span></a>
-                            
-                            <a class="nav-item nav-link" href="./admin/page/about.php">เกี่ยวกับ</a>
-                            <a class="nav-item nav-link" href="./admin/page/contact.php">ติดต่อ</a>
-                            <a class="nav-item nav-link" href="./Login/index.php">เข้าสู่ระบบ</a>
+                            <a class="nav-item nav-link active" href="../../index.php">หน้าแรก <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link" href="./about.php">เกี่ยวกับ</a>
+                            <a class="nav-item nav-link" href="./contact.php">ติดต่อ</a>
+                            <a class="nav-item nav-link" href="../../Login/index.php">เข้าสู่ระบบ</a>
                         </div>
                     </div>
                 </nav>
@@ -151,38 +173,133 @@ session_start();
         </div>
         <!-- End Navbar -->
         <hr>
+        <!-- Carousel -->
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <div class="bd-example">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <?php
+                                    $sql = "SELECT * FROM `allpost` WHERE `published`= 'y' ORDER BY `date` DESC LIMIT 3";
+                                    $query = mysqli_query($conn, $sql);
+                                    $i = 0;
+                                    while ($d = mysqli_fetch_array($query)) {
+                                    $i = $i + 1;
+                                ?>
+                                <div class="carousel-item <?php if ($i == 1) { echo "active"; } ?>">
+                                    <img src="./admin/page/img/img/<?php echo $d[2] ?>" class="d-block w-100" style="filter: grayscale(10%);">
         
+                                    <div class="carousel-caption d-none d-md-block" style="background: linear-gradient(to right, rgba(255,255,0), rgba(255,255,0,0.3));width: 90%;">
+                                        <a href="./previewcontentpost.php?id=<?php echo $d[0] ?> ">
+                                            <h3 style=""><?php echo $d[1]  ?></h3>
+                                            </h3>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- <div class="carousel-item">
+                                    <img src="..." class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="..." class="d-block w-100" alt="...">
+                                </div> -->
+                                <?php
+                                }
+                                ?>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
         <!-- content -->
-        
         <div class=" float-left mr-3 mt-3" style="height:60px;width:15px;background-color: #0064CA;">
         </div>
-        <h1 class="p-3 display-4 content_text font"><?php echo $d[1] ?> </h1>
-        <div class="row mt-5">
-            <div class="col-sm-8">
-                <div class="row mb-4">
-                    <div class="col-sm-1">
-                        <?php
-                            include "./connection/connection.php";
-                            $sql_img = "SELECT `profile` FROM `user` WHERE `Username` = '$d[5]'";
-                            $query_img = mysqli_query($con, $sql_img);
-                            while ($d_img = mysqli_fetch_array($query_img)) {
-                        ?>
-                        <img src="./admin/authorities/profile/<?php echo $d_img["profile"];?>" class="rounded-circle" alt="Cinque Terre" style=" object-fit: cover;border:3px solid #0064CA;" width="50" height="50">
-                    <?php 
-                        }
-                    ?>
-                    </div>
-                    <div class="col-sm-4">
-                        เผยแพร่เมื่อ <?php echo $d[4] ?> <br>
-                        โดย <?php echo $d[6] ?>
-                    </div>
-                </div>
-            </div>    
-        </div>     
+        <h1 class="p-3 display-4 content_text font">ข่าวประชาสัมพันธ์ </h1>
         <div class="row popular_text">
-            <div class="col-md-8 text-content">
-                <div style="line-height: 26pt;font-size:18px;" class="page-content"><?php echo $d[3] ?></div>
+            <div class="col-sm-8 py-2">
+                <?php
+                
+
+                $results_per_page = 6;
+
+                $sql = "SELECT * FROM `allpost` WHERE `published` = 'y'";
+                $result = mysqli_query($conn, $sql);
+                $number_of_results = mysqli_num_rows($result);
+                $number_of_pages = ceil($number_of_results / $results_per_page);
+
+                if (!isset($_GET['page'])) {
+                    $page = 1;
+                } else {
+                    $page = $_GET['page'];
+                }
+
+                $this_page_first_result = ($page - 1) * $results_per_page;
+
+                $sql = "SELECT * FROM `allpost` WHERE `published` = 'y' ORDER BY `post_id` DESC LIMIT $this_page_first_result,$results_per_page";
+                $result = mysqli_query($conn, $sql);
+                while ($d = mysqli_fetch_array($result)) {
+                    ?>
+                    <div class="card float-left m-3 wow fadeInUp shadow p-3 " data-wow-duration="1s" style="width: 20rem;height: 21rem">
+                        <img class="card-img-top rounded" src="./admin/page/img/img/<?php echo $d[2] ?>" height="180" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- <a href="./pages/category.php?name=<?php echo $d[0] ?>" class="btn btn-primary btn-sm float-left" style="font-size:12px;"><?php echo $d[2] ?></a> -->
+                                    <h5 class="float-left m-1 text-muted" style="font-size:15px;"><?php echo $d[4] ?></h5>
+                                </div>
+
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-sm-12">
+                                    <h5><a href="./previewcontentpost.php?id=<?php echo $d[0] ?>"><?php echo $d[1] ?> </a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
+                <?php
+                if ($number_of_results >= 7) {
+                    ?>
+                    <div class=" float-left  wow fadeInUp " data-wow-duration="1s" style="width: 95%;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                            <?php
+                                            for ($page = 1; $page <= $number_of_pages; $page++) {
+                                                echo '<li class="page-item"><a class="page-link" href="index.php?page=' . $page . '">' . $page . '</a> </li>';
+                                            }
+                                            ?>
+                                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
+
             <div class="col-md-4">
                 <b>
                     <div class=" float-left mr-3 mt-3" style="height:25px;width:15px;background-color: #0064CA;">
@@ -232,7 +349,6 @@ session_start();
                         $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
                         mysqli_set_charset($conn,"utf8");
                         
-                        
                         $sql = "SELECT * FROM `files`   WHERE `published` = 'y' ORDER BY `date` DESC LIMIT 3 ;";
                         $query = mysqli_query($conn, $sql);
                         while ($d = mysqli_fetch_array($query)) {
@@ -247,7 +363,8 @@ session_start();
                                     <div class="col-lg-8 text-center">
                                             <h6 class="card-title"><?php echo substr($d[2], 0, 88). "..." ?></h6>
                                             <h6 style="font-size:14px">จำนวนดาวน์โหลด : <?php echo $d[5]; ?> ครั้ง</h6>
-                                            <a href="./admin/page/upload_download/uploads/file/<?php echo $d[2]?>" style="color:red;">Download</a>
+                                            <!-- <a href="./admin/page/upload_download/uploads/file/<?php echo $d[2]?>" style="color:red;">Download</a> -->
+                                            <a href="./admin/page/upload_download/downloads.php?path=<?php echo $d[2]?>&id=<?php echo $d[0]?>" style="color:red;">Download</a>
                                             <p class="card-text"><small class="text-muted">วันที่โพสต์ : <?php echo $d[7]; ?></small></p>
                                     </div>
                                 </div>
@@ -256,11 +373,6 @@ session_start();
                     <?php
                         }
                     ?>
-                </div>
-            </div>
-            
-                        
-                    </div>
                 </div>
             </div>
         </div>
@@ -283,8 +395,8 @@ session_start();
             background-color: #292C2F;
         }
     </style>
-    <br>
     <!-- Footer -->
+    <br>
     <footer class="page-footer font-small blue pt-4">
 
         <!-- Footer Links -->
@@ -305,32 +417,7 @@ session_start();
 
                 <hr class="clearfix w-100 d-md-none pb-3">
 
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <!-- <h5 class="text-uppercase">ประเภท</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="./pages/category.php?name=ถนนคนเดิน">ถนนคนเดิน</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=ห้าง">ห้าง</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=ตลาดกลางคืน">ตลาดกลางคืน</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=ที่ถ่ายรูป">ที่ถ่ายรูป</a>
-                        </li>
-                        <li>
-                            <a href="./pages/category.php?name=สวนสัตว์">สวนสัตว์</a>
-                        </li>
-                    </ul> -->
-
-                </div>
-                <!-- Grid column -->
+                
 
                 <!-- Grid column -->
                 <div class="col-md-3 mb-md-0 mb-3">
@@ -378,7 +465,6 @@ session_start();
                     $('#back-to-top').fadeOut();
                 }
             });
-
             $('#back-to-top').click(function() {
                 $('#back-to-top').tooltip('hide');
                 $('body,html').animate({
@@ -389,6 +475,9 @@ session_start();
 
             $('#back-to-top').tooltip('show');
 
+        });
+        $("p").click(function(){
+            
         });
     </script>
 </body>
