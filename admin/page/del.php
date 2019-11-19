@@ -7,5 +7,5 @@
     $id =  $_GET['ID'];
     $sqlDele = "DELETE FROM `login_date` WHERE `ID` = '$id'";
     $queryDele = mysqli_query($conn,$sqlDele);
-    // header('Location: login_date.php');
+    header('Location: login_date.php');
 ?>

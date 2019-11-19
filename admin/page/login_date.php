@@ -414,7 +414,7 @@ $per_page = 10;   // Per Page
                                             </tr>
                                         </thead>
                                         <?php
-                                        $sql1 = "SELECT login_date.ID,login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date' ORDER BY `login_date`.`time` DESC";
+                                        $sql1 = "SELECT login_date.ID,login_date.ID,login_date.Username,login_date.Lastdate,login_date.time,user.Firstname, user.Lastname FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date' ORDER BY `login_date`.`time` DESC";
                                         
                                         $query = mysqli_query($conn,$sql1);
                                         $count = 1;
@@ -428,7 +428,7 @@ $per_page = 10;   // Per Page
                                             <td><div align="center"><?php echo $result["Firstname"] ." ".$result["Lastname"];?></div></td>
                                             <td align="right"><?php echo $result["Lastdate"];?></td>
                                             <td align="right"><?php echo $result["time"];?></td>
-                                            <td align="right"> <a href="./del.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"> <a href="./del.php?ID=<?php echo $result['ID']; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
                                         $count=$count+1;
