@@ -506,7 +506,7 @@ $per_page = 10;   // Per Page
                                             <td><div align="center"><?php echo $d['Firstname'] ." ".$d["Lastname"];?></div></td>
                                             <td><?php echo $d['Lastdate'];?></td>
                                             <td align="right"><?php echo $d["time"];?></td>
-                                            <td align="right"> <a href="./del.php?ID=<?php echo $result['ID']; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"> <a href="./del.php?ID=<?php echo $d['ID']; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
                                         }}else{
@@ -523,7 +523,7 @@ $per_page = 10;   // Per Page
                                             <td><div align="center"><?php echo $d['Firstname'] ." ".$d["Lastname"];?></div></td>
                                             <td><?php echo $d['Lastdate'];?></td>
                                             <td align="right"><?php echo $d["time"];?></td>
-                                            <td align="right"> <a href="./del3.php?ID=<?php echo $result['ID']; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"> <a href="./del3.php?ID=<?php echo $d['ID']; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
                                           }
@@ -542,10 +542,10 @@ $per_page = 10;   // Per Page
                                             
                                             <td><?php echo $count;?></td>
                                             <td><?php echo $d["Username"];?></td>
-                                            <td><div align="center"><?php echo $d[1] ." ".$d["Lastname"];?></div></td>
+                                            <td><div align="center"><?php echo $d['Firstname'] ." ".$d["Lastname"];?></div></td>
                                             <td><?php echo $d[3];?></td>
-                                            <td align="right"><?php echo $d[3];?></td>
-                                            <td align="right"> <a href="./deluser3.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"><?php echo $d['Lastdate'];?></td>
+                                            <td align="right"> <a href="./deluser3.php?ID=<?php echo $d['ID']; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
                                         }}

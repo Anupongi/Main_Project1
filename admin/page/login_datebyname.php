@@ -498,7 +498,7 @@ $per_page = 10;   // Per Page
                                             <td><div align="center"><?php echo $d['Firstname'] ." ".$d["Lastname"];?></div></td>
                                             <td><?php echo $d['Lastdate'];?></td>
                                             <td align="right"><?php echo $d["time"];?></td>
-                                            <td align="right"> <a href="./del2.php?ID=<?php echo $result['ID']; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"> <a href="./del2.php?ID=<?php echo $d['ID']; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
                                         }
@@ -523,7 +523,7 @@ $per_page = 10;   // Per Page
                                             <td><div align="center"><?php echo $d['Firstname'] ." ".$d["Lastname"];?></div></td>
                                             <td><?php echo $d['Firstname'];?></td>
                                             <td align="right"><?php echo $d["time"];?></td>
-                                            <td align="right"> <a href="./del2.php?ID=<?php echo $result['ID']; ?>" class="btn btn-danger">ลบ</a></td>
+                                            <td align="right"> <a href="./del2.php?ID=<?php echo $d['ID']; ?>" class="btn btn-danger">ลบ</a></td>
                                         </tr>
                                         <?php
                                           }
