@@ -5,7 +5,7 @@
     $first_name=$_POST['first_name'];
     $last_name=$_POST['last_name'];
 	$user_level= '01';
-	$image= 'default-profile.gif';
+	$image= 'defaultprofile.png';
     date_default_timezone_set('asia/bangkok');
 	$date=date("d-m-Y");
 	$phone=$_POST['phone'];

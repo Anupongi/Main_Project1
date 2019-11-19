@@ -382,7 +382,7 @@ $num_rows2 = mysqli_num_rows($query2);
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="exampleInputPassword1">รหัสผ่าน</label>
-                                                    <input type="text" class="form-control" id="password" name="password" placeholder="Password" required>
+                                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
