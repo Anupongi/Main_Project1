@@ -16,6 +16,6 @@ $date = date("d/m/Y");
 mysqli_set_charset($conn,"utf8");
 $sql = "UPDATE `tb_med` SET `med_name`= '$med_name' ,`med_fullname`= '$med_fullname' ,`total`= '$total' ,`user_post`='$user_post' , `date`='$date' WHERE `med_id` = $id";
 $query = mysqli_query($conn,$sql);
-echo $sql;
-//  Header("Location: treatment_list.php"); 
+// echo $sql;
+ Header("Location: treatment_list.php"); 
 ?>

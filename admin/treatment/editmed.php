@@ -346,7 +346,7 @@ $array = mysqli_fetch_array($query);
                                                 <div class="form-group col-md-6 ">
                                                     <label for="exampleInputEmail1">ชื่อเวชภัณฑ์ ยา อุปกรณ์ทางการแพทย์</label>
                                                     <input type="text" class="form-control" name="med_name" id="med_name" aria-describedby="emailHelp" placeholder="ชื่อ" value="<?php echo $array[1]?>">
-                                                    <input type="hidden" name="ID" value="<?php echo $id ?>">
+                                                    <input type="hidden" name="ID" value="<?php echo $array[0] ?>">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="exampleInputPassword1">ชื่อทางการ</label>
