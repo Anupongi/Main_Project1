@@ -103,7 +103,7 @@
 									?></td>
 									<td align="right"><?php echo $result["date"];?></td>
 									<!-- <td align="right"><a href="./edituser.php?ID=<?php echo $result[0] ?>" class="btn btn-warning text-white">แก้ไข</a></td> -->
-									<td align="right"> <a href="./deluser1.php?ID=<?php echo $result[0]; ?>" class="btn btn-danger">ลบ</a></td>
+									<td align="right"> <a href="./deluser1.php?ID=<?php echo $result['ID']; ?>" class="btn btn-danger">ลบ</a></td>
 								</tr>
 								<?php
 								$count=$count+1;
