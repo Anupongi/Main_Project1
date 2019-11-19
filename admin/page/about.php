@@ -173,58 +173,7 @@ session_start();
         </div>
         <!-- End Navbar -->
         <hr>
-        <!-- Carousel -->
-        <div class="row">
-            <div class="col-md-12">
-                <section>
-                    <div class="bd-example">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <?php
-                                    $sql = "SELECT * FROM `allpost` WHERE `published`= 'y' ORDER BY `date` DESC LIMIT 3";
-                                    $query = mysqli_query($conn, $sql);
-                                    $i = 0;
-                                    while ($d = mysqli_fetch_array($query)) {
-                                    $i = $i + 1;
-                                ?>
-                                <div class="carousel-item <?php if ($i == 1) { echo "active"; } ?>">
-                                    <img src="./admin/page/img/img/<?php echo $d[2] ?>" class="d-block w-100" style="filter: grayscale(10%);">
         
-                                    <div class="carousel-caption d-none d-md-block" style="background: linear-gradient(to right, rgba(255,255,0), rgba(255,255,0,0.3));width: 90%;">
-                                        <a href="./previewcontentpost.php?id=<?php echo $d[0] ?> ">
-                                            <h3 style=""><?php echo $d[1]  ?></h3>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="...">
-                                </div> -->
-                                <?php
-                                }
-                                ?>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
         <!-- content -->
         <div class=" float-left mr-3 mt-3" style="height:60px;width:15px;background-color: #0064CA;">
         </div>
