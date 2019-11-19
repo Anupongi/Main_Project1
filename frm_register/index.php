@@ -46,7 +46,12 @@
                             <div class="form-row text-center">
                                 <div class="form-group col-md-2">
                                     <label class="font-weight-bold">คำนำหน้า <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="name_title" name="name_title" placeholder="คำนำหน้า">
+                                    <select name="name_title"  id="name_title" class="form-control" placeholder="คำนำหน้า">
+									    <option id="name_title">นาย</option>
+                                        <option id="name_title">นาง</option>
+                                        <option id="name_title">นางสาว</option>
+								    </select>
+                                    <!-- <input type="text" class="form-control" id="name_title" name="name_title" placeholder="คำนำหน้า"> -->
                                 </div>
                                 <div class="form-group col-md-5">
                                     <label class="font-weight-bold">ชื่อ <span class="text-danger">*</span></label>
@@ -199,7 +204,11 @@
                             <div class="form-row text-center">
                                 <div class="form-group col-md-2">
                                     <label class="font-weight-bold">คำนำหน้า <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="name_title1" name="name_title1" placeholder="คำนำหน้า">
+                                    <select name="name_title1"  id="name_title1" class="form-control" placeholder="คำนำหน้า">
+									    <option id="name_title">นาย</option>
+                                        <option id="name_title">นาง</option>
+                                        <option id="name_title">นางสาว</option>
+								    </select>
                                 </div>
                                 <div class="form-group col-md-5">
                                     <label class="font-weight-bold">ชื่อ <span class="text-danger">*</span></label>
