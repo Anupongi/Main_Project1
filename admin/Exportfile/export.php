@@ -17,8 +17,9 @@
     $excelObj->setActiveSheetIndex(0);
     mysqli_select_db($conn, 'user_login');
     
+    // $sql_vs = "SELECT login_date.Username,user.Firstname, user.Lastname,login_date.Lastdate,login_date.time FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date' ORDER BY `login_date`.`time` DESC";
     $sql_vs = "SELECT login_date.Username,user.Firstname, user.Lastname,login_date.Lastdate,login_date.time FROM user INNER JOIN login_date ON user.Username=login_date.Username WHERE login_date.`Lastdate` = '$date' ORDER BY `login_date`.`time` DESC";
-    echo $sql_vs;
+    // echo $sql_vs;
     $query_vs = mysqli_query($conn, $sql_vs);
     
     
@@ -35,10 +36,10 @@
         $i++;
         $row++; 
     }
-    // header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    // header('Content-Disposition: attachment; filename="รายชื่อผู้ลงชื่อเข้าใช้ประจำวัน.xlsx"');
-    // header('Cache-Control: max-age=0');
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    header('Content-Disposition: attachment; filename="รายชื่อผู้ลงชื่อเข้าใช้ประจำวัน.xlsx"');
+    header('Cache-Control: max-age=0');
     
-    // $file = PHPExcel_IOFactory::createWriter($excelObj,'Excel2007');
-    // $file->save('php://output');
+    $file = PHPExcel_IOFactory::createWriter($excelObj,'Excel2007');
+    $file->save('php://output');
 ?>
