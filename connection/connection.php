@@ -2,7 +2,7 @@
 
 $hostname = "localhost"; //ชื่อโฮสต์
 $user = "root"; //ชื่อผู้ใช้
-$password = "Ice@2019"; //รหัสผ่าน
+$password = "itcmtc2019"; //รหัสผ่าน
 $dbname = "user_login"; //ชื่อฐานข้อมูล
 $tblname = "user"; //ชื่อตาราง 
 $con= mysqli_connect($hostname, $user, $password,$dbname) or die("Error: " . mysqli_error($con));
