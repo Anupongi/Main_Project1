@@ -104,7 +104,17 @@ $num_rows2 = mysqli_num_rows($query2);
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        <?php
+            $id = $_SESSION['User'];
+            mysqli_set_charset($conn,"utf8");
+            $sqlimg="SELECT `profile` FROM `user` WHERE `Username` = '$id' ";
+            $query1 = mysqli_query($conn,$sqlimg);
+            while($result=mysqli_fetch_array($query1)){
+          ?>
+          <img src="../authorities/profile/<?php echo $result["profile"]?>" class="img-circle elevation-2" alt="User Image" style="width:40px;height:40px;">
+          <?php 
+            }
+          ?>
         </div>
         <div class="info">
           <a href="#" class="d-block"><?php echo $_SESSION["name"]?></a>
