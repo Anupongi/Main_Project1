@@ -2,7 +2,7 @@
 session_start();
     $serverName = "localhost";
     $userName = "root";
-    $userPassword = "Ice@2019";
+    $userPassword = "itcmtc2019";
     $dbName = "post";
     $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
     mysqli_set_charset($conn,"utf8");
@@ -356,7 +356,7 @@ session_start();
                     <?php
                         $serverName = "localhost";
                         $userName = "root";
-                        $userPassword = "Ice@2019";
+                        $userPassword = "itcmtc2019";
                         $dbName = "file-management";
                         $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
                         mysqli_set_charset($conn,"utf8");
