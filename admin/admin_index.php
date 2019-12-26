@@ -59,7 +59,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "Ice@2019";
+$userPassword = "itcmtc2019";
 $dbName = "user_login";
 $dbName1 = "post";
 $dbName2 = "file-management";
