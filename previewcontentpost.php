@@ -163,7 +163,7 @@ session_start();
                     <div class="col-sm-1">
                         <?php
                             include "./connection/connection.php";
-                            $sql_img = "SELECT `profile` FROM `user` WHERE `Username` = '$d[5]'";
+                            $sql_img = "SELECT `profile` FROM `user` WHERE `Username` = 'admin'";
                             $query_img = mysqli_query($con, $sql_img);
                             while ($d_img = mysqli_fetch_array($query_img)) {
                         ?>
