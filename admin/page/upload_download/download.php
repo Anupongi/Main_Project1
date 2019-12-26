@@ -319,7 +319,7 @@ mysqli_set_charset($conn,"utf8");
     <!-- Main content -->
     <section class="content">
       <?php
-      $conn = mysqli_connect('localhost', 'root', 'Ice@2019', 'file-management');
+      $conn = mysqli_connect('localhost', 'root', 'itcmtc2019', 'file-management');
       $sql = "SELECT * FROM files ORDER BY `date` DESC";
       mysqli_set_charset($conn,"utf8");
       $result = mysqli_query($conn, $sql);
