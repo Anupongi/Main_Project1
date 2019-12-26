@@ -168,19 +168,19 @@ $per_page = 10;   // Per Page
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="./alluser.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>รายชื่อสมาชิกทั้งหมด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="./user02.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>นักเรียน นักศึกษา</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="./user03.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ครู บุคลากร</p>
                 </a>
