@@ -195,7 +195,7 @@ session_start();
                     <div class="col-md-12">
                         <?php
                             $sql = "SELECT * FROM `allpost`   WHERE `published` = 'y' ORDER BY `date` DESC LIMIT 3 ;";
-                            $query = mysqli_query($conn, $sql);
+                            $query = mysqli_query($connnn, $sql);
                             while ($d = mysqli_fetch_array($query)) {
                         ?>
                         <div class="card float-left mt-2 shadow">
