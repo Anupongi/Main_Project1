@@ -2,7 +2,7 @@
 //fetch.php
 if(isset($_POST["id"]))
 {
- $connect = mysqli_connect("localhost", "root", "Ice@2019", "user_login");
+ $connect = mysqli_connect("localhost", "root", "itcmtc2019", "user_login");
  mysqli_set_charset($connect,"utf8");
  $username = $_POST['id'] ;
  $query = "SELECT * FROM user WHERE `Username` = '".$_POST["id"]."' ";
