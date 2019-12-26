@@ -173,8 +173,8 @@ session_start();
                     ?>
                     </div>
                     <div class="col-sm-4">
-                        เผยแพร่เมื่อ <?php echo $d[5] ?> <br>
-                        โดย <?php echo $d[6] ?>
+                        เผยแพร่เมื่อ <?php echo $d[4] ?> <br>
+                        โดย <?php echo $d[5] ?>
                     </div>
                 </div>
             </div>    
