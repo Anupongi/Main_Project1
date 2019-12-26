@@ -214,7 +214,7 @@ $num_rows2 = mysqli_num_rows($query2);
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="./treatment.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มข้อมูลประวัติการรักษา</p>
                 </a>
