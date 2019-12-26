@@ -35,9 +35,9 @@
         $i++;
         $row++; 
     }
-    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    header('Content-Disposition: attachment; filename="รายชื่อผู้ลงชื่อเข้าใช้ประจำวัน.xlsx"');
-    header('Cache-Control: max-age=0');
+    // header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    // header('Content-Disposition: attachment; filename="รายชื่อผู้ลงชื่อเข้าใช้ประจำวัน.xlsx"');
+    // header('Cache-Control: max-age=0');
     
     // $file = PHPExcel_IOFactory::createWriter($excelObj,'Excel2007');
     // $file->save('php://output');
