@@ -1,6 +1,6 @@
 <?php
 session_start();
-    include "../../connection/connection4.php";
+include "../../connection/connection4.php";
 
 ?>
 <!DOCTYPE html>
@@ -203,7 +203,7 @@ session_start();
                     <div class="col-md-12">
                         <?php
                             $sql = "SELECT * FROM `allpost`   WHERE `published` = 'y' ORDER BY `date` DESC LIMIT 3 ;";
-                            $query = mysqli_query($conn, $sql);
+                            $query = mysqli_query($connnn, $sql);
                             while ($d = mysqli_fetch_array($query)) {
                         ?>
                         <div class="card float-left mt-2 shadow">
@@ -236,7 +236,7 @@ session_start();
                     <?php
                         $serverName = "localhost";
                         $userName = "root";
-                        $userPassword = "Ice@2019";
+                        $userPassword = "itcmtc2019";
                         $dbName = "file-management";
                         $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
                         mysqli_set_charset($conn,"utf8");
