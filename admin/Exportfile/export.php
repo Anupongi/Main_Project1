@@ -38,6 +38,6 @@
     header('Content-Disposition: attachment; filename="รายชื่อผู้ลงชื่อเข้าใช้ประจำวัน.xlsx"');
     header('Cache-Control: max-age=0');
     
-    $file = PHPExcel_IOFactory::createWriter($excelObj,'Excel2007');
-    $file->save('php://output');
+    // $file = PHPExcel_IOFactory::createWriter($excelObj,'Excel2007');
+    // $file->save('php://output');
 ?>
