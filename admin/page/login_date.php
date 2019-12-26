@@ -293,13 +293,13 @@ $per_page = 10;   // Per Page
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./page/upload_download/upload.php" class="nav-link">
+                <a href="./upload_download/upload.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เพิ่มเอกสารดาวน์โหลด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./page/upload_download/download.php" class="nav-link">
+                <a href="./upload_download/download.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>เอกสารดาวน์โหลดทั้งหมด</p>
                 </a>

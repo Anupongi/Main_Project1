@@ -2,7 +2,7 @@
 	session_start();
     $serverName = "localhost";
 	$userName = "root";
-	$userPassword = "Ice@2019";
+	$userPassword = "itcmtc2019";
 	$dbName3 = "treatment";
 	$con = mysqli_connect($serverName,$userName,$userPassword,$dbName3);
 	mysqli_set_charset($con,"utf8");

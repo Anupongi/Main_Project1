@@ -126,7 +126,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "Ice@2019";
+$userPassword = "itcmtc2019";
 $dbName = "treatment";
 
 
@@ -493,7 +493,7 @@ $per_page = 10;   // Per Page
                                                 
                                                 <th width="50"> <div align="center">ลำดับ </div></th>
                                                 <th width="100"> <div align="center">ชื่อ </div></th>
-                                                <th width="150"> <div align="center">ชื่อทางการ</div></th>
+                                                <th width="150"> <div align="center">คำอธิบายเพิ่มเติม</div></th>
                                                 <th width="80"><div align="center">จำนวนคงเหลือ</div></th>
                                                 <th width="100"><div align="center">เจ้าหน้าที่ผู้บันทึก</div></th>
                                                 <th width="80"><div align="center">วันที่ลงบันทึก</div></th>
