@@ -16,7 +16,7 @@
 
    $serverName = "localhost";
    $userName = "root";
-   $userPassword = "Ice@2019";
+   $userPassword = "itcmtc2019";
    $dbName = "user_login";
     
    $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
