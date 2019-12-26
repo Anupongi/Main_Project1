@@ -1,11 +1,6 @@
 <?php
 session_start();
-    $serverName = "localhost";
-    $userName = "root";
-    $userPassword = "Ice@2019";
-    $dbName = "post";
-    $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
-    mysqli_set_charset($conn,"utf8");
+    include "../../connection/connection4.php";
 
 ?>
 <!DOCTYPE html>
