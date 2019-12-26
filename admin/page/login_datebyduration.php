@@ -482,7 +482,7 @@ $per_page = 10;   // Per Page
                                             </tr>
                                         </thead>
                                         <?php
-                                        $conn = mysqli_connect("localhost","root","Ice@2019","user_login");
+                                        $conn = mysqli_connect("localhost","root","itcmtc2019","user_login");
                                         $count = 0;
                                         mysqli_set_charset($conn, "utf8");
                                         if(isset($_POST['datetimepicker1'])){
