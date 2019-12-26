@@ -42,7 +42,7 @@
 <?php
 $serverName = "localhost";
 $userName = "root";
-$userPassword = "Ice@2019";
+$userPassword = "itcmtc2019";
 $dbName = "user_login";
 $dbName1 = "post";
 
@@ -345,9 +345,9 @@ $num_rows2 = mysqli_num_rows($query2);
                                                     <input type="text" class="form-control" name="med_name" id="med_name" aria-describedby="emailHelp" placeholder="ชื่อ" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="exampleInputPassword1">รหัสผ่าน</label>
-                                                    <input type="text" class="form-control" id="med_fullname" name="med_fullname" placeholder="ชื่อทางการ" required>
-                                                    <small id="emailHelp" class="form-text text-muted">ชื่อทางการของเวชภัณฑ์ ยา อุปกรณ์ทางการแพทย์ </small>
+                                                    <label for="exampleInputPassword1">คำอธิบาย</label>
+                                                    <input type="text" class="form-control" id="med_fullname" name="med_fullname" placeholder="คำอธิบาย">
+                                                    <small id="emailHelp" class="form-text text-muted">คำอธิบายของเวชภัณฑ์ ยา อุปกรณ์ทางการแพทย์ </small>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="inputEmail4">จำนวน</label>
