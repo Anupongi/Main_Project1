@@ -9,7 +9,7 @@
     mysqli_set_charset($conn,"utf8");
     mysqli_set_charset($con,"utf8");
 
-    if(isset($_POST['user_name'])){
+    if(isset($_POST['user_name'])){ // กรณีนักเรียน นักศึกษา
     $user_name=$_POST['user_name'];
     $password=$_POST['password'];
     $name_title=$_POST['name_title'];
@@ -83,13 +83,13 @@
                     echo "alert('ผิดพลาด ไม่สามารถบันทึกข้อมูลได้!');";
                     echo "window.location.back();";
                 echo "</script>";
-                echo $sql4;
+                // echo $sql4;
           }
           
       }
     
     // Header("Location: ../login.php");
-    }
+    }// กรณีครู บุคลกร
     else if(isset($_POST['user_name1'])){
         $user_name1=$_POST['user_name1'];
         $password1=$_POST['password1'];
