@@ -644,9 +644,9 @@ $num_rows4 = mysqli_num_rows($query4);
                                     document.getElementById('frm_txt2').style.display = "none";
                                     }
 	                                }
-                                  function list2(){
-                                    var ck3 = document.getElementById('myCheckbox5');
-                                    if(ck3.checked == true){
+                                  function ck_frm5(){
+                                    var ck5 = document.getElementById('myCheckbox5');
+                                    if(ck5.checked == true){
                                     document.getElementById('Allergic_medication').style.display = "";
                                     }else{
                                     document.getElementById('Allergic_medication').style.display = "none";
