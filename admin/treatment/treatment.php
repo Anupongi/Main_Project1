@@ -555,7 +555,21 @@ $num_rows4 = mysqli_num_rows($query4);
                                   </div>
                                   <div class="form-group col-md-4">
                                     <label for="inputCity">ยาที่แพ้</label>
-                                    <input type="text" class="form-control" name="Allergic_medication">
+                                    <!-- <input type="text" class="form-control" name="Allergic_medication"> -->
+                                    
+                                      <div class="card" >
+                                        <div class="card-body">
+                                          <div class="form-row">
+                                            <div class="form-group col-md-5">
+                                              <div class="chiller_cb">
+                                                  <input id="myCheckbox1" type="checkbox" onClick="ck_frm1();" >
+                                                  <label for="myCheckbox1">การจ่ายยา</label>
+                                                  <span></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>    
                                   </div>
                                 </div>
                                 <div class="form-row">
