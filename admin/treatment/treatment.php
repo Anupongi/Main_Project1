@@ -502,7 +502,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                       <label for="inputAddress">เชื้อชาติ</label>
                                       <input type="text" class="form-control" name="Origin" autocomplete="off">
                                   </div>
-                                  <div class="form-group col-md-1">
+                                  <div class="form-group col-md-2">
                                       <label for="inputAddress">ศาสนา</label>
                                       <select name="Religion" class="form-control" required>
                                         <option selected>เลือก...</option>
