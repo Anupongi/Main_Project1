@@ -504,7 +504,13 @@ $num_rows4 = mysqli_num_rows($query4);
                                   </div>
                                   <div class="form-group col-md-1">
                                       <label for="inputAddress">ศาสนา</label>
-                                      <input type="text" class="form-control" name="Religion">
+                                      <select name="Religion" class="form-control" required>
+                                        <option selected>เลือก...</option>
+                                        <option>พุทธ</option>
+                                        <option>คริสต์</option>
+                                        <option>พราหมณ์-ฮินดู</option>
+                                        <option>อิสลาม</option>
+                                      </select>
                                   </div>
                                   <div class="form-group col-md-2">
                                       <label for="inputAddress">กรุ๊ปเลือด</label>
@@ -549,7 +555,11 @@ $num_rows4 = mysqli_num_rows($query4);
                                   </div>
                                   <div class="form-group col-md-4">
                                     <label for="inputCity">ยาที่แพ้</label>
-                                    <input type="text" class="form-control" name="Allergic_medication">
+                                    <!-- <input type="text" class="form-control" name="Allergic_medication"> -->
+                                    <select name="Allergic_medication" id="myCheckbox4" class="form-control" onClick="ck_frm3();">
+                                          <option value="ไม่มี">ไม่มี</option>
+                                          <option value="มี">มี</option>
+                                    </select>
                                   </div>
                                 </div>
                                 <div class="form-row">
@@ -608,6 +618,13 @@ $num_rows4 = mysqli_num_rows($query4);
                                   function ck_frm2(){
                                     var ck2 = document.getElementById('myCheckbox3');
                                     if(ck2.checked == true){
+                                    document.getElementById('frm_txt2').style.display = "";
+                                    }else{
+                                    document.getElementById('frm_txt2').style.display = "none";
+                                  }
+                                    function ck_frm3(){
+                                    var ck3 = document.getElementById('myCheckbox4');
+                                    if(ck3.checked == true){
                                     document.getElementById('frm_txt2').style.display = "";
                                     }else{
                                     document.getElementById('frm_txt2').style.display = "none";
