@@ -15,7 +15,7 @@ $Blood_pressure = $_POST['Blood_pressure'];
 $phone = $_POST['phone'];
 $phonep = $_POST['phonep'];
 $Sick = $_POST['Sick'];
-if($_POST['Allergic_medication'] ==' '){
+if($_POST['Allergic_medication'] ==''){
   $Allergic_medication = 'ไม่มี';
 }else{
   $Allergic_medication = $_POST['Allergic_medication'];
