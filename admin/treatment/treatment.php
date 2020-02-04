@@ -562,8 +562,15 @@ $num_rows4 = mysqli_num_rows($query4);
                                           <div class="form-row">
                                             <div class="form-group col-md-5">
                                               <div class="chiller_cb">
-                                                  <input id="myCheckbox1" type="checkbox" onClick="ck_frm1();" >
-                                                  <label for="myCheckbox1">การจ่ายยา</label>
+                                                  <input id="Checkbox1" type="checkbox" onClick="list1();" >
+                                                  <label for="Checkbox1">ไม่มี</label>
+                                                  <span></span>
+                                              </div>
+                                            </div>
+                                            <div class="form-group col-md-5">
+                                              <div class="chiller_cb">
+                                                  <input id="Checkbox2" type="checkbox" onClick="list2();" >
+                                                  <label for="Checkbox2">มี</label>
                                                   <span></span>
                                               </div>
                                             </div>
@@ -571,7 +578,9 @@ $num_rows4 = mysqli_num_rows($query4);
                                         </div>
                                       </div>    
                                   </div>
+                                  <textarea class="form-control" name="Sick" rows="3" required></textarea>
                                 </div>
+
                                 <div class="form-row">
                                   <div class="form-group col-md-7">
                                     <label for="inputCity">การรักษา</label>
@@ -631,6 +640,14 @@ $num_rows4 = mysqli_num_rows($query4);
                                     document.getElementById('frm_txt2').style.display = "";
                                     }else{
                                     document.getElementById('frm_txt2').style.display = "none";
+                                    }
+	                                }
+                                  function list2(){
+                                    var ck3 = document.getElementById('Checkbox2');
+                                    if(ck3.checked == true){
+                                    document.getElementById('frm_txt').style.display = "";
+                                    }else{
+                                    document.getElementById('frm_txt').style.display = "none";
                                     }
 	                                }
                                 </script>
