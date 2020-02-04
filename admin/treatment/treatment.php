@@ -578,7 +578,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                         </div>
                                       </div>    
                                   </div>
-                                  <textarea class="form-control" name="Sick" rows="3" required></textarea>
+                                  <textarea class="form-control" name="Allergic_medication" rows="3" required></textarea>
                                 </div>
 
                                 <div class="form-row">
@@ -645,9 +645,9 @@ $num_rows4 = mysqli_num_rows($query4);
                                   function list2(){
                                     var ck3 = document.getElementById('Checkbox2');
                                     if(ck3.checked == true){
-                                    document.getElementById('frm_txt').style.display = "";
+                                    document.getElementById('Allergic_medication').style.display = "";
                                     }else{
-                                    document.getElementById('frm_txt').style.display = "none";
+                                    document.getElementById('Allergic_medication').style.display = "none";
                                     }
 	                                }
                                 </script>
