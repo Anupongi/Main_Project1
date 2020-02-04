@@ -197,7 +197,7 @@ $per_page = 10;   // Per Page
       <!-- Messages Dropdown Menu -->
       <li>
       <?php
-        echo '<a href="../Login/logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
+        echo '<a href="../../Login/logout.php"><i class="fa fa-indent"></i> ออกจากระบบ</a> ';
       ?>
         
           
