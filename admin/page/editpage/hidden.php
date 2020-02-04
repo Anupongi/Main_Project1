@@ -9,6 +9,5 @@ $conn = mysqli_connect($serverName,$userName,$userPassword,$dbName);
 $id=$_GET['id'];
 $sql = "UPDATE `allpost` SET `published`='n' WHERE `post_id` = $id";
 $query = mysqli_query($conn,$sql);
-echo $sql;
-// Header("Location: ../allpost.php"); 
+Header("Location: ../allpost.php"); 
 ?>

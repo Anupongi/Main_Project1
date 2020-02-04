@@ -355,7 +355,7 @@ mysqli_set_charset($conn,"utf8");
                                 </div>
                                 <div class="col-3"></div>
                                 <div class="col-md-3">
-                                    <?php if($d[6] == "y"){ ?>
+                                    <?php if($d[7] == "y"){ ?>
                                     <a href="./editpage/hidden.php?id=<?php echo $d[0] ?>" class="btn btn-warning btn-block">ซ่อนโพสต์</a>
                                     <?php }else{ ?>
                                     <a href="./editpage/show.php?id=<?php echo $d[0] ?>" class="btn btn-success btn-block">แสดงโพสต์</a>
