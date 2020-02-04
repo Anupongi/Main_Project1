@@ -532,7 +532,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                   </div>
                                   <div class="form-group col-md-2">
                                       <label for="inputAddress">ความดันโลหิต</label>
-                                      <input type="text" class="form-control" name="Blood_pressure" required>
+                                      <input type="text" class="form-control" name="Blood_pressure" required placeholder="xxx/xx">
                                   </div>
                                 </div>
                                 <div class="form-row">
