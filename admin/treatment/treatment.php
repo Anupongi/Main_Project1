@@ -556,10 +556,6 @@ $num_rows4 = mysqli_num_rows($query4);
                                   <div class="form-group col-md-4">
                                     <label for="inputCity">ยาที่แพ้</label>
                                     <input type="text" class="form-control" name="Allergic_medication">
-                                    <select name="Allergic_medication" id="" class="form-control">
-                                          <option value="ไม่มี">ไม่มี</option>
-                                          <option value="มี">มี</option>
-                                    </select>
                                   </div>
                                 </div>
                                 <div class="form-row">
