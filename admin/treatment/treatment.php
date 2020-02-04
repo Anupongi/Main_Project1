@@ -581,7 +581,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                 </div>
                                 <div class="form-group col-md-7" id="Allergic_medication" style="display:none;">
                                     <label for="inputCity">ยาที่มีอาการแพ้</label>
-                                    <textarea class="form-control" name="Allergic_medication"  rows="3" required></textarea>
+                                    <textarea class="form-control" name="Allergic_medication"  rows="3" ></textarea>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-7">
