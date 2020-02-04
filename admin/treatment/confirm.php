@@ -123,6 +123,9 @@ $Staff = $_POST['Staff'];
                                     <label for="inputAddress2">อาการเบื้องต้น</label>
                                     <textarea class="form-control" name="Sick" rows="3" ><?php echo $Sick?></textarea>
                                   </div>
+                                  
+                                </div>
+                                <div class="form-row">
                                   <div class="form-group col-md-4">
                                     <label for="inputCity">ยาที่แพ้</label>
                                     <input type="text" class="form-control" name="Allergic_medication" value="<?php echo $Allergic_medication?>">
