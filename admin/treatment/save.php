@@ -46,28 +46,28 @@
 	
 	
 	$query1	= mysqli_query($database_condb, $sql1) ; 
-	
+	echo $sql1;
 
-	$sql2="SELECT `total`  FROM `tb_med` WHERE `med_name`='$med_name'";
-	$query2	= mysqli_query($database_condb, $sql2) ;
-	$total1=mysqli_fetch_array($query2);
-	$total2=$total1[0];
-	if($med_name == ''){
-		// Header("Location: treatment.php");
-		echo "<script>if(confirm('การบันทึกข้อมูลถูกต้อง ระบบบันทึกข้อมูลเรียบร้อยแล้ว')){document.location.href='./treatment.php'};</script>";
-	}
-	else if($total2==0){
-		echo "<script>if(confirm('การบันทึกข้อมูลไม่ถูกต้อง จำนวนคงเหลือของอุปกรณ์ไม่เพียงพอ')){document.location.href='./treatment.php'};</script>";
-		// echo "<script>";
-        // echo "alert(\" การบันทึกข้อมูลไม่ถูกต้อง จำนวนคงเหลือของอุปกรณ์ไม่เพียงพอ\");"; 
-        // echo "window.history.back()";
-        // echo "</script>";
+	// $sql2="SELECT `total`  FROM `tb_med` WHERE `med_name`='$med_name'";
+	// $query2	= mysqli_query($database_condb, $sql2) ;
+	// $total1=mysqli_fetch_array($query2);
+	// $total2=$total1[0];
+	// if($med_name == ''){
+	// 	// Header("Location: treatment.php");
+	// 	echo "<script>if(confirm('การบันทึกข้อมูลถูกต้อง ระบบบันทึกข้อมูลเรียบร้อยแล้ว')){document.location.href='./treatment.php'};</script>";
+	// }
+	// else if($total2==0){
+	// 	echo "<script>if(confirm('การบันทึกข้อมูลไม่ถูกต้อง จำนวนคงเหลือของอุปกรณ์ไม่เพียงพอ')){document.location.href='./treatment.php'};</script>";
+	// 	// echo "<script>";
+    //     // echo "alert(\" การบันทึกข้อมูลไม่ถูกต้อง จำนวนคงเหลือของอุปกรณ์ไม่เพียงพอ\");"; 
+    //     // echo "window.history.back()";
+    //     // echo "</script>";
 		
 	  
-	}else{
-		$total3=$total2-$total;
-		$sql3 ="UPDATE `tb_med` SET `total`= '$total3' WHERE `med_name`='$med_name'";
-		$query3	= mysqli_query($database_condb, $sql3) ;
-		echo "<script>if(confirm('การบันทึกข้อมูลถูกต้อง ระบบบันทึกข้อมูลเรียบร้อยแล้ว')){document.location.href='./treatment.php'};</script>";	
-	}
+	// }else{
+	// 	$total3=$total2-$total;
+	// 	$sql3 ="UPDATE `tb_med` SET `total`= '$total3' WHERE `med_name`='$med_name'";
+	// 	$query3	= mysqli_query($database_condb, $sql3) ;
+	// 	echo "<script>if(confirm('การบันทึกข้อมูลถูกต้อง ระบบบันทึกข้อมูลเรียบร้อยแล้ว')){document.location.href='./treatment.php'};</script>";	
+	// }
 ?>
