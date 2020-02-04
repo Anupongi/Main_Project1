@@ -118,19 +118,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="../../page/alluser.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>รายชื่อสมาชิกทั้งหมด</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+                <a href="../../page/user02.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>นักเรียน นักศึกษา</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="../../page/user03.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ครู บุคลากร</p>
                 </a>
@@ -147,13 +147,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="../login_date.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ประจำวัน</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+                <a href="../logindate_menu.php" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>การลงชื่อเข้าใช้ทั้งหมด</p>
                 </a>
@@ -362,7 +362,7 @@
                       // move the uploaded (temporary) file to the specified destination
 
 
-                          $con = mysqli_connect("localhost","root","Ice@2019","file-management");
+                          $con = mysqli_connect("localhost","root","itcmtc2019","file-management");
                           mysqli_set_charset($con,"utf8"); 
                           $sql10 = "INSERT INTO `files`(`image`, `name`, `extension`, `size`, `downloads`, `user_post`, `date`, `published`) VALUES ('$file_image','$filename','$extension','$size', 0 ,'$id_admin','$date1','y')";
                           
