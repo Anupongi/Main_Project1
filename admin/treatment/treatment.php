@@ -562,15 +562,15 @@ $num_rows4 = mysqli_num_rows($query4);
                                           <div class="form-row">
                                             <div class="form-group col-md-5">
                                               <div class="chiller_cb">
-                                                  <input id="Checkbox1" type="checkbox" onClick="list1();" >
-                                                  <label for="Checkbox1">ไม่มี</label>
+                                                  <input id="myCheckbox4" type="checkbox" onClick="ck_frm4();" >
+                                                  <label for="myCheckbox4">ไม่มี</label>
                                                   <span></span>
                                               </div>
                                             </div>
                                             <div class="form-group col-md-5">
                                               <div class="chiller_cb">
-                                                  <input id="Checkbox2" type="checkbox" onClick="list2();" >
-                                                  <label for="Checkbox2">มี</label>
+                                                  <input id="myCheckbox5" type="checkbox" onClick="ck_frm5();" >
+                                                  <label for="myCheckbox5">มี</label>
                                                   <span></span>
                                               </div>
                                             </div>
@@ -579,9 +579,9 @@ $num_rows4 = mysqli_num_rows($query4);
                                       </div>    
                                   </div>
                                 </div>
-                                <div class="form-group col-md-7" style="display:none;">
+                                <div class="form-group col-md-7" id="Allergic_medication" style="display:none;">
                                     <label for="inputCity">ยาที่มีอาการแพ้</label>
-                                    <textarea class="form-control" name="Allergic_medication" id="Allergic_medication" rows="3" required></textarea>
+                                    <textarea class="form-control" name="Allergic_medication"  rows="3" required></textarea>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-7">
@@ -645,7 +645,7 @@ $num_rows4 = mysqli_num_rows($query4);
                                     }
 	                                }
                                   function list2(){
-                                    var ck3 = document.getElementById('Checkbox2');
+                                    var ck3 = document.getElementById('myCheckbox5');
                                     if(ck3.checked == true){
                                     document.getElementById('Allergic_medication').style.display = "";
                                     }else{
